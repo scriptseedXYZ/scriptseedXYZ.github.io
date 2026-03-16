@@ -1,0 +1,308 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subhashini Rajamani - Technical Product Leader | Digital Transformation & AI</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #e2e8f0;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: rgba(30, 41, 59, 0.7);
+            border-radius: 20px;
+            padding: 40px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+        }
+
+        .header {
+            text-align: center;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+        }
+
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            font-weight: bold;
+            color: white;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #f8fafc;
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            font-size: 1.2em;
+            color: #94a3b8;
+            margin-bottom: 20px;
+        }
+
+        .contact {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            color: #3b82f6;
+        }
+
+            .contact a {
+                color: #3b82f6;
+                text-decoration: none;
+                font-weight: 500;
+            }
+
+        .tab-nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .tab-btn {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: #cbd5e1;
+            padding: 10px 25px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+            .tab-btn.active {
+                background: #3b82f6;
+                color: white;
+                border-color: #3b82f6;
+            }
+
+        .content-section {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+            .content-section.active {
+                display: block;
+            }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card {
+            background: rgba(255,255,255,0.03);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+            .card h3 {
+                color: #60a5fa;
+                margin-bottom: 5px;
+            }
+
+        .date {
+            color: #94a3b8;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .tag {
+            background: rgba(59, 130, 246, 0.1);
+            color: #60a5fa;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            color: #cbd5e1;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-cat h4 {
+            color: #8b5cf6;
+            margin-bottom: 15px;
+            border-left: 3px solid #8b5cf6;
+            padding-left: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <div class="profile-pic">SR</div>
+            <h1>Subhashini Rajamani</h1>
+            <p class="tagline">Strategy-Focused Leader | Analytics, Automation & Digital Transformation</p>
+            <div class="contact">
+                <span>📱 682.273.9155</span>
+                <span>|</span>
+                <a href="mailto:sreespark3000@gmail.com">📧 sreespark3000@gmail.com</a>
+            </div>
+        </div>
+
+        <div class="tab-nav">
+            <button class="tab-btn active" onclick="showTab('exp')">Experience</button>
+            <button class="tab-btn" onclick="showTab('skills')">Skills</button>
+            <button class="tab-btn" onclick="showTab('edu')">Education</button>
+        </div>
+
+        <div id="exp" class="content-section active">
+            <div class="card">
+                <h3>Digital Transformation Strategy Lead / Appian Lead</h3>
+                <span class="date">Solomon Associates (Munich Re) | 2021 – Present</span>
+                <ul>
+                    <li>Led enterprise automation and AI-enabled product initiatives focusing on productivity and risk mitigation gains, risk mitigation, and adoption metrics.</li>
+                    <li>Served as Technical Product Advisor to senior stakeholders, translating business goals into scalable solutions.</li>
+                    <li>Managed end-to-end product rollout for secure file transfers, workflow automation, and internal tools ensuring integration and adoption.</li>
+                    <li>Developed ML-driven benchmarking solutions and mentored a team of developers.</li>
+                    <li>Defined requirements through customer surveys, marketing team and technical performance feedback, convert them into JIRA epics and stories.</li>
+                    <li>Designed prototypes, delivery roadmaps, and execution strategies.</li>
+                </ul>
+                <div class="tags">
+                    <span class="tag">GenAI</span> <span class="tag">Appian</span> <span class="tag">Agile</span> <span class="tag">ML</span> <span class="tag">JIRA</span> <span class="tag">Python</span> <span class="tag">Streamlit</span> <span class="tag">Product Roadmap</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Project Manager – Strategy & Analytics Lead</h3>
+                <span class="date">Cognizant Technology Solutions | 2017 – 2019</span>
+                <ul>
+                    <li>Spearheaded strategic initiatives to evaluate and operationalize ML opportunities, including the design and deployment of a QA Risk-Based Testing Bot.</li>
+                    <li>Led process enhancements to strengthen SDLC audit readiness, compliance, and quality assurance.</li>
+                    <li>Assisted tech team to identify gaps in automation framework and in designing pseudo functions for mainframe automation.</li>
+                    <li>Developed prototypes for crystal reports and power BI for clients and executives.</li>
+                </ul>
+                <div class="tags">
+                    <span class="tag">ROI Analysis</span> <span class="tag">Automation Framework</span> <span class="tag">Stakeholder Management</span> <span class="tag">Crystal Reports</span> <span class="tag">Power BI</span> <span class="tag">SQL</span> <span class="tag">Machine Learning</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Sr. Techno-Functional Business Lead</h3>
+                <span class="date">Cognizant Technology Solutions | 2008 – 2017</span>
+                <ul>
+                    <li>Owned healthcare analytics product integration and third-party platform evaluation, providing mapping and integration decisions.</li>
+                    <li>Authored detailed user stories, requirement documents, and prototypes, bridging communication gaps between technical and business stakeholders.</li>
+                    <li>Facilitated stakeholder and customer meetings to gather pain points and assess business cases for product development and process improvements.</li>
+                    <li>Designed and developed logic flows, dashboards, and executive analytics prototypes for claims reconciliation to support strategic decision-making.</li>
+                    <li>Trained Operations teams and implemented feedback loops by collecting customer survey data and technical performance metrics to drive continuous product improvement.</li>
+                </ul>
+                <div class="tags">
+                    <span class="tag">DB Mapping</span> <span class="tag">Customer Survey and Training</span> <span class="tag">Stakeholder Management</span> <span class="tag">Excel Reports</span> <span class="tag">Oracle, MSSQL</span> <span class="tag">Visio</span> <span class="tag">Requirement Documentation</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="skills" class="content-section">
+            <div class="skills-grid">
+                <div class="skill-cat">
+                    <h4>Leadership & Strategy</h4>
+                    <ul>
+                        <li>Technical Product Management</li>
+                        <li>Digital Transformation Strategy</li>
+                        <li>Stakeholder Alignment & Executive Communication</li>
+                        <li>Business Case Development & ROI Analysis</li>
+                        <li>Program & Project Delivery</li>
+                        <li>Agile & SDLC Management</li>
+                    </ul>
+                </div>
+                <div class="skill-cat">
+                    <h4>Technical Expertise</h4>
+                    <ul>
+                        <li>Python & Streamlit</li>
+                        <li>Machine Learning & GenAI</li>
+                        <li>Appian & Workflow Automation</li>
+                        <li>SQL (Oracle, MSSQL)</li>
+                        <li>Power BI & AWS Quicksight</li>
+                        <li>AWS (Sagemaker, Opensearch)</li>
+                        <li>Big Data Ecosystems</li>
+                        <li>JIRA & Visio</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="edu" class="content-section">
+            <div class="card">
+                <h3>MS, Business Analytics (Data Science)</h3>
+                <p>University of Texas at Dallas</p>
+            </div>
+            <div class="card">
+                <h3>Bachelor’s, Computer Science</h3>
+                <p>Osmania University</p>
+            </div>
+            <div class="card">
+                <h3>Certifications</h3>
+                <p>Machine Learning Graduate Certificate</p>
+                <p>Appian Certified Developer</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showTab(tabId) {
+            document.querySelectorAll('.content-section').forEach(s => s.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+
+</body>
+</html>

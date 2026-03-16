@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subhashini Rajamani - Digital Transformation & AI Strategy Leader</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #e4e4e4;
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(30, 30, 46, 0.8);
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .profile-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 35px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 25px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 55px;
+            font-weight: bold;
+            color: white;
+            box-shadow: 0 4px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        h1 {
+            font-size: 2.8em;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .tagline {
+            font-size: 1.3em;
+            color: #a8a8b3;
+            margin-bottom: 25px;
+            font-weight: 300;
+        }
+
+        .contact-info {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            flex-wrap: wrap;
+            font-size: 1.05em;
+        }
+
+        .contact-info a {
+            color: #667eea;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-info a:hover {
+            color: #764ba2;
+        }
+
+        .summary-section {
+            margin-bottom: 40px;
+            padding: 25px;
+            background: rgba(102, 126, 234, 0.05);
+            border-radius: 15px;
+            border: 1px solid rgba(102, 126, 234, 0.2);
+        }
+
+        .summary-text {
+            line-height: 1.9;
+            color: #c4c4c4;
+            font-size: 1.1em;
+            text-align: justify;
+        }
+
+        /* Tab Navigation */
+        .tab-navigation {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+            flex-wrap: wrap;
+        }
+
+        .tab-button {
+            background: transparent;
+            border: none;
+            color: #a8a8b3;
+            padding: 15px 30px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+            font-weight: 500;
+        }
+
+        .tab-button:hover {
+            color: #667eea;
+            background: rgba(102, 126, 234, 0.05);
+        }
+
+        .tab-button.active {
+            color: #667eea;
+            border-bottom-color: #667eea;
+            background: rgba(102, 126, 234, 0.1);
+        }
+
+        /* Tab Content */
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Skills Tab */
+        .skills-section {
+            display: flex;
+            gap: 30px;
+        }
+
+        .skills-list {
+            flex: 0 0 350px;
+        }
+
+        .skills-category {
+            margin-bottom: 30px;
+        }
+
+        .category-title {
+            font-size: 1.3em;
+            color: #667eea;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .skill-item {
+            background: rgba(102, 126, 234, 0.1);
+            padding: 14px 18px;
+            border-radius: 10px;
+            border: 2px solid rgba(102, 126, 234, 0.3);
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .skill-item:hover {
+            background: rgba(102, 126, 234, 0.2);
+            transform: translateX(5px);
+            border-color: #667eea;
+        }
+
+        .skill-item.active {
+            background: rgba(102, 126, 234, 0.3);
+            border-color: #667eea;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .skill-icon {
+            font-size: 1.2em;
+        }
+
+        .skill-name {
+            font-size: 1em;
+            font-weight: 500;
+        }
+
+        .story-display {
+            flex: 1;
+            background: rgba(102, 126, 234, 0.05);
+            padding: 35px;
+            border-radius: 15px;
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            min-height: 400px;
+        }
+
+        .story-display.placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #a8a8b3;
+            font-size: 1.1em;
+            text-align: center;
+        }
+
+        .story-title {
+            color: #667eea;
+            font-size: 1.8em;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .story-meta {
+            color: #a8a8b3;
+            font-size: 0.95em;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .story-content {
+            color: #c4c4c4;
+            line-height: 1.8;
+            font-size: 1.05em;
+            margin-bottom: 20px;
+        }
+
+        .story-highlight {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%);
+            padding: 18px 22px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #667eea;
+        }
+
+        .story-highlight strong {
+            color: #667eea;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        /* Projects Tab */
+        .project-card {
+            background: rgba(102, 126, 234, 0.05);
+            padding: 35px;
+            border-radius: 15px;
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            background: rgba(102, 126, 234, 0.1);
+            border-color: rgba(102, 126, 234, 0.4);
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .project-title {
+            color: #667eea;
+            font-size: 1.8em;
+            font-weight: 600;
+            flex: 1;
+        }
+
+        .project-period {
+            color: #a8a8b3;
+            font-size: 1em;
+            font-style: italic;
+        }
+
+        .project-section {
+            margin-bottom: 20px;
+        }
+
+        .project-section-title {
+            color: #667eea;
+            font-size: 1.2em;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .project-description {
+            color: #c4c4c4;
+            line-height: 1.8;
+            font-size: 1.05em;
+        }
+
+        .project-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .project-list li {
+            color: #c4c4c4;
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+            line-height: 1.7;
+        }
+
+        .project-list li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-size: 1.2em;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .project-tag {
+            background: rgba(102, 126, 234, 0.2);
+            color: #667eea;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+
+        .edit-note {
+            background: rgba(255, 193, 7, 0.1);
+            border: 1px solid rgba(255, 193, 7, 0.3);
+            color: #ffc107;
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin-top: 15px;
+            font-size: 0.95em;
+        }
+
+        /* Education Tab */
+        .education-timeline {
+            position: relative;
+            padding-left: 40px;
+        }
+
+        .education-timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+            border-radius: 2px;
+        }
+
+        .education-item {
+            position: relative;
+            background: rgba(102, 126, 234, 0.08);
+            padding: 25px 30px;
+            border-radius: 12px;
+            border: 1px solid rgba(102, 126, 234, 0.25);
+            margin-bottom: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .education-item::before {
+            content: '';
+            position: absolute;
+            left: -47px;
+            top: 30px;
+            width: 14px;
+            height: 14px;
+            background: #667eea;
+            border-radius: 50%;
+            border: 3px solid #1a1a2e;
+        }
+
+        .education-item:hover {
+            background: rgba(102, 126, 234, 0.15);
+            transform: translateX(10px);
+        }
+
+        .degree {
+            color: #667eea;
+            font-size: 1.4em;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .institution {
+            color: #c4c4c4;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+
+        .education-details {
+            color: #a8a8b3;
+            font-size: 0.95em;
+            margin-top: 10px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 40px;
+            border-top: 2px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            font-size: 1.1em;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .skills-section {
+                flex-direction: column;
+            }
+
+            .skills-list {
+                flex: 1;
+            }
+
+            .story-display {
+                min-height: 300px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 2.2em;
+            }
+
+            .tagline {
+                font-size: 1.1em;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .tab-navigation {
+                gap: 5px;
+            }
+
+            .tab-button {
+                padding: 12px 20px;
+                font-size: 1em;
+            }
+
+            .education-timeline {
+                padding-left: 25px;
+            }
+
+            .education-item::before {
+                left: -32px;
+            }
+
+            .project-header {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile-header">
+            <div class="profile-image">SR</div>
+            <h1>Subhashini Rajamani</h1>
+            <p class="tagline">Digital Transformation & Product/Project Lead</p>
+            <div class="contact-info">
+                <span>📱 682.273.9155</span>
+                <span>|</span>
+                <a href="mailto:sreespark3000@gmail.com">📧 sreespark3000@gmail.com</a>
+            </div>
+        </div>
+
+        <div class="summary-section">
+            <p class="summary-text">
+                Strategy-focused leader with 15+ years of experience driving analytics, automation, and AI-enabled transformation across insurance and enterprise environments. Proven ability to define GenAI vision, translate business goals into actionable roadmaps, and lead cross-functional teams from concept to adoption.
+            </p>
+        </div>
+
+        <!-- Tab Navigation -->
+        <div class="tab-navigation">
+            <button class="tab-button active" onclick="openTab(event, 'skills')">Skills & Expertise</button>
+            <button class="tab-button" onclick="openTab(event, 'projects')">Projects</button>
+            <button class="tab-button" onclick="openTab(event, 'education')">Education</button>
+        </div>
+        
+
+        <!-- Projects Tab -->
+        <div id="Roles and Projects" class="tab-content">
+            <div class="project-card">
+                <div class="project-header">
+                    <h3 class="project-title">Digital Transformation Lead - Solomon Associates (Munich Re)</h3>
+                    <span class="project-period">2023-Present</span>
+                </div>
+                
+                <div class="project-section">
+                    <div class="project-section-title">Overview</div>
+                    <p class="project-description">
+                        Led digital transformatin and product development for secure file transfer and workflow automation. <br />
+                        Co-led the strategy, design, and implementation of an organization-wide, on-premise GenAI chatbot serving internal users. Focused on balancing innovation with security, governance, and compliance in a regulated environment.
+                    </p>
+                </div>
+
+                <div class="project-section">
+                    <div class="project-section-title">Key Responsibilities</div>
+                    <ul class="project-list">
+                        <li>Led enterprise automation and GenAI/ML strategy initiatives aligned to business productivity and risk objectives.</li>
+                        <li>Acted as internal consultant to senior stakeholders, translating business challenges into scalable automation solutions.</li>
+                        <li>Co-led strategy and implementation of an organization-wide, digital initiatives focusing on governance, security, and adoption.</li>
+                        <li>Defined program structures, delivery roadmaps, and execution plans for multiple digital initiatives.</li>
+                        <li>Partnered with marketing, technical, and business teams to support rollout, change management, and adoption.</li>
+                        <li>Led, mentored and managed a team of developers, overseeing prioritization, delivery, and quality.</li>
+                    </ul>
+                </div>
+
+                <div class="project-section">
+                    <div class="project-section-title">Impact & Results</div>
+                    <p class="project-description">
+                        Delivered a secure file transfer and workflow automation product, developed machine learning models to predict reliability indicators in chemical studies, and designed an on-premise chatbot prototype in close collaboration with IT security and internal stakeholders.
+                    </p>
+                </div>
+
+                <div class="project-tags">                    
+                    <span class="project-tag">Strategy</span>
+                    <span class="project-tag">Product Lead</span>
+                    <span class="project-tag">Project Lead</span>
+                </div>
+
+                <div class="skills-tags">
+                    <span class="skills-tag">ML - scikitlearn</span>
+                    <span class="skills-tag">AWS Quick Sight</span>
+                    <span class="skills-tag">Appian</span>
+                    <span class="skills-tag">Appian RPA</span>
+                    <span class="skills-tag">Python</span>
+                    <span class="skills-tag">Ollama</span>
+                    <span class="skills-tag">Huggingface Tranformation Models</span>
+                    <span class="skills-tag">Claude</span>
+                    <span class="skills-tag">JIRA</span>
+                    <span class="project-tag">Documentation</span>
+                    <span class="skills-tag">Streamlit</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <h3 class="project-title">Transformation Strategy & Analytics Project Manager - Cognizant Technology Solutions</h3>
+                    <span class="project-period">2017-2019</span>
+                </div>
+                
+                <div class="project-section">
+                    <div class="project-section-title">Overview</div>
+                    <p class="project-description">
+                        Led enterprise ML strategy and digital transformation initiatives, including development of a QA Bot prototype to optimize testing efficiency. Conducted ROI modeling and executive-level investment analysis, driving automation and analytics programs that improved ROI by 40% while shaping strategic technology decisions at the leadership level.
+                    </p>
+                </div>
+
+                <div class="project-section">
+                    <div class="project-section-title">Key Responsibilities</div>
+                    <ul class="project-list">
+                        <li>Led strategy-focused initiatives assessing ML opportunities, including the design and implementation of a QA Bot prototype.</li>
+                        <li>Conducted process and technical assessments, cost-benefit analysis, and ROI evaluations to support executive investment decisions.</li>
+                        <li>Planned and executed large-scale automation programs across 20+ applications.</li>
+                        <li>Delivered a 40% improvement in ROI through automation and analytics-driven initiatives.</li>
+                        <li>Prepared executive-level presentations and strategic recommendations for senior leadership.</li>
+                    </ul>
+                </div>
+
+                <div class="project-section">
+                    <div class="project-section-title">Impact & Results</div>
+                    <p class="project-description">
+                        Achieved 30% reduction in QA time with QA BOT, established framework for automation and showcased 40% improvement in ROI.
+                    </p>
+                </div>
+
+                <div class="project-tags">
+                    <span class="project-tag">Cross functional Delivery</span>
+                    <span class="project-tag">Automation</span>
+                    <span class="project-tag">Digital Transformation</span>
+                    <span class="project-tag">ROI Optimization</span>
+                    <span class="project-tag">Project Management</span>
+                    <span class="project-tag">System Design Documentation</span>
+                    <span class="project-tag">Kantar Media</span>
+                    <span class="project-tag">Express Scripts</span>
+                    <span class="project-tag">Molina</span>
+                </div>
+
+                <div class="skills-tags">
+                    <span class="skills-tag">ML - scikitlearn</span>
+                    <span class="skills-tag">Inhouse Automation Framework</span>
+                    <span class="skills-tag">Python</span>
+                    <span class="skills-tag">SQL</span>
+                    <span class="skills-tag">Shell Scripts</span>
+                    <span class="skills-tag">Mainframe</span>
+                    <span class="skills-tag">Visio</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <h3 class="project-title">Sr. Techno-Functional Product Lead – Cognizant Technology Solutions</h3>
+                    <span class="project-period">2017-2010</span>
+                </div>
+
+                <div class="project-section">
+                    <div class="project-section-title">Overview</div>
+                    <p class="project-description">
+                        Planned and executed large-scale transformation program spanning 20+ applications, delivering 40% improvement in ROI through strategic automation and analytics initiatives.
+                    </p>
+                </div>
+
+                <div class="project-section">
+                    <div class="project-section-title">Key Responsibilities</div>
+                    <ul class="project-list">
+                        <li>Developed comprehensive business cases with cost-benefit analysis.</li>
+                        <li>Led third-party vendor evaluations and platform selection decisions.</li>
+                        <li>Executed phased rollout across multiple business units.</li>
+                        <li>Led executive dashboards development by analyzing and steering technical and business teams for a large claims reconciliation project.</li>
+                    </ul>
+                </div>
+
+                <div class="project-section">
+                    <div class="project-section-title">Impact & Results</div>
+                    <p class="project-description">
+                        Adoption of third party tool for preventive care, transformed organizational approach to data-driven decision making.
+                    </p>
+                </div>
+
+                <div class="project-tags">
+                    <span class="project-tag">Product Management</span>
+                    <span class="project-tag">Executive Dashboards</span>
+                    <span class="project-tag">Claims Reconciliation</span>
+                    <span class="project-tag">Healthcare Analytis</span>
+                    <span class="project-tag">Documentation</span>
+                    <span class="project-tag">Operations Training</span>
+                    <span class="project-tag">Emdeon</span>
+                    <span class="project-tag">Kaiser Permanente</span>
+                </div>
+
+                <div class="skills-tags">
+                    <span class="skills-tag">Oracle</span>
+                    <span class="skills-tag">DB Mapping</span>
+                    <span class="skills-tag">Excel Reports</span>
+                    <span class="skills-tag">Visio</span>
+                    <span class="skills-tag">HTML</span>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Education Tab -->
+        <div id="education" class="tab-content">
+            <div class="education-timeline">
+                <div class="education-item">
+                    <div class="degree">Master of Science, Business Analytics (Data Science)</div>
+                    <div class="institution">University of Texas at Dallas</div>
+                    <div class="education-details">
+                        Specialized in data science, machine learning, predictive analytics, and business intelligence. Focused on applying advanced analytical techniques to solve complex business problems and drive strategic decision-making.
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="degree">UTD Machine Learning Certification</div>
+                    <div class="institution">University of Texas at Dallas</div>
+                    <div class="education-details">
+                        Advanced certification covering supervised and unsupervised learning, neural networks, deep learning, and practical ML implementation. Hands-on experience with real-world datasets and production ML systems.
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="degree">Bachelor of Engineering, Computer Science</div>
+                    <div class="institution">Osmania University</div>
+                    <div class="education-details">
+                        Comprehensive foundation in computer science fundamentals, algorithms, data structures, software engineering, and systems design. Strong emphasis on problem-solving and analytical thinking.
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="degree">Appian Certified Developer (Level 1)</div>
+                    <div class="institution">Appian Corporation</div>
+                    <div class="education-details">
+                        Professional certification in Appian low-code platform development, covering application design, process modeling, data management, and user interface creation for enterprise automation solutions.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <a href="mailto:subhashini.rajamani@gmail.com" class="cta-button">Get In Touch</a>
+        </div>
+    </div>
+
+    <script>
+        // Story data
+        const stories = {
+            'genai-transformation': {
+                title: '🚀 Leading GenAI Transformation at Enterprise Scale',
+                meta: 'Solomon Associates (Munich Re) | 2021-Present',
+                content: 'As Digital Transformation Strategy Lead, I spearheaded one of the most ambitious AI initiatives in our organization\'s history: building and deploying an enterprise-wide, on-premise GenAI chatbot. This wasn\'t just about implementing technology—it was about fundamentally changing how thousands of employees interact with information and make decisions.',
+                highlight: {
+                    title: 'The Challenge:',
+                    text: 'Balance innovation with security, governance, and user adoption in a highly regulated insurance environment. Navigate competing stakeholder priorities while maintaining executive buy-in.'
+                },
+                additional: 'I led the strategy from vision to implementation, working closely with security, compliance, IT, and business teams. My role involved translating complex technical capabilities into business value, crafting governance frameworks, and building adoption strategies. The result? A secure, compliant AI solution that\'s transforming how our organization works.'
+            },
+            'ml-solutions': {
+                title: '📈 Forecasting Industry Indicators with ML Models',
+                meta: 'Solomon Associates (Munich Re) | 2022-Present',
+                content: 'Developed machine learning models for time-series forecasting of key industry indicators in the insurance sector. These models enable proactive decision-making by predicting trends before they fully materialize.',
+                highlight: {
+                    title: 'Technical Approach:',
+                    text: 'Built ensemble models combining statistical techniques with advanced ML algorithms. Created automated forecasting pipelines for continuous model updates and delivered insights through interactive dashboards.'
+                },
+                additional: 'The predictive analytics capability has become a strategic asset, supporting executive planning and risk assessment with forward-looking intelligence. It demonstrates how data science can be operationalized to drive business value.'
+            }, 
+            'ml-automation': {
+                title: '🤖 Pioneering ML-Powered Automation',
+                meta: 'Cognizant Technology Solutions | Inhouse Product Development',
+                content: 'I led the design and implementation of a QA Bot prototype using machine learning, which became a template for future automation initiatives. This wasn\'t just about building a tool—it was about establishing a framework for how the organization could leverage ML for operational excellence.',
+                highlight: {
+                    title: 'The Innovation:',
+                    text: 'Used natural language processing and pattern recognition to automate quality assurance processes. The bot learned from historical test cases and could predict potential defects, reducing QA time by 30%.'
+                },
+                additional: 'This project demonstrated the practical value of ML in operational contexts and paved the way for broader AI adoption. It showed that ML isn\'t just for data scientists—it can be embedded into business processes to drive measurable improvements.'
+            },
+            'business-case': {
+                title: '💼 Building Compelling Business Cases for AI Investments',
+                meta: 'Throughout Career',
+                content: 'Securing executive buy-in for AI and automation initiatives requires more than technical expertise—it demands the ability to articulate value in business terms, quantify ROI, and address stakeholder concerns with data-driven evidence.',
+                highlight: {
+                    title: 'My Framework:',
+                    text: 'I combine quantitative analysis (cost savings, efficiency gains, revenue impact) with qualitative benefits (risk reduction, competitive advantage, capability building). I present multiple scenarios with clear assumptions, enabling informed decision-making.'
+                },
+                additional: 'This approach has helped me secure funding for major initiatives including the GenAI chatbot, QA Bot, and enterprise automation programs. By speaking the language of business outcomes, I\'ve bridged the gap between technical possibilities and strategic priorities.'
+            },
+            'program-delivery': {
+                title: '🎯 Delivering Complex Programs Across 20+ Applications',
+                meta: 'Cognizant Technology Solutions | Express Scripts, Molina',
+                content: 'Leading large-scale transformation programs requires more than project management—it demands strategic thinking, stakeholder orchestration, and the ability to navigate ambiguity while maintaining momentum.',
+                highlight: {
+                    title: 'My Approach:',
+                    text: 'Built comprehensive program structures with clear delivery roadmaps, established governance models for decision-making, and created transparent communication channels that kept all stakeholders aligned from C-suite to implementation teams.'
+                },
+                additional: 'I developed phased rollout strategies that balanced quick wins with long-term transformation goals, managed dependencies across multiple workstreams, and adjusted course based on real-time feedback. This disciplined yet flexible approach enabled successful delivery of complex, multi-year initiatives.'
+            },
+            'roi-transformation': {
+                title: '💡 Delivering 40% ROI Through Strategic Transformation',
+                meta: 'Cognizant Technology Solutions | Kantar Media',
+                content: 'When I joined as Project Manager for Strategy & Analytics, the organization was struggling with manual processes across 20+ applications. I saw an opportunity to not just automate, but to strategically transform how work got done.',
+                highlight: {
+                    title: 'The Strategy:',
+                    text: 'Rather than jumping into automation, I conducted comprehensive assessments, built business cases with clear ROI projections, and designed a phased transformation roadmap that minimized risk while maximizing impact.'
+                },
+                additional: 'By focusing on change management and training, I ensured Operations and Client teams weren\'t just recipients of technology, but active participants in the transformation. The outcome exceeded expectations: 40% improvement in ROI and a cultural shift toward data-driven decision making.'
+            },            
+            'executive-communication': {
+                title: '🎤 Influencing Executive Decisions Through Strategic Communication',
+                meta: 'Throughout Career',
+                content: 'Effective executive communication isn\'t about dumbing down technical concepts—it\'s about translating them into strategic implications and actionable insights that align with business priorities.',
+                highlight: {
+                    title: 'What I\'ve Learned:',
+                    text: 'Executives care about outcomes, not outputs. They need to understand: What problem are we solving? What\'s at stake? What are the options? What do you recommend and why? What are the risks and how will we mitigate them?'
+                },
+                additional: 'I\'ve prepared and delivered presentations to C-suite leaders on digital transformation strategies, AI governance frameworks, and program investments. My ability to distill complex initiatives into clear, compelling narratives has been crucial in securing support for transformative programs.'
+            },
+            'stakeholder-alignment': {
+                title: '🤝 Aligning Diverse Stakeholders Across Complex Initiatives',
+                meta: 'Throughout Career',
+                content: 'The hardest part of transformation isn\'t the technology—it\'s getting diverse stakeholders with competing priorities to work toward a common goal. I\'ve orchestrated alignment across executive leadership, technical teams, legal, compliance, security, and business units.',
+                highlight: {
+                    title: 'My Approach:',
+                    text: 'Early and continuous engagement. I identify each stakeholder\'s concerns, constraints, and success criteria. Then I facilitate conversations that surface conflicts early and build solutions that address multiple perspectives.'
+                },
+                additional: 'For the GenAI initiative, this meant balancing innovation goals with security requirements, compliance mandates with user experience, and speed with governance. By creating forums for transparent dialogue and building trust through consistent delivery, I\'ve successfully navigated complex stakeholder landscapes.'
+            },         
+            'data-strategy': {
+                title: '📊 Driving Decisions Through Data-Driven Strategy',
+                meta: 'Cognizant Technology Solutions | Emdeon',
+                content: 'Throughout my career, I\'ve championed a data-driven approach to strategy and decision-making. This means more than collecting data—it\'s about building frameworks that turn data into actionable insights.',
+                highlight: {
+                    title: 'My Philosophy:',
+                    text: 'Data should inform decisions, not just validate them. I build executive dashboards that surface the right metrics at the right time, enabling leaders to spot trends, identify risks, and seize opportunities proactively.'
+                }               
+            },
+            'team-leadership': {
+                title: '👥 Building and Leading High-Performing Teams',
+                meta: 'Throughout Career',
+                content: 'I\'ve led cross-functional teams of 25+ members, ranging from developers and analysts to business stakeholders and executives. Effective leadership isn\'t about control—it\'s about creating an environment where people can do their best work.',
+                highlight: {
+                    title: 'Leadership Philosophy:',
+                    text: 'Clear vision, transparent communication, and trust. I set clear goals, provide context for why our work matters, remove blockers, and empower team members to make decisions. I mentor and develop talent while maintaining accountability for delivery.'
+                },
+                additional: 'My teams have consistently delivered complex initiatives on time and with quality. I\'ve built cultures of collaboration, continuous learning, and excellence—where people feel valued and motivated to contribute their best work.'
+            }
+        };
+
+        // Tab switching function
+        function openTab(evt, tabName) {
+            const tabContent = document.getElementsByClassName("tab-content");
+            for (let i = 0; i < tabContent.length; i++) {
+                tabContent[i].classList.remove("active");
+            }
+
+            const tabButtons = document.getElementsByClassName("tab-button");
+            for (let i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove("active");
+            }
+
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+
+        // Show story function
+        function showStory(storyId) {
+            const storyDisplay = document.getElementById('story-display');
+            const story = stories[storyId];
+            
+            if (story) {
+                storyDisplay.classList.remove('placeholder');
+                storyDisplay.innerHTML = `
+                    <h3 class="story-title">${story.title}</h3>
+                    <p class="story-meta">${story.meta}</p>
+                    <p class="story-content">${story.content}</p>
+                    <div class="story-highlight">
+                        <strong>${story.highlight.title}</strong>
+                        ${story.highlight.text}
+                    </div>
+                    <p class="story-content">${story.additional}</p>
+                `;
+            }
+        }
+
+        // Add click event listeners to all skill items
+        document.addEventListener('DOMContentLoaded', function() {
+            const skillItems = document.querySelectorAll('.skill-item');
+            
+            skillItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    // Remove active class from all skills
+                    skillItems.forEach(skill => skill.classList.remove('active'));
+                    
+                    // Add active class to clicked skill
+                    this.classList.add('active');
+                    
+                    // Show the story
+                    const storyId = this.getAttribute('data-story');
+                    showStory(storyId);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
