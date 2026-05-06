@@ -95,7 +95,7 @@
       border-radius: 50%;
       background: radial-gradient(circle at 30% 20%, #38bdf8, #0ea5e9 40%, #0f172a 75%);
       box-shadow: 0 0 0 1px rgba(148, 163, 184, 0.2),
-        0 18px 40px rgba(15, 23, 42, 0.7);
+         0 18px 40px rgba(15, 23, 42, 0.7);
       position: relative;
       overflow: hidden;
     }
@@ -608,6 +608,241 @@
       text-decoration-style: dotted;
       text-underline-offset: 2px;
     }
+
+    /* ── Chat Widget Styles ── */
+    #fab {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+      color: #0f172a;
+      border: none;
+      cursor: pointer;
+      font-size: 22px;
+      box-shadow: 0 8px 25px rgba(8, 47, 73, 0.85);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    #fab:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 35px rgba(8, 47, 73, 0.95);
+    }
+
+    .pulse {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: rgba(56, 189, 248, 0.4);
+      animation: pulse 2s ease-out infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      100% { transform: scale(1.6); opacity: 0; }
+    }
+
+    #chat {
+      position: fixed;
+      bottom: 90px;
+      right: 24px;
+      width: 380px;
+      max-height: 600px;
+      background: #111827;
+      border: 1px solid #1f2937;
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+      display: flex;
+      flex-direction: column;
+      z-index: 9998;
+      overflow: hidden;
+    }
+
+    #chat.hide {
+      display: none;
+    }
+
+    .ch-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px;
+      background: rgba(15, 23, 42, 0.95);
+      border-bottom: 1px solid #1f2937;
+    }
+
+    .ch-av {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #0f172a;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .ch-info {
+      flex: 1;
+    }
+
+    .ch-name {
+      color: #e5e7eb;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .ch-sub {
+      color: #9ca3af;
+      font-size: 11px;
+      margin-top: 2px;
+    }
+
+    .ch-close {
+      background: none;
+      border: none;
+      color: #9ca3af;
+      font-size: 18px;
+      cursor: pointer;
+      padding: 4px;
+      transition: color 0.15s ease;
+    }
+
+    .ch-close:hover {
+      color: #e5e7eb;
+    }
+
+    .ch-msgs {
+      flex: 1;
+      overflow-y: auto;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-height: 360px;
+    }
+
+    .msg {
+      padding: 10px 14px;
+      border-radius: 12px;
+      font-size: 13px;
+      line-height: 1.5;
+      max-width: 85%;
+    }
+
+    .msg.user {
+      background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+      color: #0f172a;
+      align-self: flex-end;
+    }
+
+    .msg.bot {
+      background: rgba(15, 23, 42, 0.95);
+      color: #e5e7eb;
+      border: 1px solid #1f2937;
+      align-self: flex-start;
+    }
+
+    .msg.typing::after {
+      content: '...';
+      animation: typing 1.2s infinite;
+    }
+
+    @keyframes typing {
+      0%, 20% { content: '.'; }
+      40% { content: '..'; }
+      60%, 100% { content: '...'; }
+    }
+
+    .ch-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 12px 16px;
+      border-top: 1px solid #1f2937;
+    }
+
+    .chip {
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.95);
+      border: 1px solid #1f2937;
+      color: #9ca3af;
+      font-size: 11px;
+      cursor: pointer;
+      transition: border-color 0.15s ease, background 0.15s ease;
+      white-space: nowrap;
+    }
+
+    .chip:hover {
+      border-color: rgba(56, 189, 248, 0.7);
+      background: rgba(15, 23, 42, 1);
+    }
+
+    .ch-inp {
+      display: flex;
+      gap: 8px;
+      padding: 12px 16px;
+      border-top: 1px solid #1f2937;
+      background: rgba(15, 23, 42, 0.95);
+    }
+
+    #inp {
+      flex: 1;
+      background: rgba(15, 23, 42, 0.95);
+      border: 1px solid #1f2937;
+      border-radius: 8px;
+      color: #e5e7eb;
+      font-size: 13px;
+      padding: 8px 12px;
+      resize: none;
+      font-family: var(--font-main);
+      min-height: 36px;
+      max-height: 100px;
+    }
+
+    #inp:focus {
+      outline: none;
+      border-color: rgba(56, 189, 248, 0.7);
+    }
+
+    #send {
+      background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+      border: none;
+      border-radius: 8px;
+      color: #0f172a;
+      font-size: 16px;
+      cursor: pointer;
+      padding: 8px 14px;
+      transition: opacity 0.15s ease;
+    }
+
+    #send:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    #send:not(:disabled):hover {
+      filter: brightness(1.1);
+    }
+
+    .ch-foot {
+      padding: 8px 16px;
+      text-align: center;
+      font-size: 10px;
+      color: #6b7280;
+      border-top: 1px solid #1f2937;
+      background: rgba(15, 23, 42, 0.95);
+    }
   </style>
 </head>
 <body>
@@ -681,11 +916,6 @@
             </div>
 
             <div class="hero-cta-row">
-              <!-- Point this to your GitHub resume file URL -->
-              <a href="https://raw.githubusercontent.com/scriptseedXYZ/scriptseedXYZ.github.io/main/Subhashini_Rajamani_Resume.docx" class="btn-primary" download>
-                <span class="btn-icon">⬇</span>
-                <span>Download Resume</span>
-              </a>
               <a href="mailto:sreespark3000@gmail.com?subject=Intro%20Call%20with%20Subhashini%20Rajamani&body=Hi%20Subhashini%2C%0A%0AI%27d%20like%20to%20set%20up%20a%2015-minute%20intro%20call.%0A%0ABest%2C%0A" class="btn-ghost">
                 <span class="btn-icon">⚡</span>
                 <span>Schedule 15‑min intro (Email: sreespark3000@gmail.com, Phone: 682‑273‑9155)</span>
@@ -710,7 +940,7 @@
                   <div>
                     <span class="timeline-highlight">Led AI‑enabled automation and ML‑driven benchmarking products</span> for enterprise stakeholders, increasing productivity while reducing operational risk.
                   </div>
-                  <div class="timeline-meta">Digital Transformation Strategy Lead / Appian Lead</div>
+                  <div class="timeline-meta">Digital Transformation Strategy - ML/AI Product Manager</div>
                 </div>
               </li>
               <li class="timeline-item">
@@ -720,7 +950,7 @@
                   <div>
                     Embedded ML in core workflows (incl. QA Risk‑Based Testing Bot) and quantified value through structured ROI modeling, driving executive investment decisions.
                   </div>
-                  <div class="timeline-meta">Project Manager – Strategy & Analytics</div>
+                  <div class="timeline-meta">Product Manager - Strategy and Analytics Lead</div>
                 </div>
               </li>
               <li class="timeline-item">
@@ -730,7 +960,7 @@
                   <div>
                     Owned integration of healthcare analytics products and third‑party platforms, designing dashboards and logic flows for claims reconciliation at scale.
                   </div>
-                  <div class="timeline-meta">Sr. Techno‑Functional Business Lead</div>
+                  <div class="timeline-meta">Sr. Techno‑Functional Business Analyst</div>
                 </div>
               </li>
             </ul>
@@ -747,26 +977,26 @@
             </div>
             <div class="section-body">
               <p class="emphasis">
-                Digital Transformation Strategy Lead / Appian Lead
+                Digital Transformation Strategy - ML/AI Product Manager
               </p>
               <ul class="list-compact">
                 <li>Led enterprise automation and AI‑enabled product initiatives focused on productivity lift, risk mitigation, and secure workflow orchestration.</li>
                 <li>Acted as technical product advisor to senior stakeholders, turning business objectives into scalable platform and feature roadmaps.</li>
                 <li>Owned end‑to‑end rollout for secure file transfer, workflow automation, and internal tools, aligning architecture, controls, and adoption.</li>
                 <li>Developed ML‑driven benchmarking solutions and mentored developers on model integration and observability practices.</li>
+                <li>Designed and executed API integration strategy on Appian low-code platform — connecting ERPs, CRMs, and external services via REST/SOAP, managing authentication, and enabling seamless data flow across enterprise systems.</li>
               </ul>
 
               <p class="emphasis">
-                Project Manager – Strategy & Analytics Lead
+                Product Manager - Strategy and Analytics Lead
               </p>
               <ul class="list-compact">
                 <li>Spearheaded evaluation and operationalization of ML opportunities, including a QA Risk‑Based Testing Bot to focus testing on highest‑risk changes.</li>
-                <li>Strengthened SDLC audit readiness and QA by refining processes and evidence capture, keeping AI initiatives compliant and traceable.</li>
                 <li>Built ROI models for AI and automation investments, achieving ~60% manual effort reduction and ~40% ROI uplift across 20+ applications.</li>
               </ul>
 
               <p class="emphasis">
-                Sr. Techno‑Functional Business Lead
+                Sr. Techno‑Functional Business Analyst
               </p>
               <ul class="list-compact">
                 <li>Owned integration of healthcare analytics products, including third‑party platform evaluation and vendor collaboration.</li>
@@ -775,7 +1005,7 @@
               </ul>
 
               <p class="emphasis">
-                Quality Engineer / Business Analyst
+                Techno Functional Business Analyst
               </p>
               <ul class="list-compact">
                 <li>Partnered with Product Owners on user stories and documentation for healthcare care‑management applications.</li>
@@ -830,6 +1060,14 @@
                 <span class="pill">Digital transformation strategy</span>
                 <span class="pill">Executive storytelling & ROI analysis</span>
                 <span class="pill">Cross‑functional stakeholder alignment</span>
+              </div>
+
+              <p class="emphasis" style="margin-top:10px;">API & Integration</p>
+              <div class="pill-row">
+                <span class="pill">API integration (REST/SOAP)</span>
+                <span class="pill">Appian low-code platform</span>
+                <span class="pill">Enterprise system integration</span>
+                <span class="pill">Authentication & security</span>
               </div>
             </div>
           </div>
@@ -908,7 +1146,7 @@
                   <div class="edu-meta">Graduate‑level training in data science, statistics, and business analytics.</div>
                 </div>
                 <div>
-                  <div class="edu-item-title">Bachelor’s, Computer Science</div>
+                  <div class="edu-item-title">Bachelor's, Computer Science</div>
                   <div class="edu-meta">Strong foundation in computer science and software engineering.</div>
                 </div>
                 <div>
@@ -928,7 +1166,7 @@
           <div class="section-inner">
             <div class="section-title-row">
               <h2 class="section-title">Target Roles</h2>
-              <span class="section-tag">WHAT I’M LOOKING FOR</span>
+              <span class="section-tag">WHAT I'M LOOKING FOR</span>
             </div>
             <div class="section-body">
               <p>
@@ -956,5 +1194,164 @@
       <span>Ask me about: GenAI product strategy, ML benchmarking, and AI in healthcare & energy.</span>
     </footer>
   </div>
+
+  <!-- ── CHAT WIDGET ── -->
+  <button id="fab" aria-label="Ask AI about Subhashini">
+    ✦<span class="pulse"></span>
+  </button>
+
+  <div id="chat" class="hide">
+    <div class="ch-head">
+      <div class="ch-av">✦</div>
+      <div class="ch-info">
+        <div class="ch-name">Ask about Subhashini</div>
+        <div class="ch-sub">AI assistant · answers recruiter questions</div>
+      </div>
+      <button class="ch-close" onclick="closeChat()">✕</button>
+    </div>
+    <div class="ch-msgs" id="msgs">
+      <div class="msg bot">Hi! I can answer any questions about Subhashini's background, skills, or fit for your role. What would you like to know?</div>
+    </div>
+    <div class="ch-chips" id="chips">
+      <span class="chip" onclick="ask(this.textContent)">Why hire Subhashini?</span>
+       <span class="chip" onclick="ask(this.textContent)">API integration experience?</span>
+      <span class="chip" onclick="ask(this.textContent)">AI agents & LLMs?</span>
+      <span class="chip" onclick="ask(this.textContent)">Technical depth?</span>
+      <span class="chip" onclick="ask(this.textContent)">Enterprise SaaS track record?</span>
+    </div>
+    <div class="ch-inp">
+      <textarea id="inp" placeholder="Ask anything…"></textarea>
+      <button id="send" onclick="sendMsg()">➤</button>
+    </div>
+    <div class="ch-foot">AI · responses based on resume data · may not reflect latest updates</div>
+  </div>
+
+  <script>
+    // ── CONFIG — paste your Gemini API key here, or leave "" for fallback mode ─
+    const GEMINI_KEY = "";
+    // ──────────────────────────────────────────────────────────────────────────
+
+    const SYSTEM_CONTEXT = `You are an AI assistant representing Subhashini Rajamani, an experienced AI Product Manager with expertise in Appian platform, API integrations, and ML/AI products. Help recruiters and hiring managers learn about her fit for AI Product Manager roles. Be concise (under 100 words), confident, and accurate. Never fabricate info not in the bio.
+
+BIO:
+- 15+ years in AI product management, B2B SaaS, and digital transformation
+- Current: Digital Transformation Strategy - ML/AI Product Manager, Solomon Associates (Munich Re), 2021–present
+  • Led enterprise automation and AI-enabled product initiatives for productivity lift, risk mitigation, and secure workflow orchestration
+  • Designed and executed API integration strategy on Appian low-code platform — connecting ERPs, CRMs, and external services via REST/SOAP, managing authentication, and enabling seamless data flow across enterprise systems
+  • Led 0→1 launch of enterprise SaaS portal, wrote detailed technical requirements for AI features, onboarded 200+ users
+  • Designed and delivered AI-powered features using foundation models, AI agents for reasoning and orchestration, LangChain, RAG, Prompt Engineering, LLM integrations
+  • Partnered with engineering and data science to meet enterprise scalability, security, and integration requirements
+  • Conducted enterprise client research, translated insights into precise technical specifications
+  • Delivered 30–50% efficiency gains; communicated roadmap, KPIs, tradeoffs to executives
+- Cognizant (2017–2020): Product Manager - Strategy and Analytics Lead — built ML-based risk prioritization products; ML models for predictive analytics; accelerated release cycles 40–50%; cross-functional collaboration across sales, engineering, analytics
+- Cognizant (2008–2017): Sr. Techno-Functional Business Analyst — healthcare analytics dashboards, configurable data products, multi-tenant enterprise environments, regulated industries
+- Cognizant (2005–2008): Techno Functional Business Analyst — UAT, RFP, enterprise software deployment
+- Education: MS Business Analytics (Data Science), UT Dallas 2020–2022; BS Computer Science, Osmania University 2005
+- Certifications: Appian Certified Developer, UTD ML Certified
+- Skills: API integration (REST/SOAP), Appian low-code platform, foundation models, AI agents, LangChain, RAG, Prompt Engineering, LLM integrations, ML for personalization & optimization, Claude Code, enterprise integration, security & compliance, multi-tenant SaaS, Agile/Scrum, product analytics, cross-functional leadership
+- Personal AI Projects:
+  • Healthcare Proactive Case Management — ML model scoring patients for risk, triggering proactive case management workflows via dashboard (Streamlit app)
+  • AI Assisted Document Search — GenAI-powered semantic search with Q&A and cited sources for enterprise document discovery
+  • Petrochem Utility Efficiency Optimization — App for petrochemical plants to benchmark utility performance and surface actionable recommendations
+  • Fraud Detection Scoring (Planned) — Anomaly/behavioral model for fraud risk scoring with reviewer workflow
+- Contact: sreespark3000@gmail.com | 682.273.9155 | linkedin.com/in/subhashini-rajamani
+For salary/availability: recommend contacting Subhashini directly.`;
+
+    const FALLBACK = {
+      "why hire":        "Subhashini uniquely combines 15+ years of B2B SaaS product leadership with hands-on AI depth — foundation models, AI agents, LangChain, RAG, and API integration on Appian low-code platform. She's shipped 0→1 enterprise products, written detailed technical requirements for AI features, and delivered measurable outcomes. She bridges the gap between business strategy and engineering execution — rare at this level.",
+      "api integration": "On the Appian low-code platform, she designed and executed API integration strategy — connecting ERPs, CRMs, and external services via REST/SOAP, managing authentication, and enabling seamless data flow across enterprise systems. She understands integration architecture and enterprise connectivity.",
+      "ai agents":       "Subhashini has direct experience designing and delivering AI-powered features using foundation models, AI agents for reasoning and orchestration, LangChain, RAG Architecture, and LLM integrations — in production enterprise environments, not just prototypes.",
+      "technical depth": "She holds an MS in Business Analytics (Data Science) from UT Dallas, is an Appian Certified Developer, and has hands-on experience with LangChain, RAG, LLMs, AI agents, and prompt engineering. She writes technical requirements good enough for AI coding tools to generate production-ready code — not vague PRDs.",
+      "enterprise saas":  "Subhashini has a consistent track record owning B2B SaaS products end-to-end — from 0→1 launch at Munich Re (200+ enterprise users) to ML product delivery at Cognizant for the largest PBM client. She's navigated complex client environments, compliance requirements, and multi-tenant deployment challenges throughout her career.",
+      "personal projects": "Subhashini has built 3 AI prototype projects: 1) Healthcare Proactive Case Management — ML risk scoring with Streamlit dashboard, 2) AI Assisted Document Search — GenAI semantic search with Q&A, 3) Petrochem Utility Efficiency Optimization — benchmarking app for petrochemical plants. A 4th fraud detection project is planned.",
+      "product manager":  "Yes, Subhashini is an experienced AI Product Manager with 15+ years in the field. She currently serves as Digital Transformation Strategy - ML/AI Product Manager at Solomon Associates (Munich Re), and previously held Product Manager roles at Cognizant. She combines hands-on AI/ML expertise with strong product leadership and delivery track record."
+    };
+
+    // Smart keyword matching for fallback responses
+    const FALLBACK_KEYWORDS = {
+      "why hire":        ["why hire", "why should", "why her", "why him", "good fit", "hire subhashini", "why her for"],
+      "api integration": ["api", "integration", "rest", "soap", "appian", "connect", "erp", "crm", "enterprise integration"],
+      "ai agents":       ["ai agent", "llm", "langchain", "rag", "ai powered", "foundation model", "prompt engineering"],
+      "technical depth": ["technical", "depth", "skills", "qualified", "background", "experience with"],
+      "enterprise saas": ["saas", "enterprise", "track record", "b2b", "platform", "munich re"],
+      "personal projects": ["personal project", "project", "portfolio", "case study", "prototype", "streamlit", "fraud detection"],
+      "product manager": ["product manager", "pm ", "product management", "role", "position", "job title", "her role", "is she a"]
+    };
+
+    function findFallbackKey(question) {
+      const tl = question.toLowerCase();
+      for (const [key, keywords] of Object.entries(FALLBACK_KEYWORDS)) {
+        if (keywords.some(kw => tl.includes(kw))) {
+          return key;
+        }
+      }
+      return null;
+    }
+
+    const history = [];
+    let chatOpen = false;
+
+    function openChat(){chatOpen=true;document.getElementById('chat').classList.remove('hide')}
+    function closeChat(){chatOpen=false;document.getElementById('chat').classList.add('hide')}
+    document.getElementById('fab').onclick = ()=>{ chatOpen ? closeChat() : openChat() };
+    document.getElementById('inp').addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();sendMsg()}});
+    function ask(txt){ document.getElementById('chips').style.display='none'; sendMsg(txt) }
+
+    async function sendMsg(override){
+      const inp = document.getElementById('inp');
+      const txt = override || inp.value.trim();
+      if(!txt) return;
+      inp.value='';
+      document.getElementById('chips').style.display='none';
+      document.getElementById('send').disabled=true;
+      addMsg(txt,'user');
+      const t = addMsg('Thinking…','bot typing');
+      if(!GEMINI_KEY){
+        await new Promise(r=>setTimeout(r,600));
+        const key = findFallbackKey(txt);
+        const reply = key ? FALLBACK[key] : "Great question! I'd recommend reaching out to Subhashini directly at sreespark3000@gmail.com or via LinkedIn — she'd love to discuss her fit in detail.";
+        t.textContent=reply; t.classList.remove('typing');
+        document.getElementById('send').disabled=false;
+        return;
+      }
+
+      // Build Gemini conversation: inject system context as first user turn
+      const geminiContents = [
+        { role:'user',  parts:[{ text: SYSTEM_CONTEXT }] },
+        { role:'model', parts:[{ text: "Understood. I'm ready to answer questions about Subhashini." }] },
+        ...history,
+        { role:'user',  parts:[{ text: txt }] }
+      ];
+
+      try{
+        const res = await fetch(
+          `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_KEY}`,
+          {
+            method:'POST',
+            headers:{'Content-Type':'application/json'},
+            body:JSON.stringify({ contents: geminiContents, generationConfig:{ maxOutputTokens:200, temperature:0.7 } })
+          }
+        );
+        const d = await res.json();
+        const reply = d.candidates?.[0]?.content?.parts?.[0]?.text || 'Sorry, something went wrong.';
+        t.textContent=reply; t.classList.remove('typing');
+        history.push(
+          { role:'user',  parts:[{ text: txt }] },
+          { role:'model', parts:[{ text: reply }] }
+        );
+      }catch(e){
+        t.textContent='Connection issue — please try again.'; t.classList.remove('typing');
+      }
+      document.getElementById('send').disabled=false;
+    }
+
+    function addMsg(txt,cls){
+      const msgs=document.getElementById('msgs');
+      const el=document.createElement('div');
+      el.className=`msg ${cls}`;el.textContent=txt;
+      msgs.appendChild(el);msgs.scrollTop=msgs.scrollHeight;
+      return el;
+    }
+  </script>
 </body>
 </html>
