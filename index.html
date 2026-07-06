@@ -1,1378 +1,539 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Subhashini Rajamani | AI Product Manager</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X65YPY6LEP"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-X65YPY6LEP');
-  </script>
-  <meta name="description" content="AI Product Manager specializing in GenAI, ML-driven benchmarking, and digital transformation in healthcare and energy." />
-
-  <style>
-    :root {
-      --bg: #050816;
-      --bg-alt: #0b1020;
-      --card: #111827;
-      --accent: #38bdf8;
-      --accent-soft: rgba(56, 189, 248, 0.15);
-      --text-main: #e5e7eb;
-      --text-muted: #9ca3af;
-      --border-subtle: #1f2937;
-      --danger: #f97373;
-      --radius-lg: 14px;
-      --radius-pill: 999px;
-      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.6);
-      --shadow-pill: 0 10px 25px rgba(15, 23, 42, 0.7);
-      --font-main: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
-        "Segoe UI", sans-serif;
-      --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-        "Liberation Mono", "Courier New", monospace;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      background: radial-gradient(circle at top, #1f2937 0, #020617 45%, #020617 100%);
-      color: var(--text-main);
-      font-family: var(--font-main);
-      -webkit-font-smoothing: antialiased;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      min-height: 100vh;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .page {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      max-width: 1040px;
-      margin: 0 auto;
-      padding: 32px 16px 32px;
-    }
-
-    @media (min-width: 768px) {
-      .page {
-        padding: 40px 24px 40px;
-      }
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 16px;
-      gap: 16px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .avatar-pill {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: radial-gradient(circle at 30% 20%, #38bdf8, #0ea5e9 40%, #0f172a 75%);
-      box-shadow: 0 0 0 1px rgba(148, 163, 184, 0.2),
-         0 18px 40px rgba(15, 23, 42, 0.7);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .avatar-pill::after {
-      content: "";
-      position: absolute;
-      inset: 3px;
-      border-radius: inherit;
-      border: 1px solid rgba(15, 23, 42, 0.8);
-      background: radial-gradient(circle at 30% 0%, rgba(248, 250, 252, 0.2), transparent 50%);
-      mix-blend-mode: screen;
-    }
-
-    .brand-title {
-      font-size: 18px;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      color: #9ca3af;
-    }
-
-    .pill-links {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-    }
-
-    .pill-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 6px 14px;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.85);
-      color: #9ca3af;
-      font-size: 13px;
-      border: 1px solid rgba(31, 41, 55, 0.8);
-      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.7);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      transition: border-color 0.15s ease, background 0.15s ease, transform 0.12s ease;
-    }
-
-    .pill-link span {
-      font-family: var(--font-mono);
-      font-size: 12px;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-    }
-
-    .pill-link:hover {
-      border-color: rgba(56, 189, 248, 0.7);
-      background: rgba(15, 23, 42, 0.95);
-      transform: translateY(-1px);
-    }
-
-    .top-nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 24px;
-    }
-
-    .nav-pill {
-      padding: 5px 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(55, 65, 81, 0.9);
-      background: rgba(15, 23, 42, 0.9);
-      color: #9ca3af;
-      font-size: 11px;
-      font-family: var(--font-mono);
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      cursor: pointer;
-      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.7);
-      transition: border-color 0.12s ease, background 0.12s ease, transform 0.12s ease;
-    }
-
-    .nav-pill:hover {
-      border-color: rgba(56, 189, 248, 0.8);
-      background: rgba(15, 23, 42, 1);
-      transform: translateY(-1px);
-    }
-
-    main {
-      flex: 1;
-    }
-
-    .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 3fr);
-      gap: 24px;
-      margin-bottom: 32px;
-    }
-
-    @media (min-width: 900px) {
-      .hero {
-        grid-template-columns: minmax(0, 3fr) minmax(0, 2.4fr);
-        align-items: center;
-      }
-    }
-
-    .hero-main {
-      padding: 20px 18px 20px;
-      border-radius: 24px;
-      background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 58%),
-        radial-gradient(circle at bottom right, rgba(59, 130, 246, 0.23), transparent 60%),
-        linear-gradient(155deg, #020617 0, #020617 40%, #020617 100%);
-      border: 1px solid rgba(31, 41, 55, 0.9);
-      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.6);
-      position: relative;
-      overflow: hidden;
-    }
-
-    @media (min-width: 768px) {
-      .hero-main {
-        padding: 26px 26px 24px;
-      }
-    }
-
-    .hero-main::before {
-      content: "";
-      position: absolute;
-      inset: -20%;
-      background:
-        radial-gradient(circle at 15% 10%, rgba(244, 244, 245, 0.15), transparent 55%),
-        radial-gradient(circle at 90% 80%, rgba(56, 189, 248, 0.09), transparent 55%);
-      opacity: 0.8;
-      pointer-events: none;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero-kicker {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 4px 11px;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.9);
-      border: 1px solid rgba(31, 41, 55, 0.9);
-      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.85);
-      color: #9ca3af;
-      font-size: 12px;
-      margin-bottom: 14px;
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-    }
-
-    .hero-kicker-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      background: #22c55e;
-      box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.25);
-    }
-
-    .hero-title {
-      font-size: clamp(30px, 4vw, 36px);
-      line-height: 1.12;
-      letter-spacing: 0.01em;
-      margin: 0 0 8px;
-      color: #f9fafb;
-    }
-
-    .hero-subtitle {
-      margin: 0 0 12px;
-      color: #38bdf8;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      font-size: 12px;
-    }
-
-    .hero-text {
-      margin: 0 0 16px;
-      color: #9ca3af;
-      font-size: 14px;
-      max-width: 640px;
-    }
-
-    .hero-highlight {
-      color: #e5e7eb;
-    }
-
-    .hero-metrics {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      margin: 10px 0 18px;
-    }
-
-    .metric-chip {
-      padding: 8px 12px;
-      border-radius: 12px;
-      background: rgba(15, 23, 42, 0.95);
-      border: 1px solid rgba(31, 41, 55, 0.85);
-      font-size: 12px;
-      color: #9ca3af;
-      display: inline-flex;
-      align-items: baseline;
-      gap: 6px;
-      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.9);
-    }
-
-    .metric-value {
-      font-size: 16px;
-      color: #f9fafb;
-      font-weight: 600;
-    }
-
-    .metric-label {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-    }
-
-    .hero-cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      align-items: center;
-    }
-
-    .btn-primary {
-      padding: 9px 18px;
-      border-radius: 999px;
-      border: none;
-      background: linear-gradient(135deg, #38bdf8, #0ea5e9);
-      color: #0f172a;
-      font-weight: 600;
-      font-size: 14px;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      box-shadow: 0 16px 30px rgba(8, 47, 73, 0.85);
-      transition: transform 0.12s ease, box-shadow 0.12s ease, filter 0.12s ease;
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 22px 40px rgba(8, 47, 73, 0.95);
-      filter: brightness(1.03);
-    }
-
-    .btn-ghost {
-      padding: 8px 16px;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.7);
-      background: rgba(15, 23, 42, 0.7);
-      color: #9ca3af;
-      font-size: 13px;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      cursor: pointer;
-      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.7);
-      transition: border-color 0.12s ease, background 0.12s ease, transform 0.12s ease;
-    }
-
-    .btn-ghost:hover {
-      border-color: rgba(56, 189, 248, 0.8);
-      background: rgba(15, 23, 42, 0.9);
-      transform: translateY(-1px);
-    }
-
-    .btn-icon {
-      font-size: 16px;
-    }
-
-    .hero-right {
-      display: none;
-    }
-
-    @media (min-width: 900px) {
-      .hero-right {
-        display: block;
-      }
-    }
-
-    .hero-card {
-      border-radius: 24px;
-      background: radial-gradient(circle at top, rgba(56, 189, 248, 0.18), transparent 60%),
-        linear-gradient(160deg, #020617 0, #020617 100%);
-      border: 1px solid rgba(30, 64, 175, 0.8);
-      padding: 18px;
-      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.95);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-card-badge {
-      position: absolute;
-      top: 14px;
-      right: 16px;
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.9);
-      color: #38bdf8;
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      border: 1px solid rgba(56, 189, 248, 0.7);
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .hero-card-title {
-      font-size: 14px;
-      font-weight: 500;
-      margin-bottom: 12px;
-      color: #e5e7eb;
-    }
-
-    .timeline {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      border-radius: 18px;
-      background: rgba(15, 23, 42, 0.9);
-      border: 1px solid rgba(31, 41, 55, 0.9);
-      padding: 12px 12px 10px;
-      font-size: 12px;
-      color: #9ca3af;
-    }
-
-    .timeline-item {
-      display: flex;
-      gap: 10px;
-      padding: 7px 4px;
-      border-radius: 10px;
-    }
-
-    .timeline-item + .timeline-item {
-      border-top: 1px dashed rgba(55, 65, 81, 0.7);
-      margin-top: 4px;
-    }
-
-    .timeline-dot {
-      width: 9px;
-      height: 9px;
-      border-radius: 999px;
-      background: linear-gradient(135deg, #38bdf8, #0ea5e9);
-      margin-top: 4px;
-    }
-
-    .timeline-main {
-      flex: 1;
-    }
-
-    .timeline-label {
-      font-family: var(--font-mono);
-      font-size: 11px;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: #9ca3af;
-      margin-bottom: 2px;
-    }
-
-    .timeline-highlight {
-      color: #e5e7eb;
-    }
-
-    .timeline-meta {
-      font-size: 11px;
-      color: #6b7280;
-    }
-
-    .section-grid {
-      display: grid;
-      gap: 18px;
-    }
-
-    @media (min-width: 880px) {
-      .section-grid {
-        grid-template-columns: minmax(0, 1.35fr) minmax(0, 1.1fr);
-        align-items: flex-start;
-      }
-    }
-
-    section {
-      margin-bottom: 24px;
-    }
-
-    .section-card {
-      border-radius: 14px;
-      background: linear-gradient(145deg, rgba(15, 23, 42, 0.98), rgba(15, 23, 42, 0.96));
-      border: 1px solid rgba(31, 41, 55, 0.95);
-      padding: 16px 16px 14px;
-      box-shadow: 0 16px 35px rgba(15, 23, 42, 0.9);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .section-card::before {
-      content: "";
-      position: absolute;
-      inset: -10%;
-      background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.11), transparent 55%);
-      opacity: 0.75;
-      pointer-events: none;
-    }
-
-    .section-inner {
-      position: relative;
-      z-index: 1;
-    }
-
-    .section-title-row {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 12px;
-      margin-bottom: 8px;
-    }
-
-    .section-title {
-      font-size: 15px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #9ca3af;
-    }
-
-    .section-tag {
-      font-size: 11px;
-      background: rgba(15, 23, 42, 0.9);
-      border-radius: 999px;
-      padding: 2px 9px;
-      border: 1px solid rgba(55, 65, 81, 0.9);
-      color: #6b7280;
-      font-family: var(--font-mono);
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
-
-    .section-body {
-      font-size: 13px;
-      color: #9ca3af;
-      line-height: 1.6;
-    }
-
-    .list-compact {
-      padding-left: 18px;
-      margin: 6px 0 2px;
-    }
-
-    .list-compact li {
-      margin-bottom: 5px;
-    }
-
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 8px;
-    }
-
-    .pill {
-      border-radius: 999px;
-      padding: 4px 9px;
-      font-size: 11px;
-      border: 1px solid rgba(55, 65, 81, 0.9);
-      background: rgba(15, 23, 42, 0.95);
-      color: #9ca3af;
-      white-space: nowrap;
-    }
-
-    .emphasis {
-      color: #e5e7eb;
-    }
-
-    .text-danger {
-      color: #f97373;
-    }
-
-    .edu-grid {
-      display: grid;
-      gap: 10px;
-      margin-top: 8px;
-    }
-
-    .edu-item-title {
-      font-size: 13px;
-      color: #e5e7eb;
-    }
-
-    .edu-meta {
-      font-size: 12px;
-      color: #9ca3af;
-    }
-
-    footer {
-      margin-top: 24px;
-      font-size: 11px;
-      color: #6b7280;
-      display: flex;
-      justify-content: space-between;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-
-    footer a {
-      text-decoration: underline;
-      text-decoration-style: dotted;
-      text-underline-offset: 2px;
-    }
-
-    /* ── Chat Widget Styles ── */
-    #fab {
-      position: fixed;
-      bottom: 24px;
-      right: 24px;
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #38bdf8, #0ea5e9);
-      color: #0f172a;
-      border: none;
-      cursor: pointer;
-      font-size: 22px;
-      box-shadow: 0 8px 25px rgba(8, 47, 73, 0.85);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 9999;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    #fab:hover {
-      transform: scale(1.05);
-      box-shadow: 0 12px 35px rgba(8, 47, 73, 0.95);
-    }
-
-    .pulse {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      background: rgba(56, 189, 248, 0.4);
-      animation: pulse 2s ease-out infinite;
-    }
-
-    @keyframes pulse {
-      0% { transform: scale(1); opacity: 1; }
-      100% { transform: scale(1.6); opacity: 0; }
-    }
-
-    #chat {
-      position: fixed;
-      bottom: 90px;
-      right: 24px;
-      width: 380px;
-      max-height: 600px;
-      background: #111827;
-      border: 1px solid #1f2937;
-      border-radius: 16px;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-      display: flex;
-      flex-direction: column;
-      z-index: 9998;
-      overflow: hidden;
-    }
-
-    #chat.hide {
-      display: none;
-    }
-
-    .ch-head {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      padding: 16px;
-      background: rgba(15, 23, 42, 0.95);
-      border-bottom: 1px solid #1f2937;
-    }
-
-    .ch-av {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #38bdf8, #0ea5e9);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #0f172a;
-      font-size: 18px;
-      font-weight: bold;
-    }
-
-    .ch-info {
-      flex: 1;
-    }
-
-    .ch-name {
-      color: #e5e7eb;
-      font-weight: 600;
-      font-size: 14px;
-    }
-
-    .ch-sub {
-      color: #9ca3af;
-      font-size: 11px;
-      margin-top: 2px;
-    }
-
-    .ch-close {
-      background: none;
-      border: none;
-      color: #9ca3af;
-      font-size: 18px;
-      cursor: pointer;
-      padding: 4px;
-      transition: color 0.15s ease;
-    }
-
-    .ch-close:hover {
-      color: #e5e7eb;
-    }
-
-    .ch-msgs {
-      flex: 1;
-      overflow-y: auto;
-      padding: 16px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      max-height: 360px;
-    }
-
-    .msg {
-      padding: 10px 14px;
-      border-radius: 12px;
-      font-size: 13px;
-      line-height: 1.5;
-      max-width: 85%;
-    }
-
-    .msg.user {
-      background: linear-gradient(135deg, #38bdf8, #0ea5e9);
-      color: #0f172a;
-      align-self: flex-end;
-    }
-
-    .msg.bot {
-      background: rgba(15, 23, 42, 0.95);
-      color: #e5e7eb;
-      border: 1px solid #1f2937;
-      align-self: flex-start;
-    }
-
-    .msg.typing::after {
-      content: '...';
-      animation: typing 1.2s infinite;
-    }
-
-    @keyframes typing {
-      0%, 20% { content: '.'; }
-      40% { content: '..'; }
-      60%, 100% { content: '...'; }
-    }
-
-    .ch-chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      padding: 12px 16px;
-      border-top: 1px solid #1f2937;
-    }
-
-    .chip {
-      padding: 6px 12px;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.95);
-      border: 1px solid #1f2937;
-      color: #9ca3af;
-      font-size: 11px;
-      cursor: pointer;
-      transition: border-color 0.15s ease, background 0.15s ease;
-      white-space: nowrap;
-    }
-
-    .chip:hover {
-      border-color: rgba(56, 189, 248, 0.7);
-      background: rgba(15, 23, 42, 1);
-    }
-
-    .ch-inp {
-      display: flex;
-      gap: 8px;
-      padding: 12px 16px;
-      border-top: 1px solid #1f2937;
-      background: rgba(15, 23, 42, 0.95);
-    }
-
-    #inp {
-      flex: 1;
-      background: rgba(15, 23, 42, 0.95);
-      border: 1px solid #1f2937;
-      border-radius: 8px;
-      color: #e5e7eb;
-      font-size: 13px;
-      padding: 8px 12px;
-      resize: none;
-      font-family: var(--font-main);
-      min-height: 36px;
-      max-height: 100px;
-    }
-
-    #inp:focus {
-      outline: none;
-      border-color: rgba(56, 189, 248, 0.7);
-    }
-
-    #send {
-      background: linear-gradient(135deg, #38bdf8, #0ea5e9);
-      border: none;
-      border-radius: 8px;
-      color: #0f172a;
-      font-size: 16px;
-      cursor: pointer;
-      padding: 8px 14px;
-      transition: opacity 0.15s ease;
-    }
-
-    #send:disabled {
-      opacity: 0.5;
-      cursor: not-allowed;
-    }
-
-    #send:not(:disabled):hover {
-      filter: brightness(1.1);
-    }
-
-    .ch-foot {
-      padding: 8px 16px;
-      text-align: center;
-      font-size: 10px;
-      color: #6b7280;
-      border-top: 1px solid #1f2937;
-      background: rgba(15, 23, 42, 0.95);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subhashini Rajamani | AI Product Manager</title>
+    <meta name="description" content="AI Product Manager building generative and machine learning products for regulated industries: trust, guardrails, and human-in-the-loop design.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-deep: #0f172a;
+            --bg-card: #1e293b;
+            --accent: #3b82f6;
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+            --purple-accent: #8b5cf6;
+            --success: #10b981;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+            background-color: var(--bg-deep);
+            color: var(--text-main);
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            overflow: hidden;
+        }
+
+        /* Sidebar / Profile Area */
+        .sidebar {
+            width: 350px;
+            background: rgba(30, 41, 59, 0.8);
+            backdrop-filter: blur(10px);
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            flex-direction: column;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .profile-pic-container {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 25px;
+            border-radius: 20px;
+            background: linear-gradient(135deg, var(--accent), var(--purple-accent));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border: 4px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        .profile-pic-container img { width: 100%; height: 100%; object-fit: cover; }
+        .profile-pic-container i { font-size: 70px; color: white; }
+
+        h1 { font-size: 1.7rem; margin-bottom: 10px; line-height: 1.2; }
+        .tagline { color: var(--text-dim); font-size: 0.9rem; margin-bottom: 30px; line-height: 1.5; }
+
+        .contact-box {
+            text-align: left;
+            background: rgba(15, 23, 42, 0.4);
+            padding: 20px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: auto;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+        .contact-item:last-child { margin-bottom: 0; }
+        .contact-item i { color: var(--accent); width: 20px; text-align: center; }
+        .contact-item a { color: inherit; text-decoration: none; transition: color 0.2s; }
+        .contact-item a:hover { color: var(--accent); }
+
+        .copyable { cursor: pointer; transition: color 0.2s; position: relative; }
+        .copyable:hover { color: var(--accent); }
+
+        .copy-tooltip {
+            position: absolute;
+            background: var(--success);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            display: none;
+        }
+
+        /* Main Content Area */
+        .main-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-deep);
+            min-width: 0;
+        }
+
+        .nav-bar {
+            padding: 25px 50px;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .nav-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-dim);
+            padding: 10px 22px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: 0.3s;
+            font-family: inherit;
+        }
+        .nav-btn:hover { color: var(--text-main); }
+        .nav-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+        .nav-btn.active {
+            background: var(--accent);
+            color: white;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+        }
+
+        .content-body { flex: 1; overflow-y: auto; padding: 40px 50px; }
+
+        .content-section { display: none; animation: fadeIn 0.4s ease-out; }
+        .content-section.active { display: block; }
+
+        .section-intro { color: var(--text-dim); font-size: 0.95rem; margin-bottom: 25px; max-width: 720px; line-height: 1.6; }
+
+        .card {
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .card h3 { color: var(--accent); margin-bottom: 5px; font-size: 1.25rem; }
+        .card .meta { color: var(--text-dim); font-size: 0.85rem; margin-bottom: 15px; font-weight: 500; }
+
+        ul { padding-left: 20px; color: #cbd5e1; }
+        li { margin-bottom: 10px; }
+
+        .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+        .tag { background: rgba(59, 130, 246, 0.1); color: var(--accent); padding: 5px 14px; border-radius: 20px; font-size: 0.75rem; border: 1px solid rgba(59, 130, 246, 0.2); }
+
+        .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; }
+        .skill-box h4 { margin-bottom: 20px; color: var(--purple-accent); display: flex; align-items: center; gap: 10px; }
+
+        /* Point of View */
+        .lead-card { border-left: 4px solid var(--accent); }
+        .lead-card .positioning { font-size: 1.35rem; line-height: 1.5; color: var(--text-main); font-weight: 500; }
+        .lead-card .positioning .em { color: var(--accent); }
+        .lead-card .support { color: #cbd5e1; font-size: 1rem; line-height: 1.7; margin-top: 18px; }
+
+        .principle-card h3 { color: var(--text-main); }
+        .principle-card .kicker { color: var(--purple-accent); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 10px; }
+        .principle-card p { color: #cbd5e1; line-height: 1.7; }
+        .textlink { color: var(--accent); text-decoration: none; font-weight: 600; font-size: 0.9rem; display: inline-block; margin-top: 16px; }
+        .textlink:hover { text-decoration: underline; }
+
+        /* Work placeholders */
+        .placeholder { border: 1px dashed rgba(148, 163, 184, 0.35); background: rgba(15,23,42,0.3); }
+        .field { margin-bottom: 14px; }
+        .field-label { color: var(--purple-accent); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; display: block; margin-bottom: 4px; }
+        .field-hint { color: var(--text-dim); font-style: italic; font-size: 0.92rem; line-height: 1.55; }
+        .field-body { color: #cbd5e1; line-height: 1.7; display: block; }
+
+        /* Prose / essay */
+        .prose { max-width: 760px; }
+        .prose .subtitle { color: var(--text-dim); font-size: 1.05rem; font-style: italic; margin-bottom: 30px; }
+        .prose h4 { color: var(--text-main); font-size: 1.15rem; margin: 34px 0 12px; }
+        .prose p { color: #cbd5e1; line-height: 1.8; margin-bottom: 16px; }
+        .prose strong { color: var(--text-main); }
+        .prose hr { border: none; border-top: 1px solid rgba(255,255,255,0.08); margin: 28px 0; }
+        .prose .principle {
+            border-left: 3px solid var(--accent);
+            padding: 4px 0 4px 18px;
+            margin: 22px 0;
+            color: var(--text-main);
+            font-weight: 500;
+            line-height: 1.7;
+        }
+        .coming-soon { color: var(--text-dim); }
+        .coming-soon .badge { display: inline-block; background: rgba(139,92,246,0.15); color: var(--purple-accent); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; border: 1px solid rgba(139,92,246,0.25); margin-bottom: 12px; }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        @media (prefers-reduced-motion: reduce) {
+            .content-section, * { animation: none !important; }
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            body { flex-direction: column; overflow: auto; height: auto; width: 100%; }
+            .sidebar { width: 100%; border-right: none; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+            .contact-box { margin-top: 25px; }
+            .skills-grid { grid-template-columns: 1fr; }
+            .nav-bar { padding: 20px; }
+            .content-body { padding: 30px 20px; }
+            .lead-card .positioning { font-size: 1.15rem; }
+        }
+    </style>
 </head>
 <body>
-  <div class="page">
-    <header>
-      <div class="brand">
-        <div class="avatar-pill"></div>
-        <div>
-          <div class="brand-title">Subhashini Rajamani</div>
+
+    <aside class="sidebar">
+        <div class="profile-pic-container">
+            <!-- To add a photo: replace the <i> line below with <img src="your-photo.jpg" alt="Subhashini Rajamani"> -->
+            <i class="fa-solid fa-user"></i>
         </div>
-      </div>
-      <div class="pill-links">
-        <a class="pill-link" href="mailto:sreespark3000@gmail.com">
-          <span>@</span>
-          <span>sreespark3000@gmail.com</span>
-        </a>
-        <a class="pill-link" href="tel:+16822739155">
-          <span>☎</span>
-          <span>+1 (682) 273-9155</span>
-        </a>
-        <a class="pill-link" href="https://www.linkedin.com/in/subhashini-rajamani" target="_blank" rel="noopener noreferrer">
-          <span>in</span>
-          <span>LinkedIn</span>
-        </a>
-        <a class="pill-link" href="https://github.com/scriptseedxyz" target="_blank" rel="noopener noreferrer">
-          <span>&gt;_</span>
-          <span>GitHub</span>
-        </a>
-      </div>
-    </header>
+        <h1>Subhashini Rajamani</h1>
+        <p class="tagline">AI Product Manager<br>Trust · Guardrails · Human-in-the-Loop Design</p>
 
-    <nav class="top-nav">
-      <a class="nav-pill" href="#professional-experience">Professional Experience</a>
-      <a class="nav-pill" href="#ai-skills">AI & Technical Skills</a>
-      <a class="nav-pill" href="#ai-case-studies">AI Case Studies</a>
-      <a class="nav-pill" href="#education-credentials">Education</a>
-      <a class="nav-pill" href="#target-roles">Target Roles</a>
-    </nav>
-
-    <main>
-      <section class="hero">
-        <div class="hero-main">
-          <div class="hero-content">
-            <div class="hero-kicker">
-              <span class="hero-kicker-dot"></span>
-              <span>Open to AI Product & Strategy Roles</span>
+        <div class="contact-box">
+            <div class="contact-item">
+                <i class="fa-solid fa-envelope"></i>
+                <a href="mailto:sreespark3000@gmail.com">sreespark3000@gmail.com</a>
             </div>
-            <h1 class="hero-title">
-              AI Product Manager for ML‑driven, audit‑ready enterprise platforms
-            </h1>
-            <p class="hero-subtitle">
-              DIGITAL TRANSFORMATION • GENAI • ML BENCHMARKING • HEALTHCARE & ENERGY
-            </p>
-            <p class="hero-text">
-              I design and ship <span class="hero-highlight">AI‑enabled products that convert ambiguous business goals into measurable ROI, operational risk reduction, and compliance‑friendly workflows.</span> From ML benchmarking in oil & energy to automation in healthcare, I bridge executives, engineers, and auditors.
-            </p>
-
-            <div class="hero-metrics">
-              <div class="metric-chip">
-                <span class="metric-value">15+ yrs</span>
-                <span class="metric-label">TECHNO‑PRODUCT LEADERSHIP</span>
-              </div>
-              <div class="metric-chip">
-                <span class="metric-value">40%</span>
-                <span class="metric-label">ROI UPLIFT ON TRANSFORMATIONS</span>
-              </div>
-              <div class="metric-chip">
-                <span class="metric-value">60%</span>
-                <span class="metric-label">MANUAL EFFORT REDUCTION</span>
-              </div>
+            <div class="contact-item">
+                <i class="fa-brands fa-linkedin"></i>
+                <!-- Replace the href and text below with your LinkedIn URL -->
+                <a href="https://www.linkedin.com/in/subhashini-rajamani" target="_blank" rel="noopener">LinkedIn</a>
             </div>
-
-            <div class="hero-cta-row">
-              <a href="mailto:sreespark3000@gmail.com?subject=Intro%20Call%20with%20Subhashini%20Rajamani&body=Hi%20Subhashini%2C%0A%0AI%27d%20like%20to%20set%20up%20a%2015-minute%20intro%20call.%0A%0ABest%2C%0A" class="btn-ghost">
-                <span class="btn-icon">⚡</span>
-                <span>Schedule 15‑min intro (Email: sreespark3000@gmail.com, Phone: 682‑273‑9155)</span>
-              </a>
+            <div class="contact-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Dallas-Fort Worth, TX</span>
             </div>
-          </div>
         </div>
+    </aside>
 
-        <aside class="hero-right">
-          <div class="hero-card">
-            <div class="hero-card-badge">
-              <span>AI Product Snapshot</span>
-            </div>
-            <div class="hero-card-title">
-              Recent wins as Digital Transformation Strategy Lead
-            </div>
-            <ul class="timeline">
-              <li class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-main">
-                  <div class="timeline-label">GenAI & Automation</div>
-                  <div>
-                    <span class="timeline-highlight">Led AI‑enabled automation and ML‑driven benchmarking products</span> for enterprise stakeholders, increasing productivity while reducing operational risk.
-                  </div>
-                  <div class="timeline-meta">Digital Transformation Strategy - ML/AI Product Manager</div>
+    <div class="main-container">
+        <nav class="nav-bar">
+            <button class="nav-btn active" data-tab="pov" onclick="showTab('pov', this)">Point of View</button>
+            <button class="nav-btn" data-tab="work" onclick="showTab('work', this)">Work</button>
+            <button class="nav-btn" data-tab="writing" onclick="showTab('writing', this)">Writing</button>
+            <button class="nav-btn" data-tab="background" onclick="showTab('background', this)">Background</button>
+        </nav>
+
+        <main class="content-body">
+
+            <!-- ================= POINT OF VIEW ================= -->
+            <section id="pov" class="content-section active">
+                <div class="card lead-card">
+                    <p class="positioning">
+                        I build AI products for domains where being wrong has consequences:
+                        <span class="em">regulated workflows where a human expert's judgment is the accountability layer.</span>
+                    </p>
+                    <p class="support">
+                        Claims, contracts, submissions, filings: work where a person's name is attached to the
+                        decision and a client or regulator can ask them to defend it months later. In these settings
+                        the interesting problem isn't making the model better. It's designing the system around it so
+                        that when the model is wrong, because it will be, sometimes, the failure is caught, the cost
+                        is bounded, and the humans stay in the loop. The AI product isn't the model. It's the system of
+                        controls, feedback, and human judgment that surrounds it.
+                    </p>
                 </div>
-              </li>
-              <li class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-main">
-                  <div class="timeline-label">ML Opportunity Assessment</div>
-                  <div>
-                    Embedded ML in core workflows (incl. QA Risk‑Based Testing Bot) and quantified value through structured ROI modeling, driving executive investment decisions.
-                  </div>
-                  <div class="timeline-meta">Product Manager - Strategy and Analytics Lead</div>
+
+                <div class="card principle-card">
+                    <div class="kicker">How I think · 01</div>
+                    <h3>Trust compounds in small pieces</h3>
+                    <p>
+                        The instinct is to hand AI the whole job: detect the issue, explain it, present it. In regulated
+                        work that's usually the wrong shape. Where a deterministic layer already exists (a rules engine,
+                        a validation service), leave it in place and put AI <em>after</em> it: let the rules do detection,
+                        let the model do explanation against a corpus the user can verify. You shrink the trust surface.
+                        Instead of one large act of faith, you ask for smaller trusts, more of them, each verifiable on its own.
+                    </p>
+                    <a class="textlink" href="#" onclick="showTab('writing'); return false;">Read the full framework →</a>
                 </div>
-              </li>
-              <li class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-main">
-                  <div class="timeline-label">Healthcare Analytics</div>
-                  <div>
-                    Owned integration of healthcare analytics products and third‑party platforms, designing dashboards and logic flows for claims reconciliation at scale.
-                  </div>
-                  <div class="timeline-meta">Sr. Techno‑Functional Business Analyst</div>
+
+                <div class="card principle-card">
+                    <div class="kicker">How I think · 02</div>
+                    <h3>Guardrails map to failure modes, or they're overhead</h3>
+                    <p>
+                        Guardrails treated as an end-of-project hygiene layer produce bloat: generic controls that don't
+                        obviously map to specific risks, each costing latency, tokens, or user friction. I start from the
+                        failure modes instead: what can go wrong, what it costs when it does, and the layered control that
+                        makes it acceptably unlikely. Anything that doesn't trace to a specific failure mode isn't a
+                        guardrail. It's overhead you're paying for nothing.
+                    </p>
+                    <a class="textlink" href="#" onclick="showTab('writing'); return false;">Read the full framework →</a>
                 </div>
-              </li>
-            </ul>
-          </div>
-        </aside>
-      </section>
 
-      <section id="professional-experience" class="section-grid">
-        <article class="section-card">
-          <div class="section-inner">
-            <div class="section-title-row">
-              <h2 class="section-title">Professional Experience</h2>
-              <span class="section-tag">AI • PRODUCT • DELIVERY</span>
-            </div>
-            <div class="section-body">
-              <p class="emphasis">
-                Digital Transformation Strategy Lead / ML/AI Product Manager
-              </p>
-              <ul class="list-compact">
-                <li>Own ML and AI product vision, strategy, and roadmap for automation and analytics platforms, working backwards from business needs to formulate problems and ship impactful Generative AI solutions in a healthcare/energy context.</li>
-                <li>Led 0→1 launch of an enterprise Appian SaaS web portal from concept through production, onboarding 2,000+ users and managing full lifecycle, with features prioritized by customer feedback and business value.</li>
-                <li>Designed and executed a successful beta for an AI-assisted document summarization capability, collecting targeted user feedback that directly shaped requirements and led to production deployment.</li>
-                <li>Partnered with data science and cloud engineering teams to operationalize ML models on AWS SageMaker, defining integration patterns, monitoring needs, and handoffs between Appian workflows and SageMaker endpoints.</li>
-                <li>Acted as development lead, collaborating with Appian developers, data science, and database teams to translate requirements into delivery-ready stories and ensure successful deployment, monitoring, and iteration.</li>
-                <li>Defined and tracked product KPIs (including ~30–50% efficiency gains in key workflows), and regularly reported progress and impact to executive stakeholders.</li>
-                <li>Evangelized AI capabilities by running demos, knowledge-sharing sessions, and close engagement with operations and domain experts to drive adoption and continuous improvement.</li>
-              </ul>
-
-              <p class="emphasis">
-                Project/Product Manager – Strategy & Analytics Lead
-              </p>
-              <ul class="list-compact">
-                <li>Owned end-to-end development and launch of ML-based risk prioritization products for a large PBM client, improving release cycles by ~40–50% through data-driven prioritization and agile delivery.</li>
-                <li>Consulted on ML business cases and model evaluation, and transformed the product development lifecycle by introducing MLOps practices leveraging MLflow for experiment tracking, deployment, and monitoring.</li>
-                <li>Partnered with engineering and business stakeholders to identify high-value opportunities, define requirements, and deliver automation solutions to complex business problems in large-scale healthcare operations.</li>
-                <li>Built executive dashboards and metrics to monitor product performance and adoption, clearly communicating value and status to leadership.</li>
-              </ul>
-
-              <p class="emphasis">
-                Senior Techno-Functional Business Analyst
-              </p>
-              <ul class="list-compact">
-                <li>Designed healthcare analytics dashboards and prototypes from large datasets for the largest clearinghouse, translating stakeholder needs into product specifications and supporting deployment in regulated environments.</li>
-                <li>Facilitated cross-functional collaboration between business, analytics, and technology teams, creating feedback loops that improved solution quality and alignment with evolving business objectives.</li>
-              </ul>
-
-              <p class="emphasis">
-                Techno-Functional Business Analyst
-              </p>
-              <ul class="list-compact">
-                <li>Led UAT cycles for complex enterprise platforms, ensuring high-quality software deployment across multiple systems and stakeholders.</li>
-                <li>Supported business development initiatives through RFP responses, product use cases, and solution demonstrations tailored to client needs.</li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <article id="ai-skills" class="section-card">
-          <div class="section-inner">
-            <div class="section-title-row">
-              <h2 class="section-title">AI & Technical Skills</h2>
-              <span class="section-tag">HANDS‑ON & STRATEGIC</span>
-            </div>
-            <div class="section-body">
-              <p>
-                I combine hands‑on experimentation with ML and GenAI tools with structured product thinking, risk management, and stakeholder storytelling.
-              </p>
-
-              <p class="emphasis">AI, ML & GenAI</p>
-              <div class="pill-row">
-                <span class="pill">Generative AI, LLMs, RAG</span>
-                <span class="pill">Predictive Analytics</span>
-                <span class="pill">ML‑driven benchmarking & scoring</span>
-                <span class="pill">Prompt‑driven workflows</span>
-                <span class="pill">MLflow</span>
-              </div>
-
-              <p class="emphasis" style="margin-top:10px;">Application & Data Stack</p>
-              <div class="pill-row">
-                <span class="pill">Python</span>
-                <span class="pill">Streamlit</span>
-                <span class="pill">SQL (Oracle, MSSQL)</span>
-                <span class="pill">Power BI</span>
-                <span class="pill">AWS Quicksight</span>
-                <span class="pill">AWS Sagemaker</span>
-                <span class="pill">AWS Opensearch</span>
-                <span class="pill">AWS Machine Learning Badge</span>
-              </div>
-
-              <p class="emphasis" style="margin-top:10px;">Automation, Workflow & Delivery</p>
-              <div class="pill-row">
-                <span class="pill">Appian & workflow automation</span>
-                <span class="pill">JIRA</span>
-                <span class="pill">Visio</span>
-                <span class="pill">Agile & SDLC management</span>
-                <span class="pill">Audit‑ready controls & documentation</span>
-              </div>
-
-              <p class="emphasis" style="margin-top:10px;">Leadership & Strategy</p>
-              <div class="pill-row">
-                <span class="pill">Technical Product Management</span>
-                <span class="pill">Digital transformation strategy</span>
-                <span class="pill">Executive storytelling & ROI analysis</span>
-                <span class="pill">Cross‑functional stakeholder alignment</span>
-              </div>
-
-              <p class="emphasis" style="margin-top:10px;">API & Integration</p>
-              <div class="pill-row">
-                <span class="pill">API integration (REST/SOAP)</span>
-                <span class="pill">Appian low-code platform</span>
-                <span class="pill">Enterprise system integration</span>
-                <span class="pill">Authentication & security</span>
-              </div>
-            </div>
-          </div>
-        </article>
-      </section>
-
-      <section id="ai-case-studies" class="section-card">
-        <div class="section-inner">
-          <div class="section-title-row">
-            <h2 class="section-title">Personal AI Case Studies</h2>
-            <span class="section-tag">SELF‑INITIATED PROTOTYPES</span>
-          </div>
-          <div class="section-body">
-            <p style="font-size:12px;color:#9ca3af;">
-              These projects are independent learning prototypes using synthetic or public data.
-              They are not affiliated with any employer.
-            </p>
-
-            <p class="emphasis">Healthcare Proactive Case Management</p>
-            <ul class="list-compact">
-              <li>Problem: Preventable readmissions and deteriorations are not flagged early enough, leading to higher cost of care and poorer outcomes.</li>
-              <li>Solution: Prototype ML model that scores patients for risk and triggers proactive case management workflows (outreach, review queues) via a simple dashboard.</li>
-              <li>Value (est.): Illustrates how a 10–20% earlier intervention rate could translate into significant cost savings and better patient outcomes in a mid‑size health system.</li>
-            </ul>
-            <div class="pill-row">
-              <a class="pill" href="https://proactivecaremanagement-byaabwq279kmcpjdq8qhwr.streamlit.app/" target="_blank">Live Demo</a>
-              <a class="pill" href="https://github.com/scriptseedXYZ/ProavtiveCareManagement" target="_blank">Code & README</a>
-            </div>
-
-             <p class="emphasis" style="margin-top:10px;">ML Prototyping Tool for Students and Researchers</p>
-             <ul class="list-compact">
-               <li>Problem: Students and researchers struggle to quickly prototype and validate ML models, often getting bogged down in boilerplate code and environment setup.</li>
-               <li>Solution: Interactive Streamlit app that simplifies ML prototyping with pre-built templates, automated preprocessing, and one-click model training and evaluation for common use cases.</li>
-               <li>Value (est.): Reduces prototyping time by 50–60% for students and researchers, enabling faster experimentation and learning cycles.</li>
-             </ul>
-             <div class="pill-row">
-               <span class="pill">In Refining Stage</span>
-               <span class="pill">Demo coming soon</span>
-             </div>
-
-             <p class="emphasis" style="margin-top:10px;">Petrochem_Utility_Efficiency_Optimization</p>
-            <ul class="list-compact">
-              <li>Problem: Petrochemical plants were operating utilities (steam, power, cooling, etc.) with limited visibility into real-time efficiency, leading to higher energy costs and difficulty spotting optimization opportunities.</li>
-              <li>Solution: Designed and implemented a Petrochem Utility Efficiency Optimization app that ingests operations data, benchmarks utility performance, and surfaces actionable recommendations to operators through intuitive dashboards and alerts.</li>
-              <li>Value (est.): Enabled data-driven utility optimization, identifying efficiency improvements that can reduce energy consumption and operating costs while improving reliability and decision-making for plant leadership.</li>
-            </ul>
-            <div class="pill-row">
-              <a class="pill" href="https://utilityefficiencyoptimization-m8dhcrwsqmzfiejawrldmf.streamlit.app" target="_blank">Live Demo</a>
-              <a class="pill" href="https://github.com/scriptseedXYZ/UtilityEfficiency_Optimization" target="_blank">Code & README</a>
-            </div>            
-
-             <p class="emphasis" style="margin-top:10px;">Healthcare Fraud Detection</p>
-             <ul class="list-compact">
-               <li>Problem: Fraudulent healthcare claims need early detection without overwhelming investigators with false positives.</li>
-               <li>Solution (planned): Prototype anomaly/behavioral model that scores healthcare claims for fraud risk, surfaces explanations, and feeds a reviewer workflow.</li>
-               <li>Value (est.): Explores how a balanced fraud model could reduce losses while keeping investigation workload manageable.</li>
-             </ul>
-             <div class="pill-row">
-               <span class="pill">Demo coming soon</span>
-               <span class="pill">Planned Repo (placeholder)</span>
-             </div>
-
-             <p class="emphasis" style="margin-top:10px;">Healthcare Model Fine Tuning (Planned)</p>
-             <ul class="list-compact">
-               <li>Problem: Pre-trained models often don't perform well on specialized healthcare data and require domain-specific fine-tuning expertise.</li>
-               <li>Solution (planned): Framework and tools for fine-tuning foundation models on healthcare datasets, with automated evaluation and deployment pipelines.</li>
-               <li>Value (est.): Enables healthcare organizations to adapt general-purpose AI models to their specific needs, improving accuracy and relevance by 20–30%.</li>
-             </ul>
-             <div class="pill-row">
-               <span class="pill">Demo coming soon</span>
-               <span class="pill">Planned Repo (placeholder)</span>
-             </div>
-          </div>
-        </div>
-      </section>
-      <section id="education-credentials" class="section-grid">
-        <article class="section-card">
-          <div class="section-inner">
-            <div class="section-title-row">
-              <h2 class="section-title">Education & Credentials</h2>
-              <span class="section-tag">DATA • PRODUCT • ENGINEERING</span>
-            </div>
-            <div class="section-body">
-              <div class="edu-grid">
-                <div>
-                  <div class="edu-item-title">MS, Business Analytics (Data Science)</div>
-                  <div class="edu-meta">Graduate‑level training in data science, statistics, and business analytics.</div>
+                <div class="card principle-card">
+                    <div class="kicker">How I think · 03</div>
+                    <h3>Measure correctness, not acceptance</h3>
+                    <p>
+                        Acceptance rate, thumbs-down, click-through: easy to measure, and they trend up over time. But
+                        they're behavioral metrics, not quality ones. A time-pressured user rubber-stamping a plausible
+                        answer looks identical to one who actually verified it, until something breaks. So a ground-truth
+                        audit (senior reviewers blind-checking a random sample of accepted outputs) runs alongside from
+                        day one, not retrofitted after the client complaint.
+                    </p>
+                    <a class="textlink" href="#" onclick="showTab('writing'); return false;">Read the full framework →</a>
                 </div>
-                <div>
-                  <div class="edu-item-title">Bachelor's, Computer Science</div>
-                  <div class="edu-meta">Strong foundation in computer science and software engineering.</div>
+            </section>
+
+            <!-- ================= WORK ================= -->
+            <section id="work" class="content-section">
+                <p class="section-intro">
+                    Selected projects, framed by the decision that mattered rather than the task list. Details are
+                    anonymized here, happy to walk through the specifics in conversation.
+                </p>
+
+                <div class="card">
+                    <h3>AI assistant for a regulated review workflow</h3>
+                    <div class="meta">Anonymized · AI Product Management · current</div>
+                    <div class="field"><span class="field-label">Problem</span><span class="field-body">Domain experts run several review cycles per client submission, and most of that time goes to repetitive verification: digging through historical documents to confirm each error a rules engine had already flagged. Cycles dragged and clients waited. The experts also carry the accountability for every decision, so the hard constraint wasn't cognitive load. It was that experts won't accept an AI insight they can't verify.</span></div>
+                    <div class="field"><span class="field-label">Decision</span><span class="field-body">I kept the deterministic rules engine intact and inserted AI only after a flag fires: the engine still detects, the AI generates a cited, explainable insight for each flag. That was a deliberate push against my own team, who wanted AI to replace the engine and do the flagging itself. I argued the deterministic layer was auditable and faster to ship, and moving AI upstream would multiply the trust burden and the audit surface. The architecture followed from that stance: a RAG pipeline on AWS Bedrock over ~9,000 documents with Titan embeddings; Aurora chosen over OpenSearch for our scale and access pattern at materially lower cost; and Claude Haiku 4.5 for generation after a head-to-head evaluation showed the quality delta against frontier models didn't justify roughly 10x the token cost. Per-tenant metadata isolation is enforced at the database layer, non-negotiable for regulated data.</span></div>
+                    <div class="field"><span class="field-label">Outcome</span><span class="field-body">In the pilot cohort, review time dropped about 50% (from 2-3 days to ~1.5 per cycle) at a 75% acceptance rate, rolled out senior-experts-first with a control group left on the old process for comparison. The gate for external rollout is 90% cited relevance across a full cycle. The sharpest lesson came from getting a metric wrong: acceptance rate alone couldn't separate "accepted because correct" from "accepted because rushed," so I'm adding a monthly blind sampled audit to calibrate acceptance against ground-truth correctness: designed in, not retrofitted.</span></div>
+                    <div class="tags"><span class="tag">GenAI</span><span class="tag">RAG</span><span class="tag">AWS Bedrock</span><span class="tag">Aurora</span><span class="tag">Guardrails</span><span class="tag">Human-in-the-loop</span></div>
                 </div>
-                <div>
-                  <div class="edu-item-title">Machine Learning Graduate Certificate</div>
-                  <div class="edu-meta">Focused coursework in ML algorithms and applied modeling in AWS.</div>
+            </section>
+
+            <!-- ================= WRITING ================= -->
+            <section id="writing" class="content-section">
+                <p class="section-intro">Long-form pieces on building AI in regulated domains.</p>
+
+                <div class="card prose">
+                    <h3 style="font-size:1.6rem;">Trust Before Throughput</h3>
+                    <p class="subtitle">A framework for introducing AI into regulated workflows without losing the humans.</p>
+
+                    <h4>The shape of the problem</h4>
+                    <p>A common pattern for AI product managers in regulated domains looks like this: there's a workflow where human experts review something (claims, contracts, submissions, filings) across multiple cycles. Most of the review time is spent on repetitive lookup and verification work that AI could plausibly reduce. Leadership wants faster cycle times. Users want less cognitive load. On paper, this is a straightforward AI opportunity.</p>
+                    <p>In practice, the standard AI PM playbook (pick a model, retrieve some context, generate an output, measure quality) doesn't fully apply. What makes these workflows hard isn't the technical problem. It's that the human experts aren't just labor to be automated. They're the audit and accountability layer. Their names are attached to decisions. When a client challenges a result, or a regulator asks a question, the expert's judgment is what gets defended.</p>
+                    <p>That changes the product problem. The question isn't "can AI do this work faster than a human." It's "can AI produce output that a domain expert can <em>verify</em> faster than they could do the work themselves." Those are different problems. The first is a model quality problem. The second is a product design problem, and it's the one that actually determines whether AI in these domains earns the trust required to keep operating.</p>
+                    <p>What follows is a set of principles I've applied, and, in one case, learned by getting wrong, for building AI products in this shape.</p>
+
+                    <hr>
+
+                    <h4>Put AI behind deterministic layers where possible</h4>
+                    <p>The first instinct when introducing AI into a review workflow is to use it end-to-end. Ingest the input, identify the issues, explain them, present to the user. One AI system, doing the whole job.</p>
+                    <p>For regulated workflows, this is usually the wrong shape. If there's an existing deterministic component in the workflow (a rules engine, a validation service, a policy check), leave it in place. Insert AI <em>after</em> it, not around it. Let the deterministic layer do detection. Let the AI do explanation, contextualization, and precedent lookup for what the deterministic layer flagged.</p>
+                    <p>Two things happen when you do this. First, you preserve the auditability of the detection step. A rule that fires with a threshold and a condition is defensible in a way that a probabilistic model's flag isn't. Second, and more important, you shrink the trust surface. Instead of asking users to trust that the AI can accurately identify issues <em>and</em> explain them, you ask them to trust only the explanation, against a corpus they can verify.</p>
+                    <p class="principle">Trust compounds when you don't ask users to trust everything at once. Ask for smaller trusts, more of them, and layer them so each is verifiable independently.</p>
+                    <p>There are cases where AI has to do detection, where no deterministic layer exists, or where the pattern is too complex for rules. In those cases, the trust work is harder and the guardrail architecture has to carry more weight. But when a deterministic layer already exists, replacing it with AI is trading auditable determinism for probabilistic inference. That trade is rarely worth it in regulated contexts.</p>
+
+                    <hr>
+
+                    <h4>Architecture principles that matter more than they look</h4>
+                    <p>Two technical decisions come up repeatedly in AI systems of this shape, and both are worth defending consciously rather than defaulting to.</p>
+                    <p><strong>Vector store selection.</strong> The default choice for RAG systems in AWS environments is often OpenSearch: it's a strong retrieval engine and it's what teams reach for. But for many enterprise use cases, the corpus is smaller than OpenSearch is optimized for, the retrieval is heavily metadata-filtered, and the access pattern is closer to relational than to full-text search. In those cases, Aurora with vector capabilities is often sufficient, integrates cleanly with the rest of the data layer, and is materially cheaper.</p>
+                    <p>The principle: pick the store that matches the workload, not the one with the strongest theoretical characteristics on a workload you don't have. Running the actual comparison (retrieval quality on your data, at your scale, with your metadata patterns) is worth the week it takes. Most teams don't do this and pay for it in cloud spend.</p>
+                    <p><strong>Model tier selection.</strong> The default choice for generation is usually a frontier model. The assumption is that quality will be higher. Often it is, but the delta varies enormously by task. For structured tasks like contextualizing flagged issues against retrieved documents, smaller models can perform within margin of the larger models at roughly an order of magnitude lower cost per inference.</p>
+                    <p>The discipline is running the head-to-head evaluation on your actual task, holding a quality bar, and picking the cheapest model that clears it. This is uncomfortable: it forces you to defend a cost-conscious choice against the assumption that bigger is better, but at production volume, the cost delta between model tiers is not marginal.</p>
+                    <p><strong>One architectural choice that isn't negotiable in multi-tenant regulated contexts:</strong> metadata isolation has to be enforced at the <em>database</em> layer, not the application layer. Application-layer filtering means a bug in application logic can leak documents from one client's context into another's. Database-layer filtering means isolation is enforced by the query itself. This distinction matters because the failure mode (cross-client data leakage) is a compliance-grade event, not a UX issue.</p>
+
+                    <hr>
+
+                    <h4>Guardrails as failure-mode-mapped controls</h4>
+                    <p>Guardrails in AI products are often treated as a hygiene layer added at the end. That framing produces bloat: a list of generic controls that don't obviously map to specific risks, each one costing latency or tokens or user friction.</p>
+                    <p>The framing that works better is to start from <em>failure modes</em> and work backward. For each failure mode: what can go wrong, what's the cost of it going wrong, and what layered controls make it acceptably unlikely?</p>
+                    <p>In regulated review workflows, five failure modes recur:</p>
+                    <p><strong>Cross-client data leakage.</strong> The highest-severity failure. Primary control: metadata-scoped retrieval at the database layer. Secondary: audit logging of every retrieval, with post-hoc investigation capability. Tertiary: periodic red-team testing with mismatched metadata to verify the system returns nothing.</p>
+                    <p><strong>Ungrounded inference.</strong> The model produces a plausible-sounding output that isn't supported by retrieved documents. The output looks correct, which is what makes it dangerous. Primary control: strict citation requirement in the system prompt. Secondary: escalation as a first-class output when retrieval returns nothing sufficient. The model must be able to say "I don't have enough to answer this" without treating it as a failure state.</p>
+                    <p><strong>Automation bias.</strong> The user accepts an inference because it's plausible, not because they verified it. This survives all the technical guardrails, because it's a human failure enabled by product design. The control isn't technical. It's structural. Design the output so verification is faster than fabrication would be worthwhile. Every inference includes the citation the user can click through to. The retrieved document surfaces alongside the inference. Rejecting or escalating is a single click. Make verification the path of least resistance.</p>
+                    <p><strong>Latency and throughput degradation.</strong> Users lose trust in the tool's reliability when it falls behind. Controls are conventional but need to be defined: SLA monitoring at p95 and p99, batch processing where real-time isn't required, rate limiting against API caps, graceful degradation states.</p>
+                    <p><strong>Cost blowout.</strong> Batch inference at scale can produce surprising bills. Controls: per-tenant cost budgeting, monitoring on tokens per request, and alerting on deviation from historical patterns.</p>
+                    <p>Two guardrails are worth flagging as product decisions rather than engineering choices:</p>
+                    <p><strong>Temperature at near-zero for generation.</strong> In regulated contexts, consistency and grounding matter more than creativity. Two similar inputs should produce similar outputs, not stylistic variations. This isn't a hyperparameter choice. It's a product stance about what kind of AI this is.</p>
+                    <p><strong>Human review as non-negotiable.</strong> There should be no configuration where AI output is auto-applied to consequential artifacts. The expert is always the last mile. This isn't a v1 constraint you plan to relax. It's the shape of the product.</p>
+                    <p>Every guardrail costs something. The PM job isn't to add guardrails. It's to defend the specific set of guardrails as worth their cost. Anything that doesn't trace to a specific failure mode isn't a guardrail; it's overhead.</p>
+
+                    <hr>
+
+                    <h4>Sequencing trust in rollout</h4>
+                    <p>Shipping the system isn't the launch. Getting the users to trust it enough to catch its errors, rather than rubber-stamp them, is.</p>
+                    <p>Rollout in regulated workflows should be sequenced deliberately. The first cohort should be <em>senior</em> users, not junior ones. This is counterintuitive because senior users are usually the harder sell. But they're the right early users for two reasons. They can recognize when the AI's output is subtly wrong, because they've built the intuitions the model is trying to approximate. And they have the standing to criticize the tool credibly. If a senior user says an output is misleading, that feedback carries weight. If a junior user says the same thing, it might be read as unfamiliarity.</p>
+                    <p>Starting with the population that can most credibly criticize the system produces better signal than starting with the population most likely to accept it.</p>
+                    <p>Feedback loops should be structured, not ambient. Thumbs-down with required comments. Weekly triage that classifies each rejection into buckets: retrieval problem, generation problem, or process problem. Each bucket routes to a different team. The classification discipline matters more than the volume of feedback: it forces the loop to stay closed, and it gives users visible evidence that their feedback matters.</p>
+                    <p>Expansion gates should be defined upfront. Internal expansion has one bar; external client-facing rollout has a higher one. Holding those gates against pressure to lower them is one of the harder product decisions on this class of project, and one worth committing to publicly early.</p>
+
+                    <hr>
+
+                    <h4>The metric trap</h4>
+                    <p>There's one lesson I've learned by getting it wrong on projects of this shape, and it's the most consequential one I'd pass on.</p>
+                    <p>Behavioral metrics from users (acceptance rate, thumbs-down rate, click-through) are easy to measure, directional, and often trend upward over time. It's tempting to anchor on them as the primary signal that a product is working.</p>
+                    <p>They're not quality metrics. They're behavioral metrics. And the gap between the two matters more than it looks.</p>
+                    <p>High acceptance rate can mean the AI's outputs are correct and users are validating them. It can also mean users are time-pressured, the output looks plausible, and accepting is the path of least resistance. Both patterns produce the same number.</p>
+                    <p>For any AI product where the user's own workflow depends on trusting the output, behavioral acceptance is a <em>lagging</em> indicator of quality, and worse, it's ambiguous. Users who under-trust the system eventually stop using it, which does show up in the metric. But users who <em>over-trust</em> the system look identical to users who correctly trust it, until something goes wrong.</p>
+                    <p>The correction is a ground-truth check running in parallel from day one. A sampled audit where senior users re-verify a random subset of accepted outputs, blind to the fact that they were accepted. If audit agreement diverges from acceptance rate, that's the signal that the behavioral metric is misleading.</p>
+                    <p class="principle">When the headline metric for an AI product is a behavioral signal, there needs to be a correctness check running alongside it from launch, not retrofitted later.</p>
+                    <p>In regulated domains, the cost of measuring engagement instead of correctness doesn't show up in the behavioral metric until it shows up somewhere much worse: a client complaint, an audit finding, a regulatory question.</p>
+
+                    <hr>
+
+                    <h4>Closing</h4>
+                    <p>There are several ways to solution AI into a regulated workflow. Speed to production, aggressive scale, and non-disruptive parallel deployment are all legitimate paths, and each produces a different product. The path I've argued for here prioritizes earning trust before earning throughput: AI as a bounded assistant behind a deterministic layer, in a workflow the users already understand. It costs some speed and some ambition. What it produces is a system users adopt, correct, and eventually ask to expand, the point at which internal rollout becomes external rollout, and the users who pushed back hardest at the start start surfacing new use cases where AI could help them next.</p>
+                    <p>The most useful thing I'd offer isn't a technique. It's a stance. In regulated domains, the interesting problem isn't making the AI better. It's designing the system around the AI so that when the AI is wrong, because it will be, sometimes, the failure is caught, the cost is bounded, and the trust doesn't collapse.</p>
+                    <p>The AI product isn't the model. It's the system of controls, feedback, and human judgment that surrounds it. That's what determines whether AI in these domains earns the trust required to keep operating.</p>
                 </div>
-                <div>
-                  <div class="edu-item-title">Appian Certified Developer</div>
-                  <div class="edu-meta">Certified expertise in low‑code workflow and automation platforms.</div>
+
+                <div class="card coming-soon">
+                    <span class="badge">In progress</span>
+                    <h3 style="color:var(--text-main);">Healthcare AI Guardrails</h3>
+                    <p style="line-height:1.7; margin-top:8px;">An evaluation harness and companion writeup, turning the guardrail principles above into something runnable. Coming next.</p>
                 </div>
-              </div>
-            </div>
-          </div>
-        </article>
+            </section>
 
-        <article id="target-roles" class="section-card">
-          <div class="section-inner">
-            <div class="section-title-row">
-              <h2 class="section-title">Target Roles</h2>
-              <span class="section-tag">WHAT I'M LOOKING FOR</span>
-            </div>
-            <div class="section-body">
-              <p>
-                I am most excited by roles where I can own AI‑powered products end‑to‑end, from opportunity discovery to launch and adoption in regulated, high‑stakes environments.
-              </p>
-              <ul class="list-compact">
-                <li>AI Product Manager / Senior Product Manager – AI / ML</li>
-                <li>Product Lead for GenAI platforms or ML‑powered analytics</li>
-                <li>Digital Transformation / Automation Product Owner</li>
-              </ul>
-              <p style="margin-top:8px;">
-                Ideal domains: healthcare, energy, fintech, and other data‑rich, compliance‑heavy industries where responsible AI and measurable business impact matter.
-              </p>
-              <p class="text-danger" style="margin-top:6px;">
-                Location: Dallas–Fort Worth (hybrid or remote); open to US‑based remote roles.
-              </p>
-            </div>
-          </div>
-        </article>
-      </section>
-    </main>
+            <!-- ================= BACKGROUND ================= -->
+            <section id="background" class="content-section">
+                <p class="section-intro">The traditional record: roles, skills, and education.</p>
 
-    <footer>
-      <span>Last updated: 2026 · Built with HTML & CSS.</span>
-      <span>Ask me about: GenAI product strategy, ML benchmarking, and AI in healthcare & energy.</span>
-    </footer>
-  </div>
+                <div class="card">
+                    <h3>Digital Transformation Strategy Product Manager / Appian Product Manager</h3>
+                    <div class="meta">Solomon Associates (Munich Re) | 2021 - Present</div>
+                    <ul>
+                        <li>Led enterprise automation and AI-enabled product initiatives focused on productivity and risk-mitigation gains.</li>
+                        <li>Served as technical product advisor to senior stakeholders, translating business goals into scalable solutions.</li>
+                        <li>Managed end-to-end product rollout for secure file transfers, workflow automation, and internal tools.</li>
+                        <li>Developed ML-driven benchmarking solutions and mentored a team of developers.</li>
+                        <li>Designed prototypes, delivery roadmaps, and execution strategies for digital initiatives.</li>
+                    </ul>
+                    <div class="tags">
+                        <span class="tag">GenAI</span><span class="tag">Appian</span><span class="tag">ML</span><span class="tag">Agile</span>
+                        <span class="tag">Product Roadmap</span><span class="tag">Streamlit</span><span class="tag">Python</span><span class="tag">AWS SageMaker</span>
+                    </div>
+                </div>
 
-  <!-- ── CHAT WIDGET ── -->
-  <button id="fab" aria-label="Ask AI about Subhashini">
-    ✦<span class="pulse"></span>
-  </button>
+                <div class="card">
+                    <h3>Project Manager, Strategy &amp; Analytics Lead</h3>
+                    <div class="meta">Cognizant Technology Solutions | 2017 - 2019</div>
+                    <ul>
+                        <li>Led initiatives to evaluate and operationalize ML opportunities, including a QA risk-based testing bot.</li>
+                        <li>Drove process enhancements to strengthen SDLC audit readiness, compliance, and quality assurance.</li>
+                        <li>Conducted ROI modeling to guide executive investment decisions, reducing manual effort by 60%.</li>
+                        <li>Achieved 40% ROI improvement through large-scale transformation across 20+ applications.</li>
+                    </ul>
+                    <div class="tags">
+                        <span class="tag">ROI Analysis</span><span class="tag">Power BI</span><span class="tag">Automation</span><span class="tag">SQL</span>
+                    </div>
+                </div>
 
-  <div id="chat" class="hide">
-    <div class="ch-head">
-      <div class="ch-av">✦</div>
-      <div class="ch-info">
-        <div class="ch-name">Ask about Subhashini</div>
-        <div class="ch-sub">AI assistant · answers recruiter questions</div>
-      </div>
-      <button class="ch-close" onclick="closeChat()">✕</button>
+                <div class="card">
+                    <h3>Sr. Techno-Functional Business Lead & Technical Product Manager</h3>
+                    <div class="meta">Cognizant Technology Solutions | 2008 - 2017</div>
+                    <ul>
+                        <li>Owned healthcare analytics product integration and third-party platform evaluation.</li>
+                        <li>Authored detailed user stories and prototypes to bridge technical and business stakeholders.</li>
+                        <li>Designed logic flows and dashboards for claims reconciliation to support strategic decision-making.</li>
+                        <li>Trained operations teams and implemented feedback loops for continuous product improvement.</li>
+                    </ul>
+                    <div class="tags">
+                        <span class="tag">Product Owner</span><span class="tag">Power BI</span><span class="tag">Oracle / MSSQL</span>
+                        <span class="tag">Visio</span><span class="tag">JIRA</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Quality Engineer / Business Analyst</h3>
+                    <div class="meta">Cognizant Technology Solutions | 2005 - 2008</div>
+                    <ul>
+                        <li>Supported product owners in defining user stories and documentation for a healthcare care-management application.</li>
+                        <li>Ran UAT of developed features and bridged the gap between IT and business on requirements.</li>
+                    </ul>
+                    <div class="tags">
+                        <span class="tag">Oracle</span><span class="tag">UAT</span><span class="tag">User Stories</span><span class="tag">Documentation</span>
+                    </div>
+                </div>
+
+                <div class="skills-grid">
+                    <div class="skill-box card">
+                        <h4><i class="fa-solid fa-chart-line"></i> Leadership &amp; Strategy</h4>
+                        <ul>
+                            <li>AI / Technical Product Management</li>
+                            <li>Digital Transformation Strategy</li>
+                            <li>Stakeholder Alignment &amp; Executive Communication</li>
+                            <li>Business Case Development &amp; ROI Analysis</li>
+                            <li>Agile &amp; SDLC Management</li>
+                        </ul>
+                    </div>
+                    <div class="skill-box card" style="border-top: 4px solid var(--accent);">
+                        <h4><i class="fa-solid fa-code"></i> Technical Expertise</h4>
+                        <ul>
+                            <li>Python &amp; Streamlit</li>
+                            <li>Machine Learning &amp; GenAI (RAG, guardrails)</li>
+                            <li>Appian &amp; Workflow Automation</li>
+                            <li>SQL (Oracle, MSSQL)</li>
+                            <li>Power BI &amp; AWS QuickSight</li>
+                            <li>AWS (SageMaker, OpenSearch, Aurora)</li>
+                            <li>JIRA &amp; Visio</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Education &amp; Certifications</h3>
+                    <ul>
+                        <li><strong>MS, Business Analytics (Data Science)</strong>, University of Texas at Dallas</li>
+                        <li><strong>Bachelor's, Computer Science</strong>, Osmania University</li>
+                        <li>Machine Learning Graduate Certificate</li>
+                        <li>Appian Certified Developer</li>
+                    </ul>
+                </div>
+            </section>
+
+        </main>
     </div>
-    <div class="ch-msgs" id="msgs">
-      <div class="msg bot">Hi! I can answer any questions about Subhashini's background, skills, or fit for your role. What would you like to know?</div>
-    </div>
-    <div class="ch-chips" id="chips">
-      <span class="chip" onclick="ask(this.textContent)">Why hire Subhashini?</span>
-       <span class="chip" onclick="ask(this.textContent)">API integration experience?</span>
-      <span class="chip" onclick="ask(this.textContent)">AI agents & LLMs?</span>
-      <span class="chip" onclick="ask(this.textContent)">Technical depth?</span>
-      <span class="chip" onclick="ask(this.textContent)">Enterprise SaaS track record?</span>
-    </div>
-    <div class="ch-inp">
-      <textarea id="inp" placeholder="Ask anything…"></textarea>
-      <button id="send" onclick="sendMsg()">➤</button>
-    </div>
-    <div class="ch-foot">AI · responses based on resume data · may not reflect latest updates</div>
-  </div>
 
-  <script>
-    // ── CONFIG — paste your Gemini API key here, or leave "" for fallback mode ─
-    const GEMINI_KEY = "";
-    // ──────────────────────────────────────────────────────────────────────────
-
-    const SYSTEM_CONTEXT = `You are an AI assistant representing Subhashini Rajamani, an experienced AI Product Manager with expertise in Appian platform, API integrations, and ML/AI products. Help recruiters and hiring managers learn about her fit for AI Product Manager roles. Be concise (under 100 words), confident, and accurate. Never fabricate info not in the bio.
-
-BIO:
-- 15+ years in AI product management, B2B SaaS, and digital transformation
-- Current: Digital Transformation Strategy Lead / ML/AI Product Manager, Solomon Associates (Munich Re), 2021–present
-  • Own ML and AI product vision, strategy, and roadmap for automation and analytics platforms, working backwards from business needs to formulate problems and ship impactful Generative AI solutions in healthcare/energy context
-  • Led 0→1 launch of enterprise Appian SaaS web portal from concept through production, onboarding 2,000+ users and managing full lifecycle
-  • Designed and executed successful beta for AI-assisted document summarization capability, collecting targeted user feedback that shaped requirements and led to production deployment
-  • Partnered with data science and cloud engineering teams to operationalize ML models on AWS SageMaker, defining integration patterns, monitoring needs, and handoffs between Appian workflows and SageMaker endpoints
-  • Acted as development lead, collaborating with Appian developers, data science, and database teams to translate requirements into delivery-ready stories
-  • Defined and tracked product KPIs (including ~30–50% efficiency gains in key workflows), and regularly reported progress and impact to executive stakeholders
-  • Evangelized AI capabilities by running demos, knowledge-sharing sessions, and close engagement with operations and domain experts
-  • Designed and executed API integration strategy on Appian low-code platform — connecting ERPs, CRMs, and external services via REST/SOAP
-- Cognizant (2017–2020): Project/Product Manager – Strategy & Analytics Lead — owned end-to-end development and launch of ML-based risk prioritization products for large PBM client, improving release cycles ~40–50%
-  • Consulted on ML business cases and model evaluation, introduced MLOps practices leveraging MLflow for experiment tracking, deployment, and monitoring
-  • Partnered with engineering and business stakeholders to deliver automation solutions to complex business problems in large-scale healthcare operations
-- Cognizant (2008–2017): Senior Techno-Functional Business Analyst — designed healthcare analytics dashboards and prototypes from large datasets for largest clearinghouse, translating stakeholder needs into product specifications
-  • Facilitated cross-functional collaboration between business, analytics, and technology teams, creating feedback loops that improved solution quality
-- Cognizant (2005–2008): Techno-Functional Business Analyst — led UAT cycles for complex enterprise platforms, supported business development through RFP responses
-- Education: MS Business Analytics (Data Science), UT Dallas 2020–2022; BS Computer Science, Osmania University 2005; Machine Learning Graduate Certificate (focused coursework in ML algorithms and applied modeling in AWS)
-- Certifications: Appian Certified Developer, UTD ML Certified, AWS Machine Learning Badge
-- Skills: API integration (REST/SOAP), Appian low-code platform, foundation models, AI agents, LangChain, RAG, Prompt Engineering, LLM integrations, MLflow, AWS SageMaker, working backwards from customers, MVP scoping, lifecycle management, MLOps, enterprise integration, security & compliance, multi-tenant SaaS, Agile/Scrum, product analytics, cross-functional leadership
-- Personal AI Projects:
-  • Healthcare Proactive Case Management — ML model scoring patients for risk, triggering proactive case management workflows via dashboard (Streamlit app)
-  • ML Prototyping Tool for Students and Researchers (Refining Stage) — Interactive Streamlit app simplifying ML prototyping with pre-built templates, reducing prototyping time by 50-60%
-  • Petrochem Utility Efficiency Optimization — App for petrochemical plants to benchmark utility performance and surface actionable recommendations
-  • Healthcare Fraud Detection (Planned) — Anomaly/behavioral model for healthcare claims fraud risk scoring with reviewer workflow
-  • Healthcare Model Fine Tuning (Planned) — Framework for fine-tuning foundation models on healthcare datasets with automated evaluation and deployment pipelines
-- Contact: sreespark3000@gmail.com | 682.273.9155 | linkedin.com/in/subhashini-rajamani
-For salary/availability: recommend contacting Subhashini directly.`;
-
-    const FALLBACK = {
-      "why hire":        "Subhashini uniquely combines 15+ years of AI product leadership with hands-on Generative AI expertise — foundation models, AI agents, LangChain, RAG, MLflow, and API integration on Appian low-code platform with AWS SageMaker. She ships impactful GenAI solutions from problem framing through MVP to production, delivering measurable outcomes in healthcare and energy. She bridges strategic vision, technical depth, and pragmatic execution.",
-      "api integration": "On the Appian low-code platform, she designed and executed API integration strategy — connecting ERPs, CRMs, and external services via REST/SOAP. She also operationalizes ML models on AWS SageMaker, defining integration patterns between Appian workflows and SageMaker endpoints.",
-      "ai agents":       "Subhashini has direct experience designing and delivering AI-powered features using foundation models, AI agents for reasoning and orchestration, LangChain, RAG Architecture, LLM integrations, and MLflow for MLOps — in production enterprise environments, not just prototypes.",
-      "technical depth": "She holds an MS in Business Analytics (Data Science) from UT Dallas, is an Appian Certified Developer, and has hands-on experience with LangChain, RAG, LLMs, AI agents, MLflow, AWS SageMaker, and prompt engineering. She works backwards from customers and writes delivery-ready stories.",
-      "enterprise saas":  "Subhashini has a consistent track record owning B2B SaaS products end-to-end — from 0→1 launch of enterprise Appian SaaS portal (2,000+ users) at Munich Re to ML product delivery at Cognizant for the largest PBM client. She's navigated complex client environments, compliance requirements, and multi-tenant deployment challenges.",
-      "personal projects": "Subhashini has built 1 production AI project: Healthcare Proactive Case Management (ML risk scoring with Streamlit dashboard). She has 1 project in refining stage: ML Prototyping Tool for Students and Researchers — simplifies ML prototyping with pre-built templates, reducing prototyping time by 50-60%. She has 2 planned projects: Healthcare Fraud Detection — anomaly model for healthcare claims, Healthcare Model Fine Tuning — framework for fine-tuning foundation models on healthcare datasets.",
-      "product manager":  "Yes, Subhashini is an AI Product Manager with 15+ years driving AI adoption and building Generative AI solutions in healthcare and enterprise environments. She currently serves as Digital Transformation Strategy Lead / ML/AI Product Manager at Solomon Associates (Munich Re), and previously held Product Manager roles at Cognizant. She owns end-to-end AI product lifecycle from vision through post-production monitoring."
-    };
-
-    // Smart keyword matching for fallback responses
-    const FALLBACK_KEYWORDS = {
-      "why hire":        ["why hire", "why should", "why her", "why him", "good fit", "hire subhashini", "why her for", "generative ai", "vision", "strategy"],
-      "api integration": ["api", "integration", "rest", "soap", "appian", "connect", "erp", "crm", "enterprise integration", "sagemaker", "aws"],
-      "ai agents":       ["ai agent", "llm", "langchain", "rag", "ai powered", "foundation model", "prompt engineering", "mlflow", "ml ops"],
-      "technical depth": ["technical", "depth", "skills", "qualified", "background", "experience with", "mlflow", "sagemaker"],
-      "enterprise saas": ["saas", "enterprise", "track record", "b2b", "platform", "munich re", "2000", "appian saas"],
-      "personal projects": ["personal project", "project", "portfolio", "case study", "prototype", "streamlit", "fraud detection", "ml prototyping", "fine tuning", "healthcare model", "petrochem"],
-      "product manager": ["product manager", "pm ", "product management", "role", "position", "job title", "her role", "is she a", "ai product"]
-    };
-
-    function findFallbackKey(question) {
-      const tl = question.toLowerCase();
-      for (const [key, keywords] of Object.entries(FALLBACK_KEYWORDS)) {
-        if (keywords.some(kw => tl.includes(kw))) {
-          return key;
+    <script>
+        function showTab(tabId, btn) {
+            document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+            if (btn) {
+                btn.classList.add('active');
+            } else {
+                var match = document.querySelector('.nav-btn[data-tab="' + tabId + '"]');
+                if (match) match.classList.add('active');
+            }
+            document.querySelectorAll('.content-section').forEach(s => s.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+            document.querySelector('.content-body').scrollTop = 0;
         }
-      }
-      return null;
-    }
 
-    const history = [];
-    let chatOpen = false;
-
-    function openChat(){chatOpen=true;document.getElementById('chat').classList.remove('hide')}
-    function closeChat(){chatOpen=false;document.getElementById('chat').classList.add('hide')}
-    document.getElementById('fab').onclick = ()=>{ chatOpen ? closeChat() : openChat() };
-    document.getElementById('inp').addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();sendMsg()}});
-    function ask(txt){ document.getElementById('chips').style.display='none'; sendMsg(txt) }
-
-    async function sendMsg(override){
-      const inp = document.getElementById('inp');
-      const txt = override || inp.value.trim();
-      if(!txt) return;
-      inp.value='';
-      document.getElementById('chips').style.display='none';
-      document.getElementById('send').disabled=true;
-      addMsg(txt,'user');
-      const t = addMsg('Thinking…','bot typing');
-      if(!GEMINI_KEY){
-        await new Promise(r=>setTimeout(r,600));
-        const key = findFallbackKey(txt);
-        const reply = key ? FALLBACK[key] : "Great question! I'd recommend reaching out to Subhashini directly at sreespark3000@gmail.com or via LinkedIn — she'd love to discuss her fit in detail.";
-        t.textContent=reply; t.classList.remove('typing');
-        document.getElementById('send').disabled=false;
-        return;
-      }
-
-      // Build Gemini conversation: inject system context as first user turn
-      const geminiContents = [
-        { role:'user',  parts:[{ text: SYSTEM_CONTEXT }] },
-        { role:'model', parts:[{ text: "Understood. I'm ready to answer questions about Subhashini." }] },
-        ...history,
-        { role:'user',  parts:[{ text: txt }] }
-      ];
-
-      try{
-        const res = await fetch(
-          `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_KEY}`,
-          {
-            method:'POST',
-            headers:{'Content-Type':'application/json'},
-            body:JSON.stringify({ contents: geminiContents, generationConfig:{ maxOutputTokens:200, temperature:0.7 } })
-          }
-        );
-        const d = await res.json();
-        const reply = d.candidates?.[0]?.content?.parts?.[0]?.text || 'Sorry, something went wrong.';
-        t.textContent=reply; t.classList.remove('typing');
-        history.push(
-          { role:'user',  parts:[{ text: txt }] },
-          { role:'model', parts:[{ text: reply }] }
-        );
-      }catch(e){
-        t.textContent='Connection issue — please try again.'; t.classList.remove('typing');
-      }
-      document.getElementById('send').disabled=false;
-    }
-
-    function addMsg(txt,cls){
-      const msgs=document.getElementById('msgs');
-      const el=document.createElement('div');
-      el.className=`msg ${cls}`;el.textContent=txt;
-      msgs.appendChild(el);msgs.scrollTop=msgs.scrollHeight;
-      return el;
-    }
-  </script>
+        function copyText(text, element) {
+            navigator.clipboard.writeText(text).then(() => {
+                const tooltip = element.querySelector('.copy-tooltip');
+                tooltip.style.display = 'block';
+                setTimeout(() => { tooltip.style.display = 'none'; }, 2000);
+            });
+        }
+    </script>
 </body>
 </html>
