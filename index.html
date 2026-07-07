@@ -249,6 +249,7 @@
             <button class="nav-btn active" data-tab="pov" onclick="showTab('pov', this)">Point of View</button>
             <button class="nav-btn" data-tab="work" onclick="showTab('work', this)">Work</button>
             <button class="nav-btn" data-tab="writing" onclick="showTab('writing', this)">Writing</button>
+            <button class="nav-btn" data-tab="projects" onclick="showTab('projects', this)">Projects</button>
             <button class="nav-btn" data-tab="background" onclick="showTab('background', this)">Background</button>
         </nav>
 
@@ -410,6 +411,86 @@
                     <span class="badge">In progress</span>
                     <h3 style="color:var(--text-main);">Healthcare AI Guardrails</h3>
                     <p style="line-height:1.7; margin-top:8px;">An evaluation harness and companion writeup, turning the guardrail principles above into something runnable. Coming next.</p>
+                </div>
+            </section>
+
+            <!-- ================= PROJECTS ================= -->
+            <section id="projects" class="content-section">
+                <p class="section-intro">
+                    Self-initiated prototypes built end-to-end, not just scoped. Independent learning projects using
+                    synthetic or public data, unaffiliated with any employer.
+                </p>
+
+                <div class="card">
+                    <h3>Healthcare Proactive Case Management</h3>
+                    <div class="meta">Personal Project · Live</div>
+                    <div class="field"><span class="field-label">Problem</span><span class="field-body">Preventable readmissions and deteriorations aren't flagged early enough, driving up cost of care and worsening outcomes.</span></div>
+                    <div class="field"><span class="field-label">Solution</span><span class="field-body">A prototype ML model that scores patients for risk and triggers proactive case management workflows (outreach, review queues) through a simple dashboard.</span></div>
+                    <div class="field"><span class="field-label">Value (est.)</span><span class="field-body">Illustrates how a 10-20% earlier intervention rate could translate into meaningful cost savings and better outcomes in a mid-size health system.</span></div>
+                    <div class="tags">
+                        <span class="tag">ML</span><span class="tag">Streamlit</span><span class="tag">Python</span><span class="tag">Healthcare</span>
+                    </div>
+                    <div style="margin-top: 16px; display: flex; gap: 20px;">
+                        <a class="textlink" href="https://proactivecaremanagement-byaabwq279kmcpjdq8qhwr.streamlit.app/" target="_blank" rel="noopener">Live Demo →</a>
+                        <a class="textlink" href="https://github.com/scriptseedXYZ/ProavtiveCareManagement" target="_blank" rel="noopener">Code & README →</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>ML Prototyping Tool for Students and Researchers</h3>
+                    <div class="meta">Personal Project · In Refining Stage</div>
+                    <div class="field"><span class="field-label">Problem</span><span class="field-body">Students and researchers struggle to quickly prototype and validate ML models, often getting bogged down in boilerplate code and environment setup.</span></div>
+                    <div class="field"><span class="field-label">Solution</span><span class="field-body">An interactive Streamlit app that simplifies ML prototyping with pre-built templates, automated preprocessing, and one-click model training and evaluation for common use cases.</span></div>
+                    <div class="field"><span class="field-label">Value (est.)</span><span class="field-body">Reduces prototyping time by 50-60% for students and researchers, enabling faster experimentation and learning cycles.</span></div>
+                    <div class="tags">
+                        <span class="tag">ML</span><span class="tag">Streamlit</span><span class="tag">Python</span><span class="tag">Education</span>
+                    </div>
+                    <div style="margin-top: 16px;">
+                        <span class="field-hint">Demo coming soon.</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Petrochem Utility Efficiency Optimization</h3>
+                    <div class="meta">Personal Project · Live</div>
+                    <div class="field"><span class="field-label">Problem</span><span class="field-body">Petrochemical plants operated utilities (steam, power, cooling) with limited visibility into real-time efficiency, driving up energy costs and making it hard to spot optimization opportunities.</span></div>
+                    <div class="field"><span class="field-label">Solution</span><span class="field-body">Designed and built an app that ingests operations data, benchmarks utility performance, and surfaces actionable recommendations to operators through dashboards and alerts.</span></div>
+                    <div class="field"><span class="field-label">Value (est.)</span><span class="field-body">Enables data-driven utility optimization, identifying efficiency gains that can reduce energy consumption and operating costs while improving reliability and decision-making for plant leadership.</span></div>
+                    <div class="tags">
+                        <span class="tag">ML</span><span class="tag">Streamlit</span><span class="tag">Python</span><span class="tag">Energy</span>
+                    </div>
+                    <div style="margin-top: 16px; display: flex; gap: 20px;">
+                        <a class="textlink" href="https://utilityefficiencyoptimization-m8dhcrwsqmzfiejawrldmf.streamlit.app" target="_blank" rel="noopener">Live Demo →</a>
+                        <a class="textlink" href="https://github.com/scriptseedXYZ/UtilityEfficiency_Optimization" target="_blank" rel="noopener">Code & README →</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Healthcare Fraud Detection</h3>
+                    <div class="meta">Personal Project · Planned</div>
+                    <div class="field"><span class="field-label">Problem</span><span class="field-body">Fraudulent healthcare claims need early detection without overwhelming investigators with false positives.</span></div>
+                    <div class="field"><span class="field-label">Solution (planned)</span><span class="field-body">A prototype anomaly/behavioral model that scores healthcare claims for fraud risk, surfaces explanations, and feeds a reviewer workflow.</span></div>
+                    <div class="field"><span class="field-label">Value (est.)</span><span class="field-body">Explores how a balanced fraud model could reduce losses while keeping investigation workload manageable.</span></div>
+                    <div class="tags">
+                        <span class="tag">ML</span><span class="tag">Anomaly Detection</span><span class="tag">Healthcare</span>
+                    </div>
+                    <div style="margin-top: 16px;">
+                        <span class="field-hint">Repo and demo coming soon.</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Guardrails Framework for Regulated AI Systems</h3>
+                    <div class="meta">Personal Project · In Progress</div>
+                    <div class="field"><span class="field-label">Problem</span><span class="field-body">Teams building AI into regulated workflows keep hand-rolling the same controls, citation enforcement, escalation on ungrounded output, per-tenant audit logging, with no reusable, tested baseline to start from.</span></div>
+                    <div class="field"><span class="field-label">Solution (in progress)</span><span class="field-body">A configurable guardrails middleware that plugs into any RAG pipeline: enforces citation requirements, flags ungrounded responses for escalation, and logs every retrieval for audit. Implements the five-failure-mode framework (cross-client leakage, ungrounded inference, automation bias, latency degradation, cost blowout) from my "Trust Before Throughput" writeup as running code rather than a written argument.</span></div>
+                    <div class="field"><span class="field-label">Value (est.)</span><span class="field-body">Turns the guardrail principles into a reusable component teams can adopt instead of rebuilding from scratch for every regulated AI product.</span></div>
+                    <div class="tags">
+                        <span class="tag">Guardrails</span><span class="tag">RAG</span><span class="tag">Python</span><span class="tag">Audit Logging</span>
+                    </div>
+                    <div style="margin-top: 16px;">
+                        <span class="field-hint">Repo and demo coming soon.</span>
+                    </div>
                 </div>
             </section>
 
