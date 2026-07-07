@@ -199,6 +199,171 @@
         .coming-soon { color: var(--text-dim); }
         .coming-soon .badge { display: inline-block; background: rgba(139,92,246,0.15); color: var(--purple-accent); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; border: 1px solid rgba(139,92,246,0.25); margin-bottom: 12px; }
 
+        /* AI Chat Assistant */
+        .chat-fab {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent), var(--purple-accent));
+            border: none;
+            color: white;
+            font-size: 1.4rem;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            transition: transform 0.2s;
+        }
+        .chat-fab:hover { transform: scale(1.08); }
+
+        .chat-panel {
+            position: fixed;
+            bottom: 100px;
+            right: 28px;
+            width: 360px;
+            max-width: calc(100vw - 40px);
+            height: 500px;
+            max-height: calc(100vh - 140px);
+            background: var(--bg-card);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            z-index: 1000;
+        }
+        .chat-panel.hide { display: none; }
+
+        .chat-head {
+            padding: 18px 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(15, 23, 42, 0.4);
+        }
+        .chat-avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, var(--accent), var(--purple-accent));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        .chat-head-text { flex: 1; }
+        .chat-head-title { font-size: 0.95rem; font-weight: 600; color: var(--text-main); }
+        .chat-head-sub { font-size: 0.75rem; color: var(--text-dim); }
+        .chat-close {
+            background: transparent;
+            border: none;
+            color: var(--text-dim);
+            cursor: pointer;
+            font-size: 1rem;
+            padding: 4px;
+        }
+        .chat-close:hover { color: var(--text-main); }
+
+        .chat-messages {
+            flex: 1;
+            overflow-y: auto;
+            padding: 18px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .chat-msg {
+            max-width: 85%;
+            padding: 10px 14px;
+            border-radius: 14px;
+            font-size: 0.88rem;
+            line-height: 1.5;
+        }
+        .chat-msg.bot {
+            background: rgba(148, 163, 184, 0.1);
+            color: #cbd5e1;
+            align-self: flex-start;
+            border-bottom-left-radius: 4px;
+        }
+        .chat-msg.user {
+            background: var(--accent);
+            color: white;
+            align-self: flex-end;
+            border-bottom-right-radius: 4px;
+        }
+        .chat-msg.typing { color: var(--text-dim); font-style: italic; }
+
+        .chat-chips {
+            padding: 0 20px 14px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .chat-chip {
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--accent);
+            border: 1px solid rgba(59, 130, 246, 0.25);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .chat-chip:hover { background: rgba(59, 130, 246, 0.2); }
+
+        .chat-input-row {
+            display: flex;
+            align-items: flex-end;
+            gap: 10px;
+            padding: 14px 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .chat-input-row textarea {
+            flex: 1;
+            resize: none;
+            background: rgba(15, 23, 42, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            color: var(--text-main);
+            padding: 10px 12px;
+            font-family: inherit;
+            font-size: 0.85rem;
+            max-height: 80px;
+        }
+        .chat-input-row textarea:focus { outline: 1px solid var(--accent); }
+        .chat-send {
+            background: var(--accent);
+            border: none;
+            color: white;
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            cursor: pointer;
+            flex-shrink: 0;
+            font-size: 1rem;
+        }
+        .chat-send:disabled { opacity: 0.5; cursor: default; }
+        .chat-foot {
+            padding: 8px 20px 14px;
+            font-size: 0.68rem;
+            color: var(--text-dim);
+            text-align: center;
+        }
+
+        @media (max-width: 480px) {
+            .chat-panel { right: 16px; left: 16px; width: auto; bottom: 90px; }
+            .chat-fab { right: 16px; bottom: 16px; }
+        }
+
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
         @media (prefers-reduced-motion: reduce) {
@@ -594,6 +759,35 @@
         </main>
     </div>
 
+    <!-- ================= AI CHAT ASSISTANT ================= -->
+    <button class="chat-fab" id="chatFab" aria-label="Ask AI about Subhashini">✦</button>
+
+    <div class="chat-panel hide" id="chatPanel">
+        <div class="chat-head">
+            <div class="chat-avatar">✦</div>
+            <div class="chat-head-text">
+                <div class="chat-head-title">Ask about Subhashini</div>
+                <div class="chat-head-sub">Answers questions from this page</div>
+            </div>
+            <button class="chat-close" id="chatClose" aria-label="Close chat">✕</button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="chat-msg bot">Hi! Ask me anything about Subhashini's background, skills, projects, or fit for a role.</div>
+        </div>
+        <div class="chat-chips" id="chatChips">
+            <span class="chat-chip">Why hire her?</span>
+            <span class="chat-chip">Guardrails approach?</span>
+            <span class="chat-chip">Personal projects?</span>
+            <span class="chat-chip">Technical skills?</span>
+            <span class="chat-chip">Current role?</span>
+        </div>
+        <div class="chat-input-row">
+            <textarea id="chatInput" rows="1" placeholder="Ask anything…"></textarea>
+            <button class="chat-send" id="chatSend" aria-label="Send">➤</button>
+        </div>
+        <div class="chat-foot">Answers are generated from this page's content, not a live model.</div>
+    </div>
+
     <script>
         function showTab(tabId, btn) {
             document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
@@ -615,6 +809,95 @@
                 setTimeout(() => { tooltip.style.display = 'none'; }, 2000);
             });
         }
+
+        /* ================= AI Chat Assistant (no API, page-derived answers) ================= */
+        (function () {
+            const FAQ = {
+                contact: "Best reached at sreespark3000@gmail.com or via LinkedIn (linkedin.com/in/subhashini-rajamani). She's based in Dallas-Fort Worth, TX.",
+                education: "MS in Business Analytics (Data Science), University of Texas at Dallas. Bachelor's in Computer Science, Osmania University. Also a Machine Learning Graduate Certificate and an Appian Certified Developer.",
+                projects: "She's built five self-initiated prototypes: Healthcare Proactive Case Management (live demo), Petrochem Utility Efficiency Optimization (live demo), an ML Prototyping Tool for students and researchers (in refining), a Healthcare Fraud Detection model (planned), and a Guardrails Framework for Regulated AI Systems (in progress). Full details and links are on the Projects tab.",
+                skills: "Python & Streamlit, ML & GenAI (RAG, guardrails), Appian & workflow automation, SQL (Oracle/MSSQL), Power BI & AWS QuickSight, AWS SageMaker/OpenSearch/Aurora, JIRA & Visio. Full list on the Background tab.",
+                approach: "Her core POV: put AI behind deterministic layers where they already exist, map guardrails to specific failure modes instead of generic controls, and measure correctness rather than just acceptance rate. She's currently building a reusable guardrails framework that turns those principles into runnable code. See the Point of View and Writing tabs for the full argument.",
+                experience: "Currently Digital Transformation Strategy Product Manager / Appian Product Manager at Solomon Associates (Munich Re), since 2021. Before that at Cognizant: Project Manager, Strategy & Analytics Lead (2017-2019); Sr. Techno-Functional Business Lead & Technical Product Manager (2008-2017); and Quality Engineer / Business Analyst (2005-2008).",
+                whyHire: "She pairs 15+ years of product leadership with hands-on GenAI delivery: RAG pipelines, guardrail design, and Appian workflow automation. She doesn't just write PRDs, she ships. Her work project cut review time by about 50%, and she's built several AI prototypes end-to-end on her own time, proof she can build, not just scope."
+            };
+
+            const KEYWORDS = [
+                ['contact',    ['contact', 'email', 'reach her', 'get in touch', 'phone number', 'linkedin']],
+                ['education',  ['education', 'degree', 'university', 'certification', 'certified', 'masters', "bachelor's", 'graduate certificate']],
+                ['projects',   ['personal project', 'side project', 'prototype', 'portfolio', 'github', 'streamlit', 'case study', 'proactive case management', 'petrochem', 'fraud detection', 'ml prototyping']],
+                ['skills',     ['technical skill', 'tech stack', 'skills', 'python', 'sql', 'power bi', 'sagemaker', 'aws', 'appian', 'streamlit']],
+                ['approach',   ['guardrail', 'approach', 'philosophy', 'trust', 'regulated', 'framework', 'methodology', 'deterministic', 'how does she think', 'point of view']],
+                ['experience', ['current role', 'experience', 'background', 'munich re', 'solomon associates', 'cognizant', 'career', 'work history', 'years of experience', 'job title']],
+                ['whyHire',    ['why hire', 'why should', 'good fit', 'why her', 'strengths', 'stand out']]
+            ];
+
+            function findFaqKey(question) {
+                const q = question.toLowerCase();
+                for (const [key, words] of KEYWORDS) {
+                    if (words.some(w => q.includes(w))) return key;
+                }
+                return null;
+            }
+
+            const fab = document.getElementById('chatFab');
+            const panel = document.getElementById('chatPanel');
+            const closeBtn = document.getElementById('chatClose');
+            const messages = document.getElementById('chatMessages');
+            const chips = document.getElementById('chatChips');
+            const input = document.getElementById('chatInput');
+            const sendBtn = document.getElementById('chatSend');
+            let open = false;
+
+            function toggleChat() {
+                open = !open;
+                panel.classList.toggle('hide', !open);
+            }
+            fab.addEventListener('click', toggleChat);
+            closeBtn.addEventListener('click', toggleChat);
+
+            function addMessage(text, cls) {
+                const el = document.createElement('div');
+                el.className = 'chat-msg ' + cls;
+                el.textContent = text;
+                messages.appendChild(el);
+                messages.scrollTop = messages.scrollHeight;
+                return el;
+            }
+
+            function handleQuestion(question) {
+                if (!question) return;
+                addMessage(question, 'user');
+                sendBtn.disabled = true;
+                const typingEl = addMessage('Thinking…', 'bot typing');
+                setTimeout(() => {
+                    const key = findFaqKey(question);
+                    const reply = key
+                        ? FAQ[key]
+                        : "I don't have that answer directly from this page. The best way to find out is to reach Subhashini at sreespark3000@gmail.com or via LinkedIn.";
+                    typingEl.textContent = reply;
+                    typingEl.classList.remove('typing');
+                    sendBtn.disabled = false;
+                }, 500);
+            }
+
+            sendBtn.addEventListener('click', () => {
+                const q = input.value.trim();
+                input.value = '';
+                handleQuestion(q);
+            });
+            input.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' && !e.shiftKey) {
+                    e.preventDefault();
+                    const q = input.value.trim();
+                    input.value = '';
+                    handleQuestion(q);
+                }
+            });
+            chips.querySelectorAll('.chat-chip').forEach(chip => {
+                chip.addEventListener('click', () => handleQuestion(chip.textContent));
+            });
+        })();
     </script>
 </body>
 </html>
