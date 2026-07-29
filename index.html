@@ -5,14 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Subhashini Rajamani | AI Product Manager</title>
     <meta name="description" content="AI Product Manager building generative and machine learning products for regulated industries: trust, guardrails, and human-in-the-loop design.">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X65YPY6LEP"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-X65YPY6LEP');
-    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -419,251 +411,51 @@
 
     <div class="main-container">
         <nav class="nav-bar">
-            <button class="nav-btn active" data-tab="pov" onclick="showTab('pov', this)">Point of View</button>
-            <button class="nav-btn" data-tab="work" onclick="showTab('work', this)">Work</button>
-            <button class="nav-btn" data-tab="writing" onclick="showTab('writing', this)">Writing</button>
-            <button class="nav-btn" data-tab="projects" onclick="showTab('projects', this)">Projects</button>
+            <button class="nav-btn active" data-tab="about" onclick="showTab('about', this)">About</button>
             <button class="nav-btn" data-tab="background" onclick="showTab('background', this)">Background</button>
+            <button class="nav-btn" data-tab="work" onclick="showTab('work', this)">Work</button>
+            <button class="nav-btn" data-tab="perspective" onclick="showTab('perspective', this)">Perspective</button>
+            <button class="nav-btn" data-tab="projects" onclick="showTab('projects', this)">Projects</button>
         </nav>
 
         <main class="content-body">
 
-            <!-- ================= POINT OF VIEW ================= -->
-            <section id="pov" class="content-section active">
+            <!-- ================= ABOUT ================= -->
+            <section id="about" class="content-section active">
                 <div class="card lead-card">
                     <p class="positioning">
-                        I build AI products for domains where being wrong has consequences:
-                        <span class="em">regulated workflows where a human expert's judgment is the accountability layer.</span>
+                        I've spent 15+ years building systems, automation workflows, reconciliation and analytics
+                        dashboards, digital transformation programs at Cognizant and beyond,
+                        <span class="em">and asking the same question of all of them: does this actually work, or does it just look like it works in the demo?</span>
                     </p>
                     <p class="support">
-                        Claims, contracts, submissions, filings: work where a person's name is attached to the
-                        decision and a client or regulator can ask them to defend it months later. In these settings
-                        the interesting problem isn't making the model better. It's designing the system around it so
-                        that when the model is wrong, because it will be, sometimes, the failure is caught, the cost
-                        is bounded, and the humans stay in the loop. The AI product isn't the model. It's the system of
-                        controls, feedback, and human judgment that surrounds it.
+                        That question doesn't go away once a system ships. It's the difference between a dashboard
+                        people check and one they route around, an automation that holds up under an edge case and
+                        one that quietly breaks it.
                     </p>
                 </div>
 
-                <div class="card principle-card">
-                    <div class="kicker">How I think · 01</div>
-                    <h3>Trust compounds in small pieces</h3>
-                    <p>
-                        The instinct is to hand AI the whole job: detect the issue, explain it, present it. In regulated
-                        work that's usually the wrong shape. Where a deterministic layer already exists (a rules engine,
-                        a validation service), leave it in place and put AI <em>after</em> it: let the rules do detection,
-                        let the model do explanation against a corpus the user can verify. You shrink the trust surface.
-                        Instead of one large act of faith, you ask for smaller trusts, more of them, each verifiable on its own.
+                <div class="card">
+                    <h3>What I focus on, regardless of what's under the hood</h3>
+                    <ul>
+                        <li>Outcome-driven success metrics, not just output or throughput</li>
+                        <li>Evaluation frameworks that hold up for complex, imperfect systems, not just clean ones</li>
+                        <li>The tradeoffs between performance, latency, and what the user actually experiences</li>
+                        <li>Where product design, system behavior, and business impact are supposed to meet, and where they quietly don't</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <p style="line-height: 1.7; color: #cbd5e1;">
+                        AI systems are where that question gets hardest to answer. A model's output looks reasonable
+                        even when it's wrong: there's no error message, no stack trace, just a plausible-sounding
+                        answer that may or may not be correct. That's the problem I've been building toward: MVPs
+                        that let a compliance officer actually review and sign off on whether an AI system's
+                        guardrails held, not just trust that they did. Same question I've always asked. Harder
+                        system to ask it of, and the reason I care about evaluation and guardrails isn't academic,
+                        it's what makes that sign-off possible.
                     </p>
-                    <a class="textlink" href="#" onclick="showTab('writing'); return false;">Read the full framework →</a>
-                </div>
-
-                <div class="card principle-card">
-                    <div class="kicker">How I think · 02</div>
-                    <h3>Guardrails map to failure modes, or they're overhead</h3>
-                    <p>
-                        Guardrails treated as an end-of-project hygiene layer produce bloat: generic controls that don't
-                        obviously map to specific risks, each costing latency, tokens, or user friction. I start from the
-                        failure modes instead: what can go wrong, what it costs when it does, and the layered control that
-                        makes it acceptably unlikely. Anything that doesn't trace to a specific failure mode isn't a
-                        guardrail. It's overhead you're paying for nothing.
-                    </p>
-                    <a class="textlink" href="#" onclick="showTab('writing'); return false;">Read the full framework →</a>
-                </div>
-
-                <div class="card principle-card">
-                    <div class="kicker">How I think · 03</div>
-                    <h3>Measure correctness, not acceptance</h3>
-                    <p>
-                        Acceptance rate, thumbs-down, click-through: easy to measure, and they trend up over time. But
-                        they're behavioral metrics, not quality ones. A time-pressured user rubber-stamping a plausible
-                        answer looks identical to one who actually verified it, until something breaks. So a ground-truth
-                        audit (senior reviewers blind-checking a random sample of accepted outputs) runs alongside from
-                        day one, not retrofitted after the client complaint.
-                    </p>
-                    <a class="textlink" href="#" onclick="showTab('writing'); return false;">Read the full framework →</a>
-                </div>
-            </section>
-
-            <!-- ================= WORK ================= -->
-            <section id="work" class="content-section">
-                <p class="section-intro">
-                    Selected projects, framed by the decision that mattered rather than the task list. Details are
-                    anonymized here, happy to walk through the specifics in conversation.
-                </p>
-
-                <div class="card">
-                    <h3>AI assistant for a regulated review workflow</h3>
-                    <div class="meta">Anonymized · AI Product Management · current</div>
-                    <div class="field"><span class="field-label">Problem</span><span class="field-body">Domain experts run several review cycles per client submission, and most of that time goes to repetitive verification: digging through historical documents to confirm each error a rules engine had already flagged. Cycles dragged and clients waited. The experts also carry the accountability for every decision, so the hard constraint wasn't cognitive load. It was that experts won't accept an AI insight they can't verify.</span></div>
-                    <div class="field"><span class="field-label">Decision</span><span class="field-body">I kept the deterministic rules engine intact and inserted AI only after a flag fires: the engine still detects, the AI generates a cited, explainable insight for each flag. That was a deliberate push against my own team, who wanted AI to replace the engine and do the flagging itself. I argued the deterministic layer was auditable and faster to ship, and moving AI upstream would multiply the trust burden and the audit surface. The architecture followed from that stance: a RAG pipeline on AWS Bedrock over ~9,000 documents with Titan embeddings; Aurora chosen over OpenSearch for our scale and access pattern at materially lower cost; and Claude Haiku 4.5 for generation after a head-to-head evaluation showed the quality delta against frontier models didn't justify roughly 10x the token cost. Per-tenant metadata isolation is enforced at the database layer, non-negotiable for regulated data.</span></div>
-                    <div class="field"><span class="field-label">Outcome</span><span class="field-body">In the pilot cohort, review time dropped about 50% (from 2-3 days to ~1.5 per cycle) at a 75% acceptance rate, rolled out senior-experts-first with a control group left on the old process for comparison. The gate for external rollout is 90% cited relevance across a full cycle. The sharpest lesson came from getting a metric wrong: acceptance rate alone couldn't separate "accepted because correct" from "accepted because rushed," so I'm adding a monthly blind sampled audit to calibrate acceptance against ground-truth correctness: designed in, not retrofitted.</span></div>
-                    <div class="tags"><span class="tag">GenAI</span><span class="tag">RAG</span><span class="tag">AWS Bedrock</span><span class="tag">Aurora</span><span class="tag">Guardrails</span><span class="tag">Human-in-the-loop</span></div>
-                </div>
-            </section>
-
-            <!-- ================= WRITING ================= -->
-            <section id="writing" class="content-section">
-                <p class="section-intro">Long-form pieces on building AI in regulated domains.</p>
-
-                <div class="card prose">
-                    <h3 style="font-size:1.6rem;">Trust Before Throughput</h3>
-                    <p class="subtitle">A framework for introducing AI into regulated workflows without losing the humans.</p>
-
-                    <h4>The shape of the problem</h4>
-                    <p>A common pattern for AI product managers in regulated domains looks like this: there's a workflow where human experts review something (claims, contracts, submissions, filings) across multiple cycles. Most of the review time is spent on repetitive lookup and verification work that AI could plausibly reduce. Leadership wants faster cycle times. Users want less cognitive load. On paper, this is a straightforward AI opportunity.</p>
-                    <p>In practice, the standard AI PM playbook (pick a model, retrieve some context, generate an output, measure quality) doesn't fully apply. What makes these workflows hard isn't the technical problem. It's that the human experts aren't just labor to be automated. They're the audit and accountability layer. Their names are attached to decisions. When a client challenges a result, or a regulator asks a question, the expert's judgment is what gets defended.</p>
-                    <p>That changes the product problem. The question isn't "can AI do this work faster than a human." It's "can AI produce output that a domain expert can <em>verify</em> faster than they could do the work themselves." Those are different problems. The first is a model quality problem. The second is a product design problem, and it's the one that actually determines whether AI in these domains earns the trust required to keep operating.</p>
-                    <p>What follows is a set of principles I've applied, and, in one case, learned by getting wrong, for building AI products in this shape.</p>
-
-                    <hr>
-
-                    <h4>Put AI behind deterministic layers where possible</h4>
-                    <p>The first instinct when introducing AI into a review workflow is to use it end-to-end. Ingest the input, identify the issues, explain them, present to the user. One AI system, doing the whole job.</p>
-                    <p>For regulated workflows, this is usually the wrong shape. If there's an existing deterministic component in the workflow (a rules engine, a validation service, a policy check), leave it in place. Insert AI <em>after</em> it, not around it. Let the deterministic layer do detection. Let the AI do explanation, contextualization, and precedent lookup for what the deterministic layer flagged.</p>
-                    <p>Two things happen when you do this. First, you preserve the auditability of the detection step. A rule that fires with a threshold and a condition is defensible in a way that a probabilistic model's flag isn't. Second, and more important, you shrink the trust surface. Instead of asking users to trust that the AI can accurately identify issues <em>and</em> explain them, you ask them to trust only the explanation, against a corpus they can verify.</p>
-                    <p class="principle">Trust compounds when you don't ask users to trust everything at once. Ask for smaller trusts, more of them, and layer them so each is verifiable independently.</p>
-                    <p>There are cases where AI has to do detection, where no deterministic layer exists, or where the pattern is too complex for rules. In those cases, the trust work is harder and the guardrail architecture has to carry more weight. But when a deterministic layer already exists, replacing it with AI is trading auditable determinism for probabilistic inference. That trade is rarely worth it in regulated contexts.</p>
-
-                    <hr>
-
-                    <h4>Architecture principles that matter more than they look</h4>
-                    <p>Two technical decisions come up repeatedly in AI systems of this shape, and both are worth defending consciously rather than defaulting to.</p>
-                    <p><strong>Vector store selection.</strong> The default choice for RAG systems in AWS environments is often OpenSearch: it's a strong retrieval engine and it's what teams reach for. But for many enterprise use cases, the corpus is smaller than OpenSearch is optimized for, the retrieval is heavily metadata-filtered, and the access pattern is closer to relational than to full-text search. In those cases, Aurora with vector capabilities is often sufficient, integrates cleanly with the rest of the data layer, and is materially cheaper.</p>
-                    <p>The principle: pick the store that matches the workload, not the one with the strongest theoretical characteristics on a workload you don't have. Running the actual comparison (retrieval quality on your data, at your scale, with your metadata patterns) is worth the week it takes. Most teams don't do this and pay for it in cloud spend.</p>
-                    <p><strong>Model tier selection.</strong> The default choice for generation is usually a frontier model. The assumption is that quality will be higher. Often it is, but the delta varies enormously by task. For structured tasks like contextualizing flagged issues against retrieved documents, smaller models can perform within margin of the larger models at roughly an order of magnitude lower cost per inference.</p>
-                    <p>The discipline is running the head-to-head evaluation on your actual task, holding a quality bar, and picking the cheapest model that clears it. This is uncomfortable: it forces you to defend a cost-conscious choice against the assumption that bigger is better, but at production volume, the cost delta between model tiers is not marginal.</p>
-                    <p><strong>One architectural choice that isn't negotiable in multi-tenant regulated contexts:</strong> metadata isolation has to be enforced at the <em>database</em> layer, not the application layer. Application-layer filtering means a bug in application logic can leak documents from one client's context into another's. Database-layer filtering means isolation is enforced by the query itself. This distinction matters because the failure mode (cross-client data leakage) is a compliance-grade event, not a UX issue.</p>
-
-                    <hr>
-
-                    <h4>Guardrails as failure-mode-mapped controls</h4>
-                    <p>Guardrails in AI products are often treated as a hygiene layer added at the end. That framing produces bloat: a list of generic controls that don't obviously map to specific risks, each one costing latency or tokens or user friction.</p>
-                    <p>The framing that works better is to start from <em>failure modes</em> and work backward. For each failure mode: what can go wrong, what's the cost of it going wrong, and what layered controls make it acceptably unlikely?</p>
-                    <p>In regulated review workflows, five failure modes recur:</p>
-                    <p><strong>Cross-client data leakage.</strong> The highest-severity failure. Primary control: metadata-scoped retrieval at the database layer. Secondary: audit logging of every retrieval, with post-hoc investigation capability. Tertiary: periodic red-team testing with mismatched metadata to verify the system returns nothing.</p>
-                    <p><strong>Ungrounded inference.</strong> The model produces a plausible-sounding output that isn't supported by retrieved documents. The output looks correct, which is what makes it dangerous. Primary control: strict citation requirement in the system prompt. Secondary: escalation as a first-class output when retrieval returns nothing sufficient. The model must be able to say "I don't have enough to answer this" without treating it as a failure state.</p>
-                    <p><strong>Automation bias.</strong> The user accepts an inference because it's plausible, not because they verified it. This survives all the technical guardrails, because it's a human failure enabled by product design. The control isn't technical. It's structural. Design the output so verification is faster than fabrication would be worthwhile. Every inference includes the citation the user can click through to. The retrieved document surfaces alongside the inference. Rejecting or escalating is a single click. Make verification the path of least resistance.</p>
-                    <p><strong>Latency and throughput degradation.</strong> Users lose trust in the tool's reliability when it falls behind. Controls are conventional but need to be defined: SLA monitoring at p95 and p99, batch processing where real-time isn't required, rate limiting against API caps, graceful degradation states.</p>
-                    <p><strong>Cost blowout.</strong> Batch inference at scale can produce surprising bills. Controls: per-tenant cost budgeting, monitoring on tokens per request, and alerting on deviation from historical patterns.</p>
-                    <p>Two guardrails are worth flagging as product decisions rather than engineering choices:</p>
-                    <p><strong>Temperature at near-zero for generation.</strong> In regulated contexts, consistency and grounding matter more than creativity. Two similar inputs should produce similar outputs, not stylistic variations. This isn't a hyperparameter choice. It's a product stance about what kind of AI this is.</p>
-                    <p><strong>Human review as non-negotiable.</strong> There should be no configuration where AI output is auto-applied to consequential artifacts. The expert is always the last mile. This isn't a v1 constraint you plan to relax. It's the shape of the product.</p>
-                    <p>Every guardrail costs something. The PM job isn't to add guardrails. It's to defend the specific set of guardrails as worth their cost. Anything that doesn't trace to a specific failure mode isn't a guardrail; it's overhead.</p>
-
-                    <hr>
-
-                    <h4>Sequencing trust in rollout</h4>
-                    <p>Shipping the system isn't the launch. Getting the users to trust it enough to catch its errors, rather than rubber-stamp them, is.</p>
-                    <p>Rollout in regulated workflows should be sequenced deliberately. The first cohort should be <em>senior</em> users, not junior ones. This is counterintuitive because senior users are usually the harder sell. But they're the right early users for two reasons. They can recognize when the AI's output is subtly wrong, because they've built the intuitions the model is trying to approximate. And they have the standing to criticize the tool credibly. If a senior user says an output is misleading, that feedback carries weight. If a junior user says the same thing, it might be read as unfamiliarity.</p>
-                    <p>Starting with the population that can most credibly criticize the system produces better signal than starting with the population most likely to accept it.</p>
-                    <p>Feedback loops should be structured, not ambient. Thumbs-down with required comments. Weekly triage that classifies each rejection into buckets: retrieval problem, generation problem, or process problem. Each bucket routes to a different team. The classification discipline matters more than the volume of feedback: it forces the loop to stay closed, and it gives users visible evidence that their feedback matters.</p>
-                    <p>Expansion gates should be defined upfront. Internal expansion has one bar; external client-facing rollout has a higher one. Holding those gates against pressure to lower them is one of the harder product decisions on this class of project, and one worth committing to publicly early.</p>
-
-                    <hr>
-
-                    <h4>The metric trap</h4>
-                    <p>There's one lesson I've learned by getting it wrong on projects of this shape, and it's the most consequential one I'd pass on.</p>
-                    <p>Behavioral metrics from users (acceptance rate, thumbs-down rate, click-through) are easy to measure, directional, and often trend upward over time. It's tempting to anchor on them as the primary signal that a product is working.</p>
-                    <p>They're not quality metrics. They're behavioral metrics. And the gap between the two matters more than it looks.</p>
-                    <p>High acceptance rate can mean the AI's outputs are correct and users are validating them. It can also mean users are time-pressured, the output looks plausible, and accepting is the path of least resistance. Both patterns produce the same number.</p>
-                    <p>For any AI product where the user's own workflow depends on trusting the output, behavioral acceptance is a <em>lagging</em> indicator of quality, and worse, it's ambiguous. Users who under-trust the system eventually stop using it, which does show up in the metric. But users who <em>over-trust</em> the system look identical to users who correctly trust it, until something goes wrong.</p>
-                    <p>The correction is a ground-truth check running in parallel from day one. A sampled audit where senior users re-verify a random subset of accepted outputs, blind to the fact that they were accepted. If audit agreement diverges from acceptance rate, that's the signal that the behavioral metric is misleading.</p>
-                    <p class="principle">When the headline metric for an AI product is a behavioral signal, there needs to be a correctness check running alongside it from launch, not retrofitted later.</p>
-                    <p>In regulated domains, the cost of measuring engagement instead of correctness doesn't show up in the behavioral metric until it shows up somewhere much worse: a client complaint, an audit finding, a regulatory question.</p>
-
-                    <hr>
-
-                    <h4>Closing</h4>
-                    <p>There are several ways to solution AI into a regulated workflow. Speed to production, aggressive scale, and non-disruptive parallel deployment are all legitimate paths, and each produces a different product. The path I've argued for here prioritizes earning trust before earning throughput: AI as a bounded assistant behind a deterministic layer, in a workflow the users already understand. It costs some speed and some ambition. What it produces is a system users adopt, correct, and eventually ask to expand, the point at which internal rollout becomes external rollout, and the users who pushed back hardest at the start start surfacing new use cases where AI could help them next.</p>
-                    <p>The most useful thing I'd offer isn't a technique. It's a stance. In regulated domains, the interesting problem isn't making the AI better. It's designing the system around the AI so that when the AI is wrong, because it will be, sometimes, the failure is caught, the cost is bounded, and the trust doesn't collapse.</p>
-                    <p>The AI product isn't the model. It's the system of controls, feedback, and human judgment that surrounds it. That's what determines whether AI in these domains earns the trust required to keep operating.</p>
-                </div>
-
-                <div class="card coming-soon">
-                    <span class="badge">In progress</span>
-                    <h3 style="color:var(--text-main);">Healthcare AI Guardrails</h3>
-                    <p style="line-height:1.7; margin-top:8px;">An evaluation harness and companion writeup, turning the guardrail principles above into something runnable. Coming next.</p>
-                </div>
-            </section>
-
-            <!-- ================= PROJECTS ================= -->
-            <section id="projects" class="content-section">
-                <p class="section-intro">
-                    Self-initiated prototypes built end-to-end, not just scoped. Independent learning projects using
-                    synthetic or public data, unaffiliated with any employer.
-                </p>
-
-                <div class="card">
-                    <h3>Healthcare Proactive Case Management</h3>
-                    <div class="meta">Personal Project · Live</div>
-                    <div class="field"><span class="field-label">Problem</span><span class="field-body">Preventable readmissions and deteriorations aren't flagged early enough, driving up cost of care and worsening outcomes.</span></div>
-                    <div class="field"><span class="field-label">Solution</span><span class="field-body">A prototype ML model that scores patients for risk and triggers proactive case management workflows (outreach, review queues) through a simple dashboard.</span></div>
-                    <div class="field"><span class="field-label">Value (est.)</span><span class="field-body">Illustrates how a 10-20% earlier intervention rate could translate into meaningful cost savings and better outcomes in a mid-size health system.</span></div>
-                    <div class="tags">
-                        <span class="tag">ML</span><span class="tag">Streamlit</span><span class="tag">Python</span><span class="tag">Healthcare</span>
-                    </div>
-                    <div style="margin-top: 16px; display: flex; gap: 20px;">
-                        <a class="textlink" href="https://proactivecaremanagement-byaabwq279kmcpjdq8qhwr.streamlit.app/" target="_blank" rel="noopener">Live Demo →</a>
-                        <a class="textlink" href="https://github.com/scriptseedXYZ/ProavtiveCareManagement" target="_blank" rel="noopener">Code & README →</a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <h3>ML Prototyping Tool for Students and Researchers</h3>
-                    <div class="meta">Personal Project · In Refining Stage</div>
-                    <div class="field"><span class="field-label">Problem</span><span class="field-body">Students and researchers struggle to quickly prototype and validate ML models, often getting bogged down in boilerplate code and environment setup.</span></div>
-                    <div class="field"><span class="field-label">Solution</span><span class="field-body">An interactive Streamlit app that simplifies ML prototyping with pre-built templates, automated preprocessing, and one-click model training and evaluation for common use cases.</span></div>
-                    <div class="field"><span class="field-label">Value (est.)</span><span class="field-body">Reduces prototyping time by 50-60% for students and researchers, enabling faster experimentation and learning cycles.</span></div>
-                    <div class="tags">
-                        <span class="tag">ML</span><span class="tag">Streamlit</span><span class="tag">Python</span><span class="tag">Education</span>
-                    </div>
-                    <div style="margin-top: 16px;">
-                        <span class="field-hint">Demo coming soon.</span>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <h3>Petrochem Utility Efficiency Optimization</h3>
-                    <div class="meta">Personal Project · Live</div>
-                    <div class="field"><span class="field-label">Problem</span><span class="field-body">Petrochemical plants operated utilities (steam, power, cooling) with limited visibility into real-time efficiency, driving up energy costs and making it hard to spot optimization opportunities.</span></div>
-                    <div class="field"><span class="field-label">Solution</span><span class="field-body">Designed and built an app that ingests operations data, benchmarks utility performance, and surfaces actionable recommendations to operators through dashboards and alerts.</span></div>
-                    <div class="field"><span class="field-label">Value (est.)</span><span class="field-body">Enables data-driven utility optimization, identifying efficiency gains that can reduce energy consumption and operating costs while improving reliability and decision-making for plant leadership.</span></div>
-                    <div class="tags">
-                        <span class="tag">ML</span><span class="tag">Streamlit</span><span class="tag">Python</span><span class="tag">Energy</span>
-                    </div>
-                    <div style="margin-top: 16px; display: flex; gap: 20px;">
-                        <a class="textlink" href="https://utilityefficiencyoptimization-m8dhcrwsqmzfiejawrldmf.streamlit.app" target="_blank" rel="noopener">Live Demo →</a>
-                        <a class="textlink" href="https://github.com/scriptseedXYZ/UtilityEfficiency_Optimization" target="_blank" rel="noopener">Code & README →</a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <h3>Healthcare Fraud Detection</h3>
-                    <div class="meta">Personal Project · Planned</div>
-                    <div class="field"><span class="field-label">Problem</span><span class="field-body">Fraudulent healthcare claims need early detection without overwhelming investigators with false positives.</span></div>
-                    <div class="field"><span class="field-label">Solution (planned)</span><span class="field-body">A prototype anomaly/behavioral model that scores healthcare claims for fraud risk, surfaces explanations, and feeds a reviewer workflow.</span></div>
-                    <div class="field"><span class="field-label">Value (est.)</span><span class="field-body">Explores how a balanced fraud model could reduce losses while keeping investigation workload manageable.</span></div>
-                    <div class="tags">
-                        <span class="tag">ML</span><span class="tag">Anomaly Detection</span><span class="tag">Healthcare</span>
-                    </div>
-                    <div style="margin-top: 16px;">
-                        <span class="field-hint">Repo and demo coming soon.</span>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <h3>Guardrails Framework for Regulated AI Systems</h3>
-                    <div class="meta">Personal Project · In Progress</div>
-                    <div class="field"><span class="field-label">Problem</span><span class="field-body">Teams building AI into regulated workflows keep hand-rolling the same controls, citation enforcement, escalation on ungrounded output, per-tenant audit logging, with no reusable, tested baseline to start from.</span></div>
-                    <div class="field"><span class="field-label">Solution (in progress)</span><span class="field-body">A configurable guardrails middleware that plugs into any RAG pipeline: enforces citation requirements, flags ungrounded responses for escalation, and logs every retrieval for audit. Implements the five-failure-mode framework (cross-client leakage, ungrounded inference, automation bias, latency degradation, cost blowout) from my "Trust Before Throughput" writeup as running code rather than a written argument.</span></div>
-                    <div class="field"><span class="field-label">Value (est.)</span><span class="field-body">Turns the guardrail principles into a reusable component teams can adopt instead of rebuilding from scratch for every regulated AI product.</span></div>
-                    <div class="tags">
-                        <span class="tag">Guardrails</span><span class="tag">RAG</span><span class="tag">Python</span><span class="tag">Audit Logging</span>
-                    </div>
-                    <div style="margin-top: 16px;">
-                        <span class="field-hint">Repo and demo coming soon.</span>
-                    </div>
+                    <a class="textlink" href="#" onclick="showTab('perspective'); return false;" style="display:inline-block; margin-top:14px;">Read the full guardrails framework →</a>
                 </div>
             </section>
 
@@ -764,6 +556,240 @@
                 </div>
             </section>
 
+            <!-- ================= WORK ================= -->
+            <section id="work" class="content-section">
+                <p class="section-intro">
+                    Selected projects, framed by the decision that mattered rather than the task list. Details are
+                    anonymized here, happy to walk through the specifics in conversation.
+                </p>
+
+                <div class="card">
+                    <h3>AI assistant for a regulated review workflow</h3>
+                    <div class="meta">Anonymized · AI Product Management · current</div>
+                    <div class="field"><span class="field-label">Problem</span><span class="field-body">Domain experts run several review cycles per client submission, and most of that time goes to repetitive verification: digging through historical documents to confirm each error a rules engine had already flagged. Cycles dragged and clients waited. The experts also carry the accountability for every decision, so the hard constraint wasn't cognitive load. It was that experts won't accept an AI insight they can't verify.</span></div>
+                    <div class="field"><span class="field-label">Decision</span><span class="field-body">I kept the deterministic rules engine intact and inserted AI only after a flag fires: the engine still detects, the AI generates a cited, explainable insight for each flag. That was a deliberate push against my own team, who wanted AI to replace the engine and do the flagging itself. I argued the deterministic layer was auditable and faster to ship, and moving AI upstream would multiply the trust burden and the audit surface. The architecture followed from that stance: a RAG pipeline on AWS Bedrock over ~9,000 documents with Titan embeddings; Aurora chosen over OpenSearch for our scale and access pattern at materially lower cost; and Claude Haiku 4.5 for generation after a head-to-head evaluation showed the quality delta against frontier models didn't justify roughly 10x the token cost. Per-tenant metadata isolation is enforced at the database layer, non-negotiable for regulated data.</span></div>
+                    <div class="field"><span class="field-label">Outcome</span><span class="field-body">In the pilot cohort, review time dropped about 50% (from 2-3 days to ~1.5 per cycle) at a 75% acceptance rate, rolled out senior-experts-first with a control group left on the old process for comparison. The gate for external rollout is 90% cited relevance across a full cycle. The sharpest lesson came from getting a metric wrong: acceptance rate alone couldn't separate "accepted because correct" from "accepted because rushed," so I'm adding a monthly blind sampled audit to calibrate acceptance against ground-truth correctness: designed in, not retrofitted.</span></div>
+                    <div class="tags"><span class="tag">GenAI</span><span class="tag">RAG</span><span class="tag">AWS Bedrock</span><span class="tag">Aurora</span><span class="tag">Guardrails</span><span class="tag">Human-in-the-loop</span></div>
+                </div>
+            </section>
+
+            <!-- ================= PERSPECTIVE ================= -->
+            <section id="perspective" class="content-section">
+                <div class="card lead-card">
+                    <p class="positioning">
+                        I build AI products for domains where being wrong has consequences:
+                        <span class="em">regulated workflows where a human expert's judgment is the accountability layer.</span>
+                    </p>
+                    <p class="support">
+                        Claims, contracts, submissions, filings: work where a person's name is attached to the
+                        decision and a client or regulator can ask them to defend it months later. In these settings
+                        the interesting problem isn't making the model better. It's designing the system around it so
+                        that when the model is wrong, because it will be, sometimes, the failure is caught, the cost
+                        is bounded, and the humans stay in the loop. The AI product isn't the model. It's the system of
+                        controls, feedback, and human judgment that surrounds it.
+                    </p>
+                </div>
+
+                <div class="card principle-card">
+                    <div class="kicker">How I think · 01</div>
+                    <h3>Trust compounds in small pieces</h3>
+                    <p>
+                        The instinct is to hand AI the whole job: detect the issue, explain it, present it. In regulated
+                        work that's usually the wrong shape. Where a deterministic layer already exists (a rules engine,
+                        a validation service), leave it in place and put AI <em>after</em> it: let the rules do detection,
+                        let the model do explanation against a corpus the user can verify. You shrink the trust surface.
+                        Instead of one large act of faith, you ask for smaller trusts, more of them, each verifiable on its own.
+                    </p>
+                </div>
+
+                <div class="card principle-card">
+                    <div class="kicker">How I think · 02</div>
+                    <h3>Guardrails map to failure modes, or they're overhead</h3>
+                    <p>
+                        Guardrails treated as an end-of-project hygiene layer produce bloat: generic controls that don't
+                        obviously map to specific risks, each costing latency, tokens, or user friction. I start from the
+                        failure modes instead: what can go wrong, what it costs when it does, and the layered control that
+                        makes it acceptably unlikely. Anything that doesn't trace to a specific failure mode isn't a
+                        guardrail. It's overhead you're paying for nothing.
+                    </p>
+                </div>
+
+                <div class="card principle-card">
+                    <div class="kicker">How I think · 03</div>
+                    <h3>Measure correctness, not acceptance</h3>
+                    <p>
+                        Acceptance rate, thumbs-down, click-through: easy to measure, and they trend up over time. But
+                        they're behavioral metrics, not quality ones. A time-pressured user rubber-stamping a plausible
+                        answer looks identical to one who actually verified it, until something breaks. So a ground-truth
+                        audit (senior reviewers blind-checking a random sample of accepted outputs) runs alongside from
+                        day one, not retrofitted after the client complaint.
+                    </p>
+                </div>
+
+                <div class="card prose" style="margin-top: 8px;">
+                    <h3 style="font-size:1.6rem;">Trust Before Throughput</h3>
+                    <p class="subtitle">A framework for introducing AI into regulated workflows without losing the humans.</p>
+
+                    <h4>The shape of the problem</h4>
+                    <p>A common pattern for AI product managers in regulated domains looks like this: there's a workflow where human experts review something (claims, contracts, submissions, filings) across multiple cycles. Most of the review time is spent on repetitive lookup and verification work that AI could plausibly reduce. Leadership wants faster cycle times. Users want less cognitive load. On paper, this is a straightforward AI opportunity.</p>
+                    <p>In practice, the standard AI PM playbook (pick a model, retrieve some context, generate an output, measure quality) doesn't fully apply. What makes these workflows hard isn't the technical problem. It's that the human experts aren't just labor to be automated. They're the audit and accountability layer. Their names are attached to decisions. When a client challenges a result, or a regulator asks a question, the expert's judgment is what gets defended.</p>
+                    <p>That changes the product problem. The question isn't "can AI do this work faster than a human." It's "can AI produce output that a domain expert can <em>verify</em> faster than they could do the work themselves." Those are different problems. The first is a model quality problem. The second is a product design problem, and it's the one that actually determines whether AI in these domains earns the trust required to keep operating.</p>
+                    <p>What follows is a set of principles I've applied, and, in one case, learned by getting wrong, for building AI products in this shape.</p>
+
+                    <hr>
+
+                    <h4>Put AI behind deterministic layers where possible</h4>
+                    <p>The first instinct when introducing AI into a review workflow is to use it end-to-end. Ingest the input, identify the issues, explain them, present to the user. One AI system, doing the whole job.</p>
+                    <p>For regulated workflows, this is usually the wrong shape. If there's an existing deterministic component in the workflow (a rules engine, a validation service, a policy check), leave it in place. Insert AI <em>after</em> it, not around it. Let the deterministic layer do detection. Let the AI do explanation, contextualization, and precedent lookup for what the deterministic layer flagged.</p>
+                    <p>Two things happen when you do this. First, you preserve the auditability of the detection step. A rule that fires with a threshold and a condition is defensible in a way that a probabilistic model's flag isn't. Second, and more important, you shrink the trust surface. Instead of asking users to trust that the AI can accurately identify issues <em>and</em> explain them, you ask them to trust only the explanation, against a corpus they can verify.</p>
+                    <p class="principle">Trust compounds when you don't ask users to trust everything at once. Ask for smaller trusts, more of them, and layer them so each is verifiable independently.</p>
+                    <p>There are cases where AI has to do detection, where no deterministic layer exists, or where the pattern is too complex for rules. In those cases, the trust work is harder and the guardrail architecture has to carry more weight. But when a deterministic layer already exists, replacing it with AI is trading auditable determinism for probabilistic inference. That trade is rarely worth it in regulated contexts.</p>
+
+                    <hr>
+
+                    <h4>Architecture principles that matter more than they look</h4>
+                    <p>Two technical decisions come up repeatedly in AI systems of this shape, and both are worth defending consciously rather than defaulting to.</p>
+                    <p><strong>Vector store selection.</strong> The default choice for RAG systems in AWS environments is often OpenSearch: it's a strong retrieval engine and it's what teams reach for. But for many enterprise use cases, the corpus is smaller than OpenSearch is optimized for, the retrieval is heavily metadata-filtered, and the access pattern is closer to relational than to full-text search. In those cases, Aurora with vector capabilities is often sufficient, integrates cleanly with the rest of the data layer, and is materially cheaper.</p>
+                    <p>The principle: pick the store that matches the workload, not the one with the strongest theoretical characteristics on a workload you don't have. Running the actual comparison (retrieval quality on your data, at your scale, with your metadata patterns) is worth the week it takes. Most teams don't do this and pay for it in cloud spend.</p>
+                    <p><strong>Model tier selection.</strong> The default choice for generation is usually a frontier model. The assumption is that quality will be higher. Often it is, but the delta varies enormously by task. For structured tasks like contextualizing flagged issues against retrieved documents, smaller models can perform within margin of the larger models at roughly an order of magnitude lower cost per inference.</p>
+                    <p>The discipline is running the head-to-head evaluation on your actual task, holding a quality bar, and picking the cheapest model that clears it. This is uncomfortable: it forces you to defend a cost-conscious choice against the assumption that bigger is better, but at production volume, the cost delta between model tiers is not marginal.</p>
+                    <p><strong>One architectural choice that isn't negotiable in multi-tenant regulated contexts:</strong> metadata isolation has to be enforced at the <em>database</em> layer, not the application layer. Application-layer filtering means a bug in application logic can leak documents from one client's context into another's. Database-layer filtering means isolation is enforced by the query itself. This distinction matters because the failure mode (cross-client data leakage) is a compliance-grade event, not a UX issue.</p>
+
+                    <hr>
+
+                    <h4>Guardrails as failure-mode-mapped controls</h4>
+                    <p>Guardrails in AI products are often treated as a hygiene layer added at the end. That framing produces bloat: a list of generic controls that don't obviously map to specific risks, each one costing latency or tokens or user friction.</p>
+                    <p>The framing that works better is to start from <em>failure modes</em> and work backward. For each failure mode: what can go wrong, what's the cost of it going wrong, and what layered controls make it acceptably unlikely?</p>
+                    <p>In regulated review workflows, five failure modes recur:</p>
+                    <p><strong>Cross-client data leakage.</strong> The highest-severity failure. Primary control: metadata-scoped retrieval at the database layer. Secondary: audit logging of every retrieval, with post-hoc investigation capability. Tertiary: periodic red-team testing with mismatched metadata to verify the system returns nothing.</p>
+                    <p><strong>Ungrounded inference.</strong> The model produces a plausible-sounding output that isn't supported by retrieved documents. The output looks correct, which is what makes it dangerous. Primary control: strict citation requirement in the system prompt. Secondary: escalation as a first-class output when retrieval returns nothing sufficient. The model must be able to say "I don't have enough to answer this" without treating it as a failure state.</p>
+                    <p><strong>Automation bias.</strong> The user accepts an inference because it's plausible, not because they verified it. This survives all the technical guardrails, because it's a human failure enabled by product design. The control isn't technical. It's structural. Design the output so verification is faster than fabrication would be worthwhile. Every inference includes the citation the user can click through to. The retrieved document surfaces alongside the inference. Rejecting or escalating is a single click. Make verification the path of least resistance.</p>
+                    <p><strong>Latency and throughput degradation.</strong> Users lose trust in the tool's reliability when it falls behind. Controls are conventional but need to be defined: SLA monitoring at p95 and p99, batch processing where real-time isn't required, rate limiting against API caps, graceful degradation states.</p>
+                    <p><strong>Cost blowout.</strong> Batch inference at scale can produce surprising bills. Controls: per-tenant cost budgeting, monitoring on tokens per request, and alerting on deviation from historical patterns.</p>
+                    <p>Two guardrails are worth flagging as product decisions rather than engineering choices:</p>
+                    <p><strong>Temperature at near-zero for generation.</strong> In regulated contexts, consistency and grounding matter more than creativity. Two similar inputs should produce similar outputs, not stylistic variations. This isn't a hyperparameter choice. It's a product stance about what kind of AI this is.</p>
+                    <p><strong>Human review as non-negotiable.</strong> There should be no configuration where AI output is auto-applied to consequential artifacts. The expert is always the last mile. This isn't a v1 constraint you plan to relax. It's the shape of the product.</p>
+                    <p>Every guardrail costs something. The PM job isn't to add guardrails. It's to defend the specific set of guardrails as worth their cost. Anything that doesn't trace to a specific failure mode isn't a guardrail; it's overhead.</p>
+
+                    <hr>
+
+                    <h4>Sequencing trust in rollout</h4>
+                    <p>Shipping the system isn't the launch. Getting the users to trust it enough to catch its errors, rather than rubber-stamp them, is.</p>
+                    <p>Rollout in regulated workflows should be sequenced deliberately. The first cohort should be <em>senior</em> users, not junior ones. This is counterintuitive because senior users are usually the harder sell. But they're the right early users for two reasons. They can recognize when the AI's output is subtly wrong, because they've built the intuitions the model is trying to approximate. And they have the standing to criticize the tool credibly. If a senior user says an output is misleading, that feedback carries weight. If a junior user says the same thing, it might be read as unfamiliarity.</p>
+                    <p>Starting with the population that can most credibly criticize the system produces better signal than starting with the population most likely to accept it.</p>
+                    <p>Feedback loops should be structured, not ambient. Thumbs-down with required comments. Weekly triage that classifies each rejection into buckets: retrieval problem, generation problem, or process problem. Each bucket routes to a different team. The classification discipline matters more than the volume of feedback: it forces the loop to stay closed, and it gives users visible evidence that their feedback matters.</p>
+                    <p>Expansion gates should be defined upfront. Internal expansion has one bar; external client-facing rollout has a higher one. Holding those gates against pressure to lower them is one of the harder product decisions on this class of project, and one worth committing to publicly early.</p>
+
+                    <hr>
+
+                    <h4>The metric trap</h4>
+                    <p>There's one lesson I've learned by getting it wrong on projects of this shape, and it's the most consequential one I'd pass on.</p>
+                    <p>Behavioral metrics from users (acceptance rate, thumbs-down rate, click-through) are easy to measure, directional, and often trend upward over time. It's tempting to anchor on them as the primary signal that a product is working.</p>
+                    <p>They're not quality metrics. They're behavioral metrics. And the gap between the two matters more than it looks.</p>
+                    <p>High acceptance rate can mean the AI's outputs are correct and users are validating them. It can also mean users are time-pressured, the output looks plausible, and accepting is the path of least resistance. Both patterns produce the same number.</p>
+                    <p>For any AI product where the user's own workflow depends on trusting the output, behavioral acceptance is a <em>lagging</em> indicator of quality, and worse, it's ambiguous. Users who under-trust the system eventually stop using it, which does show up in the metric. But users who <em>over-trust</em> the system look identical to users who correctly trust it, until something goes wrong.</p>
+                    <p>The correction is a ground-truth check running in parallel from day one. A sampled audit where senior users re-verify a random subset of accepted outputs, blind to the fact that they were accepted. If audit agreement diverges from acceptance rate, that's the signal that the behavioral metric is misleading.</p>
+                    <p class="principle">When the headline metric for an AI product is a behavioral signal, there needs to be a correctness check running alongside it from launch, not retrofitted later.</p>
+                    <p>In regulated domains, the cost of measuring engagement instead of correctness doesn't show up in the behavioral metric until it shows up somewhere much worse: a client complaint, an audit finding, a regulatory question.</p>
+
+                    <hr>
+
+                    <h4>Closing</h4>
+                    <p>There are several ways to solution AI into a regulated workflow. Speed to production, aggressive scale, and non-disruptive parallel deployment are all legitimate paths, and each produces a different product. The path I've argued for here prioritizes earning trust before earning throughput: AI as a bounded assistant behind a deterministic layer, in a workflow the users already understand. It costs some speed and some ambition. What it produces is a system users adopt, correct, and eventually ask to expand, the point at which internal rollout becomes external rollout, and the users who pushed back hardest at the start start surfacing new use cases where AI could help them next.</p>
+                    <p>The most useful thing I'd offer isn't a technique. It's a stance. In regulated domains, the interesting problem isn't making the AI better. It's designing the system around the AI so that when the AI is wrong, because it will be, sometimes, the failure is caught, the cost is bounded, and the trust doesn't collapse.</p>
+                    <p>The AI product isn't the model. It's the system of controls, feedback, and human judgment that surrounds it. That's what determines whether AI in these domains earns the trust required to keep operating.</p>
+                </div>
+
+                <div class="card coming-soon">
+                    <span class="badge">In progress</span>
+                    <h3 style="color:var(--text-main);">Healthcare AI Guardrails</h3>
+                    <p style="line-height:1.7; margin-top:8px;">An evaluation harness and companion writeup, turning the guardrail principles above into something runnable. Coming next.</p>
+                </div>
+            </section>
+
+
+            <!-- ================= PROJECTS ================= -->
+            <section id="projects" class="content-section">
+                <p class="section-intro">
+                    Self-initiated prototypes built end-to-end, not just scoped. Independent learning projects using
+                    synthetic or public data, unaffiliated with any employer.
+                </p>
+
+                <div class="card">
+                    <h3>Healthcare Proactive Case Management</h3>
+                    <div class="meta">Personal Project · Live</div>
+                    <div class="field"><span class="field-label">Problem</span><span class="field-body">Preventable readmissions and deteriorations aren't flagged early enough, driving up cost of care and worsening outcomes.</span></div>
+                    <div class="field"><span class="field-label">Solution</span><span class="field-body">A prototype ML model that scores patients for risk and triggers proactive case management workflows (outreach, review queues) through a simple dashboard.</span></div>
+                    <div class="field"><span class="field-label">Value (est.)</span><span class="field-body">Illustrates how a 10-20% earlier intervention rate could translate into meaningful cost savings and better outcomes in a mid-size health system.</span></div>
+                    <div class="tags">
+                        <span class="tag">ML</span><span class="tag">Streamlit</span><span class="tag">Python</span><span class="tag">Healthcare</span>
+                    </div>
+                    <div style="margin-top: 16px; display: flex; gap: 20px;">
+                        <a class="textlink" href="https://proactivecaremanagement-byaabwq279kmcpjdq8qhwr.streamlit.app/" target="_blank" rel="noopener">Live Demo →</a>
+                        <a class="textlink" href="https://github.com/scriptseedXYZ/ProavtiveCareManagement" target="_blank" rel="noopener">Code & README →</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>ML Prototyping Tool for Students and Researchers</h3>
+                    <div class="meta">Personal Project · In Refining Stage</div>
+                    <div class="field"><span class="field-label">Problem</span><span class="field-body">Students and researchers struggle to quickly prototype and validate ML models, often getting bogged down in boilerplate code and environment setup.</span></div>
+                    <div class="field"><span class="field-label">Solution</span><span class="field-body">An interactive Streamlit app that simplifies ML prototyping with pre-built templates, automated preprocessing, and one-click model training and evaluation for common use cases.</span></div>
+                    <div class="field"><span class="field-label">Value (est.)</span><span class="field-body">Reduces prototyping time by 50-60% for students and researchers, enabling faster experimentation and learning cycles.</span></div>
+                    <div class="tags">
+                        <span class="tag">ML</span><span class="tag">Streamlit</span><span class="tag">Python</span><span class="tag">Education</span>
+                    </div>
+                    <div style="margin-top: 16px;">
+                        <span class="field-hint">Demo coming soon.</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Petrochem Utility Efficiency Optimization</h3>
+                    <div class="meta">Personal Project · Live</div>
+                    <div class="field"><span class="field-label">Problem</span><span class="field-body">Petrochemical plants operated utilities (steam, power, cooling) with limited visibility into real-time efficiency, driving up energy costs and making it hard to spot optimization opportunities.</span></div>
+                    <div class="field"><span class="field-label">Solution</span><span class="field-body">Designed and built an app that ingests operations data, benchmarks utility performance, and surfaces actionable recommendations to operators through dashboards and alerts.</span></div>
+                    <div class="field"><span class="field-label">Value (est.)</span><span class="field-body">Enables data-driven utility optimization, identifying efficiency gains that can reduce energy consumption and operating costs while improving reliability and decision-making for plant leadership.</span></div>
+                    <div class="tags">
+                        <span class="tag">ML</span><span class="tag">Streamlit</span><span class="tag">Python</span><span class="tag">Energy</span>
+                    </div>
+                    <div style="margin-top: 16px; display: flex; gap: 20px;">
+                        <a class="textlink" href="https://utilityefficiencyoptimization-m8dhcrwsqmzfiejawrldmf.streamlit.app" target="_blank" rel="noopener">Live Demo →</a>
+                        <a class="textlink" href="https://github.com/scriptseedXYZ/UtilityEfficiency_Optimization" target="_blank" rel="noopener">Code & README →</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>FamilyFilter: Scene-Level Content Filter for Streaming Platforms</h3>
+                    <div class="meta">Personal Project · Phase 1 Testing In Progress</div>
+                    <div class="field"><span class="field-label">Problem</span><span class="field-body">Streaming platforms only offer title-level parental controls, so families can't watch an otherwise-suitable film that has a few explicit scenes. Editing the video violates copyright, and blocking the stream outright throws out the rest of the movie.</span></div>
+                    <div class="field"><span class="field-label">Solution (in progress)</span><span class="field-body">A Chrome extension (Manifest V3) that filters playback on Netflix and Prime Video, auto-skipping or muting timestamped intervals from categorized "skip lists," with per-family severity controls. Designed inside the Family Movie Act safe harbor: user-directed, playback-side only, no content copied or modified.</span></div>
+                    <div class="field"><span class="field-label">Value (est.)</span><span class="field-body">Lets families watch mainstream films together by removing only the objectionable moments, without touching the underlying copyrighted content.</span></div>
+                    <div class="tags">
+                        <span class="tag">Chrome Extension</span><span class="tag">JavaScript</span><span class="tag">Manifest V3</span><span class="tag">Content Filtering</span>
+                    </div>
+                    <div style="margin-top: 16px;">
+                        <span class="field-hint">Repo and demo coming soon.</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>ClaimsGuard: Guardrail Assurance Console for Regulated AI</h3>
+                    <div class="meta">Personal Project · Phase 1 In Progress</div>
+                    <div class="field"><span class="field-label">Problem</span><span class="field-body">Teams building AI into regulated workflows keep hand-rolling the same controls, citation enforcement, escalation on ungrounded output, per-tenant audit logging, with no reusable, tested baseline. And "we tested the guardrails" is usually a claim, not something a compliance officer can independently verify.</span></div>
+                    <div class="field"><span class="field-label">Solution (in progress)</span><span class="field-body">A console that sits beside an AI system, fires an adversarial battery of test cases at it, detects leaks and failures, and produces a framework-mapped scorecard with tamper-evident, replayable evidence: an artifact a compliance officer can actually sign an attestation against. Implements the five-failure-mode framework (cross-client leakage, ungrounded inference, automation bias, latency degradation, cost blowout) from my "Trust Before Throughput" writeup as running code, not a written argument.</span></div>
+                    <div class="field"><span class="field-label">Value (est.)</span><span class="field-body">Turns "we tested the guardrails" from a claim into a scorecard a compliance officer can independently verify and sign off on.</span></div>
+                    <div class="tags">
+                        <span class="tag">Guardrails</span><span class="tag">RAG</span><span class="tag">Python</span><span class="tag">Audit Logging</span><span class="tag">Compliance</span>
+                    </div>
+                    <div style="margin-top: 16px; display: flex; gap: 20px;">
+                        <a class="textlink" href="https://github.com/notalegacybug/ai-guardrails-mvp/tree/main/examples" target="_blank" rel="noopener">View Examples →</a>
+                        <a class="textlink" href="https://github.com/notalegacybug/ai-guardrails-mvp" target="_blank" rel="noopener">Code & README →</a>
+                    </div>
+                </div>
+            </section>
+
+
         </main>
     </div>
 
@@ -823,9 +849,9 @@
             const FAQ = {
                 contact: "Best reached at sreespark3000@gmail.com or via LinkedIn (linkedin.com/in/subhashini-rajamani). She's based in Dallas-Fort Worth, TX.",
                 education: "MS in Business Analytics (Data Science), University of Texas at Dallas. Bachelor's in Computer Science, Osmania University. Also a Machine Learning Graduate Certificate and an Appian Certified Developer.",
-                projects: "She's built five self-initiated prototypes: Healthcare Proactive Case Management (live demo), Petrochem Utility Efficiency Optimization (live demo), an ML Prototyping Tool for students and researchers (in refining), a Healthcare Fraud Detection model (planned), and a Guardrails Framework for Regulated AI Systems (in progress). Full details and links are on the Projects tab.",
+                projects: "She's built five self-initiated prototypes: Healthcare Proactive Case Management (live demo), Petrochem Utility Efficiency Optimization (live demo), an ML Prototyping Tool for students and researchers (in refining), FamilyFilter, a scene-level content filter for streaming platforms (Phase 1 testing), and ClaimsGuard, a guardrail assurance console for regulated AI with a public repo and worked examples (github.com/notalegacybug/ai-guardrails-mvp). Full details and links are on the Projects tab.",
                 skills: "Python & Streamlit, ML & GenAI (RAG, guardrails), Appian & workflow automation, SQL (Oracle/MSSQL), Power BI & AWS QuickSight, AWS SageMaker/OpenSearch/Aurora, JIRA & Visio. Full list on the Background tab.",
-                approach: "Her core POV: put AI behind deterministic layers where they already exist, map guardrails to specific failure modes instead of generic controls, and measure correctness rather than just acceptance rate. She's currently building a reusable guardrails framework that turns those principles into runnable code. See the Point of View and Writing tabs for the full argument.",
+                approach: "Her core POV: put AI behind deterministic layers where they already exist, map guardrails to specific failure modes instead of generic controls, and measure correctness rather than just acceptance rate. She's currently building ClaimsGuard, a guardrail assurance console that turns those principles into runnable code, with a public repo and examples. See the Perspective and Projects tabs for the full argument and the code.",
                 experience: "Currently Digital Transformation Strategy Product Manager / Appian Product Manager at Solomon Associates (Munich Re), since 2021. Before that at Cognizant: Project Manager, Strategy & Analytics Lead (2017-2019); Sr. Techno-Functional Business Lead & Technical Product Manager (2008-2017); and Quality Engineer / Business Analyst (2005-2008).",
                 whyHire: "She pairs 15+ years of product leadership with hands-on GenAI delivery: RAG pipelines, guardrail design, and Appian workflow automation. She doesn't just write PRDs, she ships. Her work project cut review time by about 50%, and she's built several AI prototypes end-to-end on her own time, proof she can build, not just scope."
             };
@@ -833,9 +859,9 @@
             const KEYWORDS = [
                 ['contact',    ['contact', 'email', 'reach her', 'get in touch', 'phone number', 'linkedin']],
                 ['education',  ['education', 'degree', 'university', 'certification', 'certified', 'masters', "bachelor's", 'graduate certificate']],
-                ['projects',   ['personal project', 'side project', 'prototype', 'portfolio', 'github', 'streamlit', 'case study', 'proactive case management', 'petrochem', 'fraud detection', 'ml prototyping']],
+                ['projects',   ['personal project', 'side project', 'prototype', 'portfolio', 'github', 'streamlit', 'case study', 'proactive case management', 'petrochem', 'familyfilter', 'claimsguard', 'ml prototyping']],
                 ['skills',     ['technical skill', 'tech stack', 'skills', 'python', 'sql', 'power bi', 'sagemaker', 'aws', 'appian', 'streamlit']],
-                ['approach',   ['guardrail', 'approach', 'philosophy', 'trust', 'regulated', 'framework', 'methodology', 'deterministic', 'how does she think', 'point of view']],
+                ['approach',   ['guardrail', 'approach', 'philosophy', 'trust', 'regulated', 'framework', 'methodology', 'deterministic', 'how does she think', 'point of view', 'perspective']],
                 ['experience', ['current role', 'experience', 'background', 'munich re', 'solomon associates', 'cognizant', 'career', 'work history', 'years of experience', 'job title']],
                 ['whyHire',    ['why hire', 'why should', 'good fit', 'why her', 'strengths', 'stand out']]
             ];
