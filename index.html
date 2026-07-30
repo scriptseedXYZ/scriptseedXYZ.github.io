@@ -233,16 +233,17 @@
 
         .chat-panel {
             position: fixed;
-            bottom: 100px;
+            bottom: 60px;
             right: 28px;
-            width: 360px;
+            width: 460px;
             max-width: calc(100vw - 40px);
-            height: 500px;
-            max-height: calc(100vh - 140px);
-            background: var(--bg-card);
+            height: 88vh;
+            max-height: calc(100vh - 60px);
+            background: rgba(15, 23, 42, 0.65);
+            backdrop-filter: blur(20px);
             border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow: 0 24px 70px rgba(0,0,0,0.35);
             display: flex;
             flex-direction: column;
             overflow: hidden;
@@ -257,6 +258,7 @@
             gap: 12px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.08);
             background: rgba(15, 23, 42, 0.4);
+            backdrop-filter: blur(10px);
         }
         .chat-avatar {
             width: 36px;
@@ -831,32 +833,20 @@
     </div>
 
     <!-- ================= AI CHAT ASSISTANT ================= -->
-    <button class="chat-fab" id="chatFab" aria-label="Ask AI about Subhashini">✦</button>
+    <button class="chat-fab" id="chatFab" aria-label="Open AI chat">✦</button>
 
     <div class="chat-panel hide" id="chatPanel">
         <div class="chat-head">
             <div class="chat-avatar">✦</div>
             <div class="chat-head-text">
-                <div class="chat-head-title">Ask about Subhashini</div>
-                <div class="chat-head-sub">Answers questions from this page</div>
+                <div class="chat-head-title">AI Chat</div>
+                <div class="chat-head-sub">Powered by ask-about-subhashini.ai.studio</div>
             </div>
             <button class="chat-close" id="chatClose" aria-label="Close chat">✕</button>
         </div>
-        <div class="chat-messages" id="chatMessages">
-            <div class="chat-msg bot">Hi! Ask me anything about Subhashini's background, skills, projects, or fit for a role.</div>
+        <div class="chat-iframe-wrapper" style="flex:1; min-height:0;">
+            <iframe id="chatIframe" src="https://ask-about-subhashini.ai.studio/" style="border:none; width:100%; height:100%; min-height:500px;" allow="clipboard-read clipboard-write; fullscreen; geolocation; microphone; camera" sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-modals"></iframe>
         </div>
-        <div class="chat-chips" id="chatChips">
-            <span class="chat-chip">Why hire her?</span>
-            <span class="chat-chip">Guardrails approach?</span>
-            <span class="chat-chip">Personal projects?</span>
-            <span class="chat-chip">Technical skills?</span>
-            <span class="chat-chip">Current role?</span>
-        </div>
-        <div class="chat-input-row">
-            <textarea id="chatInput" rows="1" placeholder="Ask anything…"></textarea>
-            <button class="chat-send" id="chatSend" aria-label="Send">➤</button>
-        </div>
-        <div class="chat-foot">Answers are generated from this page's content, not a live model.</div>
     </div>
 
     <script>
@@ -881,93 +871,19 @@
             });
         }
 
-        /* ================= AI Chat Assistant (no API, page-derived answers) ================= */
         (function () {
-            const FAQ = {
-                contact: "Best reached at sreespark3000@gmail.com or via LinkedIn (linkedin.com/in/subhashini-rajamani). She's based in Dallas-Fort Worth, TX.",
-                education: "MS in Business Analytics (Data Science), University of Texas at Dallas. Bachelor's in Computer Science, Osmania University. Also a Machine Learning Graduate Certificate and an Appian Certified Developer.",
-                projects: "She's built five self-initiated prototypes: Healthcare Proactive Case Management (live demo), Petrochem Utility Efficiency Optimization (live demo), an ML Prototyping Tool for students and researchers (in refining), FamilyFilter, a scene-level content filter for streaming platforms (Phase 1 testing), and ClaimsGuard, a guardrail assurance console for regulated AI with a public repo and worked examples (github.com/notalegacybug/ai-guardrails-mvp). Full details and links are on the Projects tab.",
-                skills: "Python, SQL & NoSQL, Linux, .NET & Angular, Appian SaaS Platform & APIs, Power BI, AWS (SageMaker, OpenSearch, Aurora, QuickSight), ML model evaluation, predictive analytics & forecasting, RAG architectures, prompt engineering, LLM integrations, AI agents, workflow automation, JIRA & SharePoint. She also builds with Lovable, Google AI Studio, Claude Code, and GitHub Copilot. Full list on the Background tab.",
-                approach: "Her core POV: put AI behind deterministic layers where they already exist, map guardrails to specific failure modes instead of generic controls, and measure correctness rather than just acceptance rate. She's currently building ClaimsGuard, a guardrail assurance console that turns those principles into runnable code, with a public repo and examples. See the Perspective and Projects tabs for the full argument and the code.",
-                experience: "Currently Digital Transformation Strategy Product Manager / Appian Product Manager at Solomon Associates (Munich Re), since 2021. Before that at Cognizant: Project Manager, Strategy & Analytics Lead (2017-2019); Sr. Techno-Functional Business Lead & Technical Product Manager (2008-2017); and Quality Engineer / Business Analyst (2005-2008).",
-                whyHire: "She pairs 15+ years of product leadership with hands-on GenAI delivery: RAG pipelines, guardrail design, and Appian workflow automation. She doesn't just write PRDs, she ships. Her work project cut review time by about 50%, and she's built several AI prototypes end-to-end on her own time, proof she can build, not just scope."
-            };
-
-            const KEYWORDS = [
-                ['contact',    ['contact', 'email', 'reach her', 'get in touch', 'phone number', 'linkedin']],
-                ['education',  ['education', 'degree', 'university', 'certification', 'certified', 'masters', "bachelor's", 'graduate certificate']],
-                ['projects',   ['personal project', 'side project', 'prototype', 'portfolio', 'github', 'streamlit', 'case study', 'proactive case management', 'petrochem', 'familyfilter', 'claimsguard', 'ml prototyping']],
-                ['skills',     ['technical skill', 'tech stack', 'skills', 'python', 'sql', 'nosql', 'linux', '.net', 'angular', 'power bi', 'sagemaker', 'aws', 'appian', 'streamlit', 'prompt engineering', 'lovable', 'copilot', 'claude code', 'ai studio', 'agentic']],
-                ['approach',   ['guardrail', 'approach', 'philosophy', 'trust', 'regulated', 'framework', 'methodology', 'deterministic', 'how does she think', 'point of view', 'perspective']],
-                ['experience', ['current role', 'experience', 'background', 'munich re', 'solomon associates', 'cognizant', 'career', 'work history', 'years of experience', 'job title']],
-                ['whyHire',    ['why hire', 'why should', 'good fit', 'why her', 'strengths', 'stand out']]
-            ];
-
-            function findFaqKey(question) {
-                const q = question.toLowerCase();
-                for (const [key, words] of KEYWORDS) {
-                    if (words.some(w => q.includes(w))) return key;
-                }
-                return null;
-            }
-
             const fab = document.getElementById('chatFab');
             const panel = document.getElementById('chatPanel');
             const closeBtn = document.getElementById('chatClose');
-            const messages = document.getElementById('chatMessages');
-            const chips = document.getElementById('chatChips');
-            const input = document.getElementById('chatInput');
-            const sendBtn = document.getElementById('chatSend');
             let open = false;
 
             function toggleChat() {
                 open = !open;
                 panel.classList.toggle('hide', !open);
             }
+
             fab.addEventListener('click', toggleChat);
             closeBtn.addEventListener('click', toggleChat);
-
-            function addMessage(text, cls) {
-                const el = document.createElement('div');
-                el.className = 'chat-msg ' + cls;
-                el.textContent = text;
-                messages.appendChild(el);
-                messages.scrollTop = messages.scrollHeight;
-                return el;
-            }
-
-            function handleQuestion(question) {
-                if (!question) return;
-                addMessage(question, 'user');
-                sendBtn.disabled = true;
-                const typingEl = addMessage('Thinking…', 'bot typing');
-                setTimeout(() => {
-                    const key = findFaqKey(question);
-                    const reply = key
-                        ? FAQ[key]
-                        : "I don't have that answer directly from this page. The best way to find out is to reach Subhashini at sreespark3000@gmail.com or via LinkedIn.";
-                    typingEl.textContent = reply;
-                    typingEl.classList.remove('typing');
-                    sendBtn.disabled = false;
-                }, 500);
-            }
-
-            sendBtn.addEventListener('click', () => {
-                const q = input.value.trim();
-                input.value = '';
-                handleQuestion(q);
-            });
-            input.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter' && !e.shiftKey) {
-                    e.preventDefault();
-                    const q = input.value.trim();
-                    input.value = '';
-                    handleQuestion(q);
-                }
-            });
-            chips.querySelectorAll('.chat-chip').forEach(chip => {
-                chip.addEventListener('click', () => handleQuestion(chip.textContent));
-            });
         })();
     </script>
 </body>
