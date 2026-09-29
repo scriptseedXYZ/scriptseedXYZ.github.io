@@ -1,0 +1,43 @@
+Subhashini Rajamani
+
+Contact: 682.273.9155 | sreespark3000@gmail.com | www.linkedin.com/in/subhashini-rajamani | Dallas, TX
+
+Professional Summary
+Senior Product Manager with 15+ years of end-to-end ownership across discovery, strategy, roadmap, execution, and iteration. 5+ years specializing in ML/AI adoption and GenAI solutions in healthcare, insurance including Pharmacy Benefit Management (PBM), and enterprise settings. Strong track record of turning ambiguity into shipped products and improving outcomes with data, user feedback, and judgment.
+
+Core Skills
+AI product management; GenAI/LLMs/RAG/prompt engineering/LLM integrations; product discovery; 0-to-1 ownership; roadmaps; KPIs; Agile/Scrum. Python, SQL, NoSQL, Linux, .NET, Angular, Appian SaaS/APIs, Power BI, AWS, SageMaker, ML evaluation, predictive analytics, Lovable, AI Studio, Claude Code, GitHub Copilot, Jira, SharePoint.
+
+Domain Expertise
+Healthcare and health insurance including PBM (10+ years); oil and gas (4 years); finance (1 year); media and communications (2 years).
+
+Professional Experience
+Solomon Associates (Munich Re) | Product and Project Manager | 2022-Present
+- Owned the 0-to-1 launch of an enterprise Appian SaaS portal from concept to production; onboarded 2,000+ users.
+- Delivered an AI alerts dashboard that reduced advisor review time by 50%; evaluated LLMs, designed prompts, built fallback logic, and set confidence thresholds.
+- Led beta and production deployment of AI-assisted document summarization.
+- Automated AWS Trusted Advisor alerts and EBS snapshot-tagging notifications.
+- Partnered with data science and cloud engineering teams to operationalize ML models on AWS SageMaker.
+- Defined KPIs showing about 30-50% efficiency gains across workflows.
+
+Cognizant | Project/Product Manager - Strategy & Analytics Lead | 2017-2020
+- Launched an ML risk-prioritization product that accelerated release cycles by about 40-50%.
+- Introduced MLflow-based MLOps practices and improved product development lifecycle governance.
+- Delivered automation and dashboards for healthcare and PBM operations.
+
+Cognizant | Senior Techno-Functional Business Analyst | 2008-2017
+- Designed healthcare preventive messages, analytics dashboards, and EDI-claims prototypes for regulated environments.
+
+Cognizant | Techno-Functional Business Analyst | 2005-2008
+- Built HL7 validation scripts, led UAT, and supported RFPs and solution demos.
+
+Independent Projects
+- Healthcare Proactive Case Management: ML risk-scoring prototype for earlier intervention in care management.
+- Petrochem Utility Efficiency Optimization: app for utility performance monitoring and optimization.
+- FamilyFilter: Chrome extension for user-directed skip/mute controls on streaming platforms.
+- ClaimsGuard: AI guardrail assurance console with adversarial testing, leak detection, and tamper-evident evidence.
+
+Education & Certifications
+MS in Business Analytics (Data Science), University of Texas at Dallas, 2020-2022.
+Bachelor’s in Computer Science, Osmania University, 2005.
+Certifications: Appian Certified Developer; AWS Machine Learning Badge; UTD ML Certified.

@@ -1,0 +1,39 @@
+<!-- Replace the two ALL-CAPS values and adapt this to your site's existing UI. -->
+<section class="resume-chat" aria-labelledby="resume-chat-heading">
+  <h2 id="resume-chat-heading">Ask about my background</h2>
+  <div id="resume-chat-messages" aria-live="polite"></div>
+  <form id="resume-chat-form">
+    <label for="resume-chat-input">Ask a question about this resume</label>
+    <input id="resume-chat-input" maxlength="700" required placeholder="What experience does this candidate have?">
+    <button type="submit">Send</button>
+  </form>
+</section>
+<script>window.RESUME_CHAT_WORKER_URL = "https://YOUR-WORKER.YOUR-SUBDOMAIN.workers.dev";</script>
+<script src="/assets/chat-widget.js"></script>
+<script>
+  const chat = new ResumeChat({
+    fallbackKnowledge: {
+      "experience|work|career": "See the experience section of the resume for the candidate's work history.",
+      "skills|tools|technology": "See the skills section of the resume for the candidate's listed strengths.",
+      "contact|email|reach": "Please use the contact details provided on the resume.",
+    },
+    onStatus: (status) => document.querySelector(".resume-chat").dataset.status = status,
+  });
+  const form = document.querySelector("#resume-chat-form");
+  const input = document.querySelector("#resume-chat-input");
+  const messages = document.querySelector("#resume-chat-messages");
+  function addMessage(role, text) {
+    const line = document.createElement("p");
+    line.className = `resume-chat__${role}`;
+    line.textContent = text;
+    messages.appendChild(line);
+  }
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const question = input.value.trim();
+    if (!question) return;
+    input.value = "";
+    addMessage("visitor", question);
+    addMessage("assistant", await chat.ask(question));
+  });
+</script>
